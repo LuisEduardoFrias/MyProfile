@@ -5,7 +5,7 @@ import CpSkill from '../components/component_skill.js';
 import CpExperience from '../components/component_experience.js';
 
 /* ********************************** */
-alert("https://luiseduardofrias.github.io/MyProfile/");
+
 const ArraySkill = await getdata(skills);
 
 const ArrayExperience = await getdata(experiences);
