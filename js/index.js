@@ -22,5 +22,4 @@ try {
 }
 
 */
-
-alert("https://luiseduardofrias.github.io/MyProfile/");
+alert("si funciona 1");
