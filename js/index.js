@@ -1,17 +1,17 @@
-import { getdata, skills, experiences } from '../data/data_access.js';
+/* import { getdata, skills, experiences } from '../data/data_access.js';
 
 import CpSkill from '../components/component_skill.js';
 
 import CpExperience from '../components/component_experience.js';
 
 /* ********************************** */
-alert("https://luiseduardofrias.github.io/MyProfile/");
+/* alert("https://luiseduardofrias.github.io/MyProfile/");
 const ArraySkill = await getdata(skills);
 
 const ArrayExperience = await getdata(experiences);
 
 /* ********************************** */
-
+/*
 try {
      ArraySkill.forEach(i => CpSkill(document.querySelector('.skills'), i.name, i.url));
 
@@ -21,3 +21,6 @@ try {
     console.log(e);
 }
 
+*/
+
+alert("https://luiseduardofrias.github.io/MyProfile/");
