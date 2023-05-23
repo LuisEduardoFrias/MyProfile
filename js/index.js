@@ -1,3 +1,5 @@
+alert("MyProfile");
+
 /* import { getdata, skills, experiences } from '../data/data_access.js';
 
 import CpSkill from '../components/component_skill.js';
@@ -22,4 +24,3 @@ try {
 }
 
 */
-alert("si funciona 1");
