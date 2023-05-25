@@ -1,13 +1,14 @@
 export async function getdata(t) { 
-  return await fetch('http://localhost:8080/data/data.json')
+  return await fetch('https://luiseduardofrias.github.io/MyProfile/data/data.json')
         .then((response) => response.json())
         .then((json) =>
         {     
             switch (t) {
-                case skills:     return json.skills;
-                case segurity:   return json.segurity;
+                case skills:      return json.skills;
+                case segurity:    return json.segurity;
                 case experiences: return json.experiences;
-                default:         return undefined;
+                case proyects:    return json.proyects;
+                default:          return undefined;
             }
         });
 };
@@ -15,6 +16,7 @@ export async function getdata(t) {
 export const segurity = {};
 export const skills = {};
 export const experiences = {};
+export const proyects = {};
 
 /*
 export class segurity {

@@ -1,4 +1,4 @@
-import { getdata, skills, experiences, proyects  } from '../data/data_access.js';
+import { getdata, skills, experiences, proyects  } from '../data/data_access.j
 
 import CpSkill from '../components/component_skill.js';
 
@@ -25,4 +25,3 @@ try {
 } catch(e) {
     console.log(e);
 }
-
