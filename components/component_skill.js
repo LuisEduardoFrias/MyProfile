@@ -6,23 +6,15 @@ export default function skill(element, name, url) {
 
     const img = Img(source + url); 
 
-    
-
     img.style.width = '50px';
 
     img.style.height = '50px';
 
     img.style.marginBottom = '10px';
 
-    
-
     const label = Label(name);
 
-    
-
     const div = Div([ img, label ]);
-
-    
 
     div.style.width = "100px";
 
@@ -54,13 +46,8 @@ export default function skill(element, name, url) {
 
     div.style.padding = "2px 2px";
 
-    
-
     element.appendChild(div);
-
     
-
     return element;
-
 }
 
