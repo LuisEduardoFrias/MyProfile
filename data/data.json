@@ -61,7 +61,7 @@
         },
 
         
-
+ 
         { 
 
             "company" : "EC Mobiliario Creativo SRL", 
@@ -124,6 +124,65 @@
 
         }
 
+   ],
+   
+   "proyects" : [
+       
+       { 
+           "tittle": "Tridente SC", 
+           "description" : "Administrador de tienda de celulares.", 
+           "tegnologys" : [
+               "WinForms",
+               "Sql Server",
+               "Entity Framework",
+               "SignalR",
+               "Asp.net Core"
+           ], 
+           "repositorys" : []
+       },
+
+       { 
+           "tittle": "ARS Afiliados", 
+           "description" : "Sistema de afiliados",     
+           "tegnologys" : [
+               "Angular 11",
+               "Asp.Net Core Api 3.1",
+               "Ado.net",
+               "Entity Framework",
+               "Sql Server",
+               "Identity",
+               "Bootstrap",
+               "Madia-Type vnd"
+            ], 
+            "repositorys" : [
+                "https://github.com/LuisEduardoFrias/Back-End",
+"https://github.com/LuisEduardoFrias/front-end-ars-afiliados"
+            ]
+       },
+      
+       { 
+           "tittle": "PokeSite",
+           "description" : "Guía de pokemones", 
+           "tegnologys" : [
+               "Angular 11",
+               "Asp.Net Core Api 3.1",
+               "Bootstrap"
+           ],
+           "repositorys" : []
+       },
+ 
+       { 
+           "tittle": "DSRG", 
+           "description" : "Generador de reporte de la estructura tu base de datos.", 
+           "tegnologys" : [
+               "WindowsForms",
+               "Telerik report",
+               "SpreadsheetLight - Excel"
+            ],     
+            "repositorys" : [
+            "https://github.com/LuisEduardoFrias/DSRG"
+            ]
+       }
    ]
 
 }
