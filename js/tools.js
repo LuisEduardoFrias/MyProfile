@@ -11,7 +11,7 @@ export const addCI = (elem, classId) => {
    {
        const _char = classId.charAt(0);
   
-       _char == "." ? elem.className += ` ${classId.substring(1, classId.length)}` :
+       _char == "." ? elem.className += ` ${ classId.substring(1, classId.length)}` :
        _char == "#" ? elem.setAttribute("id", classId.substring(1, classId.length)) :
        console.log('El strig no corresponde con un atributo de class o Id.');
        
@@ -38,6 +38,7 @@ export const Img = (src, alt, classId) => {
 export const Div = (array, classId) => {
 
     const div = document.createElement("div");
+    
     addCI(div, classId);
     
     if(Array.isArray(array))
@@ -61,8 +62,9 @@ export const Div = (array, classId) => {
     return div;
 }
 
-export const isNode = (obj) => obj.toString().indexOf(' HTML')>0;
+export const isNode = (element) => element instanceof Element || element instanceof HTMLDocument;
 
+/*obj.toString().indexOf(' HTML')>0;*/
 
 export const Buttom = (text, classId) => {
     const buttom = document.createElement("button");
@@ -72,9 +74,9 @@ export const Buttom = (text, classId) => {
 } 
 
 export const A = (href, text, classId) => {
-    const a = document.createElement("a");
-    a.href = href;
-    a.innerText = text;
+    const a = document.createElement('link');
+    a.innerHTML = "text";
+    a.href = "href";
     addCI(a, classId);
     return a;
 }
