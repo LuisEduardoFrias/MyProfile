@@ -1,5 +1,5 @@
 export async function getdata(t) { 
-  return await fetch('http://localhost:8158/data/data.json')
+  return await fetch('https://luiseduardofrias.github.io/MyProfile/data/data.json')
         .then((response) => response.json())
         .then((json) =>
         {     
