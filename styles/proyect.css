@@ -1,6 +1,6 @@
 @import "tools.css";
 
-.experiences {
+.proyects {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -18,9 +18,16 @@
     padding: 10px 10px;
     box-sizing: border-box;
     gap: 10px;
+    /* background: linear-gradient(
+        135deg,
+        grey 15%,
+        gray 30%, 
+        lightgrey 50%,
+        silver 65%,
+        grey 98%);; */
 }
 
-.company {
+.tittle {
     font-size: 18px;
     font-weight: bold;
     margin-bottom: 20px;
@@ -30,12 +37,8 @@
     font-size: 9px;
 }
 
-.position {
-    font-size: 14px;
-    font-weight: 800;
-}
 
-.titleTack {
+.titleTegnology {
     font-size: 12px;
     font-weight: 700;
     position: relative;
@@ -44,22 +47,46 @@
     background-color: black;
 }
 
-.tack {
+.tenology {
     font-size: 10px;
     font-weight: 700;
 }
 
-.tack:before {
+.repository {
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.tenology:before {
     content: "-";
     margin-left: 2px;
     
 }
 
-.contan-tack {
+.repository:before {
+    content: "-";
+    margin-left: 2px;
+    
+}
+
+.contan-repository {
     width: 100%;
 }
 
-.container-tacks {
+.contan-tegnology {
+    width: 100%;
+}
+
+.container-tegnology {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px 10px;
+    gap: 2px;
+    padding: 10px 10px;
+    box-shadow: inset 0px 0px 5px 1px gray;
+}
+
+.container-repository {
     display: flex;
     flex-direction: column;
     border-radius: 10px 10px;
