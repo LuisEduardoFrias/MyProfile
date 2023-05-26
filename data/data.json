@@ -188,8 +188,11 @@
     "tittle" : "Técnico Superior en Desarrollo del Software",
     "institucion" : "Instituto Técnico Superior Comunitario (ITSC)",
     "more_education" : [
-       {"title" : "", 
+       {
+        "title" : "", 
        "institucion" : ""
+        
+       }
      ]
    }
 
