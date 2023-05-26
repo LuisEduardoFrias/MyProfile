@@ -6,8 +6,7 @@ export default function reference(element, proyect) {
  
  const labelT = Label(proyect.tittle, ".tittle");
  const labelI = Label(proyect.description, ".description");
- const labelT = Label("Tegnologias", ".titleTegnology");
- const img
+ const img = 
  const divT = Div([], ".container-tegnology");
  const divR = Div([], ".container-repository");
 
