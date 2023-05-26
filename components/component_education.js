@@ -6,7 +6,7 @@ export default function education(element, proyect) {
  
  const labelT = Label(proyect.tittle, ".tittle");
  const labelD = Label(proyect.description, ".description");
- const labelTT = Label("Tegnologias", ".titleTegnology");
+ const ("Tegnologias", ".titleTegnology");
 
  const divT = Div([], ".container-tegnology");
  const divE = Div([], ".container-repository");
