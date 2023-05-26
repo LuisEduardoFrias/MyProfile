@@ -2,7 +2,7 @@ import { P, T } from "../js/tools.js";
 import { Div, Label, addCI, Img } from "../js/tools.js";
 import { float_button } from "../js/float_button.js";
 
-export default function education(element, proyect) {
+export default function education(element, education) {
  
  const conta = Div([], ".container-tegnology");
  
