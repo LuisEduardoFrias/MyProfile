@@ -9,7 +9,7 @@ export async function getdata(t) {
                 case experiences: return json.experiences;
                 case proyects:    return json.proyects;
                 case educations:  return json.educations;
-                case references:  return json.refereturs; 
+                case references:  return json.references; 
                 default:          return undefined;
             }
         });
