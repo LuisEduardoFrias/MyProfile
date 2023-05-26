@@ -18,7 +18,7 @@ export default function education(element, education) {
       Label(e.tittle, ".sub_tittle"),
       A(e.url, e.institution, "sub_institution"),
       Img(e.tittle_img, "Imagen del titutlo", ".sub_img_tittle")
-      ], ".contan-tegnology"));
+      ], ".conta"));
  });
 
  proyect.repositorys.forEach((element) => {
