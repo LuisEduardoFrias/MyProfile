@@ -7,7 +7,7 @@ export default function reference(element, reference) {
  const div = Div([], ".container-tegnology");
  
  const labelT = Label(reference.name, ".tittle");
- const labelI = Label(reference., ".description");
+ const labelI = Label(reference.phone_number, ".description");
  
  const divT = Div([labelT, labelI], ".container-tegnology");
 
