@@ -185,14 +185,15 @@
        }
    ],
    "references" : [
-      {"name" : "Julio Angel",
-      "phone_number" : "849-356-5151"}
-      "Ing. José Manuel Tejeda Contacto",
-      "809-436-7126"
-     "Lic. Jairo Esteban Lora Mejía Contacto",
-     "829-983-1386"
-    " Ing. Julio Angel Florentino Contacto",
-     "829-854-7130"
+      {
+         "name" : "Ing. José Manuel Tejeda Contacto",
+         "phone_number" : "809-436-7126"
+      },
+      {
+         "name" : "Lic. Jairo Esteban Lora Mejía Contacto",
+         "phone_number" : "829-983-1386"},
+      {"name" : "Ing. Julio Angel Florentino Contacto",
+      "phone_number" : "829-854-7130"}
     ],
    "educations" : {
     "tittle" : "Técnico Superior en Desarrollo del Software",
