@@ -10,7 +10,7 @@ export default function education(element, proyect) {
  const labelI = Label(proyect.description, ".description");
  const img = Img(",", "Imagen de titulo.", "");
  
- const contaP = Div([labelT, labelI, ], ".container-tegnology");
+ const contaP = Div([labelT, labelI, img], ".container-tegnology");
  const contaS = Div([], ".container-tegnology");
  
 
