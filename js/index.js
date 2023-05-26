@@ -32,7 +32,7 @@ try {
      
      ArrayProyect.forEach(i => CpProyect(document.querySelector('.proyects'), i));
      
-     ArrayProyect.forEach(i => CpProyect(document.querySelector('.proyects'), i));
+     ArrayEducation.forEach(i => CpEducation(document.querySelector('.proyects'), i));
      
      ArrayProyect.forEach(i => CpProyect(document.querySelector('.proyects'), i));
      
