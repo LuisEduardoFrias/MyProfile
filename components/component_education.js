@@ -31,7 +31,7 @@ export default function education(element, education) {
  conta.style.borderStyle = "double";
  div.style.borderBottomColor = `${P}`;
  div.style.borderLeftColor = `${P}`;
- div.style.borderTopColor = `${T}`;
+ conta.style.borderTopColor = `${T}`;
  conta.style.borderRightColor = `${T}`;
 
  element.appendChild(div);
