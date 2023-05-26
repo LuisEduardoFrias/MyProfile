@@ -189,9 +189,8 @@
     "institucion" : "Instituto Técnico Superior Comunitario (ITSC)",
     "more_education" : [
        {
-        "title" : "", 
-       "institucion" : ""
-        
+          "title" : "", 
+          "institucion" : ""
        }
      ]
    }
