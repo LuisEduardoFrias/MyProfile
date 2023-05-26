@@ -10,7 +10,7 @@ import CpProyect from '../components/component_proyect.js';
 
 import CpEducation from '../components/component_proyect.js';
 
-import Cp from '../components/component_proyect.js';
+import CpReference from '../components/component_proyect.js';
 
 /* ********************************** */
 
