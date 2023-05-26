@@ -8,9 +8,9 @@ import CpExperience from '../components/component_experience.js';
 
 import CpProyect from '../components/component_proyect.js';
 
-import CpEducati from '../components/component_proyect.js';
+import CpEducation from '../components/component_proyect.js';
 
-import CpProyect from '../components/component_proyect.js';
+import Cp from '../components/component_proyect.js';
 
 /* ********************************** */
 
