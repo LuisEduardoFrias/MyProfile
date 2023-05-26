@@ -183,6 +183,40 @@
             "https://github.com/LuisEduardoFrias/DSRG"
             ]
        }
-   ]
-
+   ],
+   "educations" : [
+      {
+         "tittle" : "Técnico Superior en Desarrollo del Software",
+         "institution" : "Instituto Técnico Superior Comunitario (ITSC)",
+        "tittle_img" : "",
+        "more_education" : [
+           {
+              "tittle" : "Desarrollando Aplicaciones en Angular 10 y ASP.NET Core 5", 
+              "institution" : "udemy",
+              "url" : "",
+              "tittle_img" : ""
+           },
+           {
+              "tittle" : "Desarrollando Aplicaciones en Angular 10 y ASP.NET Core 5", 
+              "institution" : "udemy",
+              "url" : "",
+              "tittle_img" : ""
+           }
+         ]
+      }
+   ],
+   "references" : [
+      {
+         "name" : "Ing. José Manuel Tejeda Contacto",
+         "phone_number" : "809-436-7126"
+      },
+      {
+         "name" : "Lic. Jairo Esteban Lora Mejía Contacto",
+         "phone_number" : "829-983-1386"
+      },
+      {
+         "name" : "Ing. Julio Angel Florentino Contacto",
+         "phone_number" : "829-854-7130"
+      }
+    ]
 }
