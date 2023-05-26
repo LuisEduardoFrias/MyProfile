@@ -33,8 +33,8 @@ try {
      ArrayProyect.forEach(i => CpProyect(document.querySelector('.proyects'), i));
      
      ArrayEducation.forEach(i => CpEducation(document.querySelector('.educations'), i));
-     
-     ArrayReference.forEach(i => CpReference(document.querySelector('.references'), i));
+     /*
+     ArrayReference.forEach(i => CpReference(document.querySelector('.references'), i));*/
 } catch(e) { 
     console.log(e);
 }
