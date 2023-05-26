@@ -185,9 +185,9 @@
        }
    ],
    "references" : [
-      "name" : "Julio Angel",
-      "phone_number" : "849-356-5151"
-    ]
+      {"name" : "Julio Angel",
+      "phone_number" : "849-356-5151"}
+    ],
    "education" : {
     "tittle" : "Técnico Superior en Desarrollo del Software",
     "institucion" : "Instituto Técnico Superior Comunitario (ITSC)",
