@@ -17,7 +17,7 @@ export default function education(element, education) {
   contaS.appendChild( Div( [
       Label(e.tittle, ".sub_tittle"),
       A(e.url, e.institution, "sub_institution"),
-      Img(e.tittle_img, "Imagen del titutlo", "")
+      Img(e.tittle_img, "Imagen del titutlo", "sub_")
       ], ".contan-tegnology"));
  });
 
