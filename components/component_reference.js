@@ -17,16 +17,6 @@ export default function reference(element, proyect) {
 
  divT.style.border = "1px solid silver";
  divR.style.border = "1px solid silver";
-
-let div = document.node;
-if(proyect.repositorys[0] === undefined ) {
- div = Div(
-  [labelT, labelD, labelTT, divT ],".constainer-experience" );
-}
-else {
-div = Div(
-  [labelT, labelD, labelTT, divT, divR ],".constainer-experience" );
-}
   
  div.style.borderWidth = "2px";
  div.style.borderStyle = "double";
