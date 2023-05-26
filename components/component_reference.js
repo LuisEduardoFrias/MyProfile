@@ -9,7 +9,6 @@ export default function reference(element, proyect) {
  const img = img();
  
  const divT = Div([], ".container-tegnology");
- const divR = Div([], ".container-repository");
 
  proyect.tegnologys.forEach((element) => {
   divT.appendChild(Div([Label(element, ".tenology")], ".contan-tegnology"));
