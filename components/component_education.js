@@ -12,7 +12,7 @@ export default function education(element, proyect) {
  const divE = Div([], ".container-repository");
 
  proyect.more_education.forEach((e) => {
-  divE.appendChild( Div( [Label(, ".tenology"), ], ".contan-tegnology"));
+  divE.appendChild( Div( [Label(e.tittle, ".tenology"), ], ".contan-tegnology"));
  });
 
  proyect.repositorys.forEach((element) => {
