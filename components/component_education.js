@@ -24,7 +24,7 @@ export default function education(element, education) {
  
 
  contaP.style.border = "1px solid silver";
- con.style.border = "1px solid silver";
+ contaS.style.border = "1px solid silver";
 
   
  conta.style.borderWidth = "2px";
