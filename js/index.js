@@ -8,6 +8,9 @@ import CpExperience from '../components/component_experience.js';
 
 import CpProyect from '../components/component_proyect.js';
 
+
+import CpProyect from '../components/component_proyect.js';
+
 /* ********************************** */
 
 const ArraySkill = await getdata(skills);
