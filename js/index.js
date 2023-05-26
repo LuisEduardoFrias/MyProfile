@@ -1,6 +1,5 @@
 import { getdata, skills, experiences, proyects, educations, references  } from '../data/data_access.js'
 
-
 import CpSkill from '../components/component_skill.js'
 
 import CpExperience from '../components/component_experience.js'
@@ -31,7 +30,7 @@ try {
      ArrayExperience.forEach(i => CpExperience(document.querySelector('.experiences'), i));
      
      ArrayProyect.forEach(i => CpProyect(document.querySelector('.proyects'), i));
-     console.log(ArrayEducation);
+     
      ArrayEducation.forEach(i => CpEducation(document.querySelector('.educations'), i));
      
      ArrayReference.forEach(i => CpReference(document.querySelector('.references'), i));
