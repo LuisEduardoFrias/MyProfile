@@ -10,8 +10,8 @@ export default function education(element, proyect) {
  const labelI = Label(proyect.description, ".description");
  const img = Img(",", "Imagen de titulo.", "");
  
- const conta = Div([], ".container-tegnology");
- const divT = Div([], ".container-tegnology");
+ const contaP = Div([], ".container-tegnology");
+ const contS = Div([], ".container-tegnology");
  
 
  proyect.more_education.forEach((e) => {
