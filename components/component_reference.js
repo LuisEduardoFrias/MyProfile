@@ -1,5 +1,5 @@
 import { P, T } from "../js/tools.js";
-import { Div, Label, addCI } from "../js/tools.js";
+import { Div, Label, addCI, } from "../js/tools.js";
 import { float_button } from "../js/float_button.js";
 
 export default function reference(element, proyect) {
