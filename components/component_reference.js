@@ -4,6 +4,8 @@ import { float_button } from "../js/float_button.js";
 
 export default function reference(element, proyect) {
  
+ const divT = Div([], ".container-tegnology");
+ 
  const labelT = Label(proyect.tittle, ".tittle");
  const labelI = Label(proyect.description, ".description");
  const img = img();
