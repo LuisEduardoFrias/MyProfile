@@ -11,11 +11,6 @@ export default function reference(element, proyect) {
  
  
  const divT = Div([], ".container-tegnology");
- 
- proyect.tegnologys.forEach((element) => {
-  divT.appendChild(Div([Label(element, ".tenology")], ".contan-tegnology"));
- });
-
 
  divT.style.border = "1px solid silver";
  divR.style.border = "1px solid silver";
