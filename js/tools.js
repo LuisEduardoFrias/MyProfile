@@ -75,7 +75,15 @@ export const Buttom = (text, classId) => {
 
 export const A = (href, text, classId) => {
  
+      const node = document.createElement("a");
+     
+      node.appendChild(document.createTextNode(element));
+      node.href = element;
+      node.setAttribute("rel", "noopener noreferrer"); 
+      node.setAttribute("target", "_blank");
    
+      addCI(node, ".repository");
+
     const a = document.createElement('link');
     a.innerHTML = "text";
     a.href = "href";
