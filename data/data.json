@@ -191,7 +191,7 @@
    "educations" : {
     "tittle" : "Técnico Superior en Desarrollo del Software",
     "institucion" : "Instituto Técnico Superior Comunitario (ITSC)",
-    "tittle" : ""
+    "tittle_img" : ""
     "more_education" : [
        {
           "title" : "Desarrollando Aplicaciones en Angular 10 y ASP.NET Core 5", 
