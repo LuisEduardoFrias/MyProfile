@@ -9,7 +9,7 @@ export default function reference(element, proyect) {
  const labelT = Label(proyect.tittle, ".tittle");
  const labelI = Label(proyect.description, ".description");
  
- const divT = Div([], ".container-tegnology");
+ const divT = Div([labelT, labelI], ".container-tegnology");
 
  div.style.borderWidth = "2px";
  div.style.borderStyle = "double";
