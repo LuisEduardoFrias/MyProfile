@@ -74,6 +74,8 @@ export const Buttom = (text, classId) => {
 } 
 
 export const A = (href, text, classId) => {
+ 
+   
     const a = document.createElement('link');
     a.innerHTML = "text";
     a.href = "href";
