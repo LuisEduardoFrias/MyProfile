@@ -194,7 +194,7 @@
     "tittle_img" : "",
     "more_education" : [
        {
-          "title" : "Desarrollando Aplicaciones en Angular 10 y ASP.NET Core 5", 
+          "tittle" : "Desarrollando Aplicaciones en Angular 10 y ASP.NET Core 5", 
           "institucion" : "udemy",
           "url" : "",
           "tittle_img" : ""
