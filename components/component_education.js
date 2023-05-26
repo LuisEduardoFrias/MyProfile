@@ -8,7 +8,7 @@ export default function education(element, education) {
  
  const labelT = Label(education.tittle, ".tittle");
  const labelI = Label(education.institution, ".institution");
- const img = Img(education.tittle_img, "Imagen de titulo.", "img_tittle");
+ const img = Img(education.tittle_img, "Imagen de titulo.", ".img_tittle");
  
  const contaP = Div([labelT, labelI, img], ".container-tegnology");
  const contaS = Div([], ".container-tegnology");
