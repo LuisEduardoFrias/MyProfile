@@ -26,7 +26,7 @@ export default function proyect(element, proyect) {
    
       addCI(node, ".repository");
 
-      console.log(node instanceof Element || node instanceof HTMLDocument);
+
 
       divR.appendChild(Div([node], ".contan-repository"));
  });
