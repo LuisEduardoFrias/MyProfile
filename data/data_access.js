@@ -18,7 +18,7 @@ export const skills = {};
 export const experiences = {};
 export const proyects = {};
 export const education = {};
-export const references = 
+export const references = {}
 
 /*
 export class segurity {
