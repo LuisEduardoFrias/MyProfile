@@ -31,7 +31,7 @@ try {
      ArrayExperience.forEach(i => CpExperience(document.querySelector('.experiences'), i));
      
      ArrayProyect.forEach(i => CpProyect(document.querySelector('.proyects'), i));
-     
+     console.log(ArrayEducation);
      ArrayEducation.forEach(i => CpEducation(document.querySelector('.educations'), i));
      
      /*
