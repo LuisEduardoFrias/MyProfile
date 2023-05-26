@@ -1,4 +1,4 @@
-import { getdata, skills, experiences, proyects  } from '../data/data_access.js'
+import { getdata, skills, experiences, proyects, educations, references  } from '../data/data_access.js'
 
 
 import CpSkill from '../components/component_skill.js'
@@ -31,6 +31,10 @@ try {
      ArrayExperience.forEach(i => CpExperience(document.querySelector('.experiences'), i));
      
      ArrayProyect.forEach(i => CpProyect(document.querySelector('.proyects'), i));
+     
+     ArrayProyect.forEach(i => CpProyect(document.querySelector('.proyects'), i));
+     
+     
 } catch(e) { 
     console.log(e);
 }
