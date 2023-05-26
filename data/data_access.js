@@ -21,26 +21,3 @@ export const experiences = {};
 export const proyects = {};
 export const educations = {};
 export const references = {};
-
-/*
-export class segurity {
-    constructor(password){
-        this.password = password;
-    }
-};
-
-export class skills {
-    constructor(name,url) {
-        this.name = name;
-        this.url = url;
-    }
-};
-
-export class experiences {
-    constructor(company, descripcion, position, tacks) {
-        this.company = company;
-        this.description = descripcion;
-        this.position = position;
-        this.tacks = tacks;
-    }
-}*/
