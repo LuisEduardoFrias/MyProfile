@@ -15,7 +15,7 @@ export default function education(element, proyect) {
   divE.appendChild( Div( [
       Label(e.tittle, ".tenology"),
       Label(e.institucion)
-      Img(e.tittle_img, "Imagen del titutl")
+      Img(e.tittle_img, "Imagen del titutlo", "")
       ], ".contan-tegnology"));
  });
 
