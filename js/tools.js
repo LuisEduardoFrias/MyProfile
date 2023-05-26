@@ -82,7 +82,7 @@ export const A = (href, text, classId) => {
       node.setAttribute("rel", "noopener noreferrer"); 
       node.setAttribute("target", "_blank");
    
-      addCI(node, ".repository");
+      addCI(node, classId);
 
     const a = document.createElement('link');
     a.innerHTML = "text";
