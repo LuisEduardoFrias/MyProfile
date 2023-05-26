@@ -1,5 +1,5 @@
 import { P, T } from "../js/tools.js";
-import { Div, Label, addCI } from "../js/tools.js";
+import { Div, Label, addCI, Img } from "../js/tools.js";
 import { float_button } from "../js/float_button.js";
 
 export default function education(element, proyect) {
@@ -8,7 +8,7 @@ export default function education(element, proyect) {
  
  const labelT = Label(proyect.tittle, ".tittle");
  const labelI = Label(proyect.description, ".description");
- const img = img(",", "Imagen de titulo.", "");
+ const img = Img(",", "Imagen de titulo.", "");
  
  const divT = Div([], ".container-tegnology");
  const divT = Div([], ".container-tegnology");
