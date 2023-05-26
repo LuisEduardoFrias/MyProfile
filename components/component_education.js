@@ -27,7 +27,7 @@ export default function education(element, education) {
  divR.style.border = "1px solid silver";
 
   
- div.style.borderWidth = "2px";
+ conta.style.borderWidth = "2px";
  div.style.borderStyle = "double";
  div.style.borderBottomColor = `${P}`;
  div.style.borderLeftColor = `${P}`;
