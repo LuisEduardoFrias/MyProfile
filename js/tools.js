@@ -83,6 +83,6 @@ export const A = (href, text, classId) => {
     node.setAttribute("target", "_blank");
    
     addCI(node, classId);
- 1     
-    return a;
+      
+    return node;
 }
