@@ -1,4 +1,4 @@
-import { getdata, skills, experiences, proyects  } from '../data/data_access.j
+import { getdata, skills, experiences, proyects  } from '../data/data_access.js';
 
 console.log(" okey ");
 
