@@ -9,7 +9,7 @@ export default function reference(element, reference) {
  const labelT = Label(reference.name, ".name");
  const labelI = Label(reference.phone_number, ".phone");
  
- const divT = Div([labelT, labelI], ".containe");
+ const divT = Div([labelT, labelI], ".conten");
 
  div.style.borderWidth = "2px";
  div.style.borderStyle = "double";
