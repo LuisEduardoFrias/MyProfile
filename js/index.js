@@ -24,6 +24,6 @@ try {
      ArrayExperience.forEach(i => CpExperience(document.querySelector('.experiences'), i));
      
      ArrayProyect.forEach(i => CpProyect(document.querySelector('.proyects'), i));
-} catch(e) {
+} catch(e) { 
     console.log(e);
 }
