@@ -75,14 +75,14 @@ export const Buttom = (text, classId) => {
 
 export const A = (href, text, classId) => {
  
-      const node = document.createElement("a");
+    const node = document.createElement("a");
      
-      node.appendChild(document.createTextNode(text));
-      node.href = href;
-      node.setAttribute("rel", "noopener noreferrer"); 
-      node.setAttribute("target", "_blank");
+    node.appendChild(document.createTextNode(text));
+    node.href = href;
+    node.setAttribute("rel", "noopener noreferrer"); 
+    node.setAttribute("target", "_blank");
    
-      addCI(node, classId);
-      
+    addCI(node, classId);
+ 1     
     return a;
 }
