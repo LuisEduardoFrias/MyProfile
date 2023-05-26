@@ -20,12 +20,9 @@ export default function education(element, education) {
       Img(e.tittle_img, "Imagen del titutlo", ".sub_img_tittle")
       ], ".sub_container_education"));
  });
-
  
-
  contaP.style.border = "1px solid silver";
  contaS.style.border = "1px solid silver";
-
   
  conta.style.borderWidth = "2px";
  conta.style.borderStyle = "double";
