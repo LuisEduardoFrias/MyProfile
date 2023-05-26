@@ -14,7 +14,7 @@ export default function education(element, education) {
  const contaS = Div([], ".container-tegnology");
 
  proyect.more_education.forEach((e) => {
-  divE.appendChild( Div( [
+  contaS.appendChild( Div( [
       Label(e.tittle, ".tenology"),
       A(e.url, e.institucion, ""),
       Img(e.tittle_img, "Imagen del titutlo", "")
