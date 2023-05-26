@@ -190,7 +190,8 @@
     "more_education" : [
        {
           "title" : "Desarrollando Aplicaciones en Angular 10 y ASP.NET Core 5", 
-          "institucion" : ""
+          "institucion" : "udemy",
+          "url" : ""
        }
      ]
    }
