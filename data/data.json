@@ -198,7 +198,7 @@
          "phone_number" : "829-854-7130"
       }
     ],
-   "educations" : [
+   "educations" : [{
     "tittle" : "Técnico Superior en Desarrollo del Software",
     "institution" : "Instituto Técnico Superior Comunitario (ITSC)",
     "tittle_img" : "",
@@ -215,6 +215,6 @@
           "url" : "",
           "tittle_img" : ""
        }
-     ]
+     ]}
    ]
 }
