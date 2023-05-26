@@ -4,12 +4,12 @@ import { float_button } from "../js/float_button.js";
 
 export default function reference(element, reference) {
  
- const div = Div([], ".container-tegnology");
+ const div = Div([], ".container");
  
  const labelT = Label(reference.name, ".name");
  const labelI = Label(reference.phone_number, ".phone");
  
- const divT = Div([labelT, labelI], ".container-tegnology");
+ const divT = Div([labelT, labelI], ".containe");
 
  div.style.borderWidth = "2px";
  div.style.borderStyle = "double";
