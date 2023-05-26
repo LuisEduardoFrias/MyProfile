@@ -13,7 +13,8 @@ export default function education(element, proyect) {
 
  proyect.more_education.forEach((e) => {
   divE.appendChild( Div( [
-      'Label(e.tittle, ".tenology"),
+      Label(e.tittle, ".tenology"),
+      
       ], ".contan-tegnology"));
  });
 
