@@ -191,8 +191,10 @@
       },
       {
          "name" : "Lic. Jairo Esteban Lora Mejía Contacto",
-         "phone_number" : "829-983-1386"},
-      {"name" : "Ing. Julio Angel Florentino Contacto",
+         "phone_number" : "829-983-1386"
+      },
+      {
+       "name" : "Ing. Julio Angel Florentino Contacto",
       "phone_number" : "829-854-7130"}
     ],
    "educations" : {
