@@ -4,7 +4,7 @@ import { float_button } from "../js/float_button.js";
 
 export default function education(element, education) {
  
- const conta = Div([], ".container-tegnology");
+ const conta = Div([], ".container");
  
  const labelT = Label(education.tittle, ".tittle");
  const labelI = Label(education.institution, ".institution");
