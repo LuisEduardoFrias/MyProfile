@@ -77,7 +77,7 @@ export const A = (href, text, classId) => {
  
       const node = document.createElement("a");
      
-      node.appendChild(document.createTextNode(element));
+      node.appendChild(document.createTextNode(t));
       node.href = element;
       node.setAttribute("rel", "noopener noreferrer"); 
       node.setAttribute("target", "_blank");
