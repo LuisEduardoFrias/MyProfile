@@ -1,6 +1,7 @@
 import { getdata, skills, experiences, proyects  } from '../data/data_access.j
 
-console.log(" okey ")
+console.log(" okey ");
+
 import CpSkill from '../components/component_skill.js';
 
 import CpExperience from '../components/component_experience.js';
