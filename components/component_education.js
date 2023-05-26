@@ -21,21 +21,7 @@ export default function education(element, education) {
       ], ".sub_container_education"));
  });
 
- proyect.repositorys.forEach((element) => {
-
-      const node = document.createElement("a");
-     
-      node.appendChild(document.createTextNode(element));
-      node.href = element;
-      node.setAttribute("rel", "noopener noreferrer"); 
-      node.setAttribute("target", "_blank");
-   
-      addCI(node, ".repository");
-
-      console.log(node instanceof Element || node instanceof HTMLDocument);
-
-      divR.appendChild(Div([node], ".contan-repository"));
- });
+ 
 
  divT.style.border = "1px solid silver";
  divR.style.border = "1px solid silver";
