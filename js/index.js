@@ -34,7 +34,7 @@ try {
      
      ArrayEducation.forEach(i => CpEducation(document.querySelector('.proyects'), i));
      
-     ArrayRe.forEach(i => CpReference(document.querySelector('.proyects'), i));
+     ArrayReference.forEach(i => CpReference(document.querySelector('.proyects'), i));
      
 } catch(e) { 
     console.log(e);
