@@ -9,12 +9,8 @@ export default function reference(element, proyect) {
  const labelT = Label(proyect.tittle, ".tittle");
  const labelI = Label(proyect.description, ".description");
  
- 
  const divT = Div([], ".container-tegnology");
 
- divT.style.border = "1px solid silver";
- divR.style.border = "1px solid silver";
-  
  div.style.borderWidth = "2px";
  div.style.borderStyle = "double";
  div.style.borderBottomColor = `${P}`;
