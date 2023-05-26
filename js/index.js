@@ -14,7 +14,7 @@ import CpReference from '../components/component_reference.js'
 /* ********************************** */
 
 const ArraySkill = await getdata(skills);
-/*
+
 const ArrayExperience = await getdata(experiences);
 
 const ArrayProyect = await getdata(proyects);
@@ -22,20 +22,19 @@ const ArrayProyect = await getdata(proyects);
 const ArrayEducation = await getdata(educations);
 
 const ArrayReference = await getdata(references);
-*/
 
 /* ********************************** */
 
 try {
      ArraySkill.forEach(i => CpSkill(document.querySelector('.skills'), i.name, i.url));
-/*
+
      ArrayExperience.forEach(i => CpExperience(document.querySelector('.experiences'), i));
      
      ArrayProyect.forEach(i => CpProyect(document.querySelector('.proyects'), i));
      console.log(ArrayEducation);
      ArrayEducation.forEach(i => CpEducation(document.querySelector('.educations'), i));
      
-     ArrayReference.forEach(i => CpReference(document.querySelector('.references'), i));*/
+     ArrayReference.forEach(i => CpReference(document.querySelector('.references'), i));
 } catch(e) { 
     console.log(e);
 }
