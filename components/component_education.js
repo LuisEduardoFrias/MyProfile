@@ -13,7 +13,7 @@ export default function education(element, proyect) {
 
  proyect.more_education.forEach((e) => {
   divE.appendChild( Div( [
-      Labe(e.tittle, ".tenology"),
+      Label(e.tittle, ".tenology"),
       Label(e.institucion)
       Img(e.tittle_img, "Imagen del titutlo", "")
       ], ".contan-tegnology"));
