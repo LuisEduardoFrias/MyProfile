@@ -29,12 +29,12 @@ export default function education(element, education) {
   
  conta.style.borderWidth = "2px";
  conta.style.borderStyle = "double";
- div.style.borderBottomColor = `${P}`;
- div.style.borderLeftColor = `${P}`;
+ conta.style.borderBottomColor = `${P}`;
+ conta.style.borderLeftColor = `${P}`;
  conta.style.borderTopColor = `${T}`;
  conta.style.borderRightColor = `${T}`;
 
- element.appendChild(div);
+ element.appendChild(conta);
 
  return element;
 }
