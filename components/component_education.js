@@ -4,12 +4,15 @@ import { float_button } from "../js/float_button.js";
 
 export default function education(element, proyect) {
  
- const labelT = Label(proyect.tittle, ".tittle");
- const labelD = Label(proyect.description, ".description");
- const ("Tegnologias", ".titleTegnology");
-
  const divT = Div([], ".container-tegnology");
- const divE = Div([], ".container-repository");
+ 
+ const labelT = Label(proyect.tittle, ".tittle");
+ const labelI = Label(proyect.description, ".description");
+ const img = img(",", "Imagen de titulo.", "");
+ 
+ const divT = Div([], ".container-tegnology");
+ const divT = Div([], ".container-tegnology");
+ 
 
  proyect.more_education.forEach((e) => {
   divE.appendChild( Div( [
