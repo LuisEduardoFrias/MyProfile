@@ -8,6 +8,7 @@ export async function getdata(t) {
                 case segurity:    return json.segurity;
                 case experiences: return json.experiences;
                 case proyects:    return json.proyects;
+                case 
                 default:          return undefined;
             }
         });
