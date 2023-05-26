@@ -15,7 +15,7 @@ export default function education(element, education) {
 
  proyect.more_education.forEach((e) => {
   contaS.appendChild( Div( [
-      Label(e.tittle, ".sub_education_tittle"),
+      Label(e.tittle, ".sub_tittle"),
       A(e.url, e.institution, "sub_institution"),
       Img(e.tittle_img, "Imagen del titutlo", "")
       ], ".contan-tegnology"));
