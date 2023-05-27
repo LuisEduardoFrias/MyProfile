@@ -16,9 +16,9 @@ export default function education(element, education) {
       A(e.url, e.institution, ".sub_institution"),
       if(e.tittle_img !== "")
       {
-       
+       Img(e.tittle_img, "Imagen del titutlo", ".sub_img_tittle")
       }
-      Img(e.tittle_img, "Imagen del titutlo", ".sub_img_tittle")
+      
       ], ".sub_container_education"));
  });
  
