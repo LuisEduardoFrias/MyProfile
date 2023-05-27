@@ -2,6 +2,8 @@
 @import "tools.css";
 @import "float_button.css";
 @import "proyect.css";
+@import "education.css";
+@import "reference.css";
 
 *{
     margin: 0;
