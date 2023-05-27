@@ -43,20 +43,26 @@ border: 1px solid red;
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 10px;
 }
 
 .sub_tittle {
- border: 1px solid red;
+ 
 }
 
 .sub_institution {
- border: 1px solid red;
+ 
 }
 
 .sub_img_tittle {
- border: 1px solid red;
+ 
 }
 
 .sub_container_education {
- border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px 10px;
+    gap: 2px;
+    padding: 10px 10px;
+    box-shadow: inset 0px 0px 5px 1px gray;
 }
