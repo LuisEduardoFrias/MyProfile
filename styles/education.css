@@ -57,7 +57,10 @@ border: 1px solid red;
  
 }
 
-.
+.label_institution{
+ 
+}
+
 .sub_container_education {
     display: flex;
     flex-direction: column;
