@@ -1,16 +1,4 @@
 @import "tools.css";
-
-.tittle
-.institution
-.img_tittle
-.containerP
-.containerS
-.sub_tittle
-.sub_institution
-.sub_img_tittle
-.sub_container_education
-.
-
 .educations {
     display: flex;
     flex-direction: column;
