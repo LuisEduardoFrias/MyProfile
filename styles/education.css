@@ -26,7 +26,7 @@
 }
 
 .institution {
-qq border: 1px solid red;
+border: 1px solid red;
 }
 
 .img_tittle {
@@ -34,11 +34,15 @@ qq border: 1px solid red;
 }
 
 .containerP {
- border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .containerS {
- border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .sub_tittle {
