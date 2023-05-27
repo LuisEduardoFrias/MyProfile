@@ -1,4 +1,5 @@
 @import "tools.css";
+
 .educations {
     display: flex;
     flex-direction: column;
@@ -24,4 +25,22 @@
         lightgrey 50%,
         silver 65%,
         grey 98%);; */
+}
+
+.tittle {
+ 
+}
+
+.institution {
+ 
+}
+
+.img_tittle
+.containerP
+.containerS
+.sub_tittle
+.sub_institution
+.sub_img_tittle
+.sub_container_education {
+ 
 }
