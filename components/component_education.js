@@ -14,10 +14,9 @@ export default function education(element, education) {
   contaS.appendChild( Div( [
       Label(e.tittle, ".sub_tittle"),
       A(e.url, e.institution, ".sub_institution"),
-      if(e.tittle_img !== "")
-      {
+      e.tittle_img !== "" ?
        Img(e.tittle_img, "Imagen del titutlo", ".sub_img_tittle")
-      }
+      : null
       
       ], ".sub_container_education"));
  });
