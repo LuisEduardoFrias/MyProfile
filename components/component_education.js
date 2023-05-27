@@ -13,7 +13,7 @@ export default function education(element, education) {
  education.more_education.forEach((e) => {
   contaS.appendChild( Div( [
       Label(e.tittle, ".sub_tittle"),
-      D
+      Div()
       Label("Institucion : ",".label_institution"),
       A(e.url, e.institution, ".sub_institution"),
       e.tittle_img !== "" ?
