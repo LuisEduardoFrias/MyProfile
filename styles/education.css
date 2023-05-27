@@ -1,15 +1,11 @@
 @import "tools.css";
 
 ".tittle");
- const labelI = Label(education.institution, ".institution");
- const img = Img(education.tittle_img, "Imagen de titulo.", ".img_tittle");
- 
- const contaP = Div([labelT, labelI, img], ".containerP");
- const contaS = Div([], ".containerS");
-
- education.more_education.forEach((e) => {
-  contaS.appendChild( Div( [
-      Label(e.tittle, ".sub_tittle
+ const labelI = La.institution"
+.img_tittle
+.containerP
+.containerS
+.sub_tittle
 .sub_institution
 .sub_img_tittle
 .sub_container_education
