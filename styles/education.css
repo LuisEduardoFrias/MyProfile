@@ -10,7 +10,8 @@
 .sub_img_tittle
 .sub_container_education
 .container_education
-.proyects {
+
+.educations {
     display: flex;
     flex-direction: column;
     align-items: center;
