@@ -9,7 +9,7 @@
 .sub_institution
 .sub_img_tittle
 .sub_container_education
-.container_education
+.
 
 .educations {
     display: flex;
@@ -18,7 +18,7 @@
     gap: 15px;
 }
 
-.constainer-experience {
+.container_education {
     width: 100%;
     border-radius: 10px 10px;
     display: flex;
