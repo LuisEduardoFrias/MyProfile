@@ -1,10 +1,14 @@
-import { getdata, skills, experiences, proyects  } from '../data/data_access.j
+import { getdata, skills, experiences, proyects, educations, references  } from '../data/data_access.js'
 
-import CpSkill from '../components/component_skill.js';
+import CpSkill from '../components/component_skill.js'
 
-import CpExperience from '../components/component_experience.js';
+import CpExperience from '../components/component_experience.js'
 
-import CpProyect from '../components/component_proyect.js';
+import CpProyect from '../components/component_proyect.js'
+
+import CpEducation from '../components/component_education.js'
+
+import CpReference from '../components/component_reference.js'
 
 /* ********************************** */
 
@@ -14,6 +18,10 @@ const ArrayExperience = await getdata(experiences);
 
 const ArrayProyect = await getdata(proyects);
 
+const ArrayEducation = await getdata(educations);
+
+const ArrayReference = await getdata(references);
+
 /* ********************************** */
 
 try {
@@ -22,6 +30,10 @@ try {
      ArrayExperience.forEach(i => CpExperience(document.querySelector('.experiences'), i));
      
      ArrayProyect.forEach(i => CpProyect(document.querySelector('.proyects'), i));
-} catch(e) {
+     
+     ArrayEducation.forEach(i => CpEducation(document.querySelector('.educations'), i));
+     
+     ArrayReference.forEach(i => CpReference(document.querySelector('.references'), i));
+} catch(e) { 
     console.log(e);
 }

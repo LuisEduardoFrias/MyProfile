@@ -8,6 +8,8 @@ export async function getdata(t) {
                 case segurity:    return json.segurity;
                 case experiences: return json.experiences;
                 case proyects:    return json.proyects;
+                case educations:  return json.educations;
+                case references:  return json.references; 
                 default:          return undefined;
             }
         });
@@ -17,26 +19,5 @@ export const segurity = {};
 export const skills = {};
 export const experiences = {};
 export const proyects = {};
-
-/*
-export class segurity {
-    constructor(password){
-        this.password = password;
-    }
-};
-
-export class skills {
-    constructor(name,url) {
-        this.name = name;
-        this.url = url;
-    }
-};
-
-export class experiences {
-    constructor(company, descripcion, position, tacks) {
-        this.company = company;
-        this.description = descripcion;
-        this.position = position;
-        this.tacks = tacks;
-    }
-}*/
+export const educations = {};
+export const references = {};

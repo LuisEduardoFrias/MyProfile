@@ -74,9 +74,15 @@ export const Buttom = (text, classId) => {
 } 
 
 export const A = (href, text, classId) => {
-    const a = document.createElement('link');
-    a.innerHTML = "text";
-    a.href = "href";
-    addCI(a, classId);
-    return a;
+ 
+    const node = document.createElement("a");
+     
+    node.appendChild(document.createTextNode(text));
+    node.href = href;
+    node.setAttribute("rel", "noopener noreferrer"); 
+    node.setAttribute("target", "_blank");
+   
+    addCI(node, classId);
+      
+    return node;
 }
