@@ -15,10 +15,9 @@ export default function education(element, education) {
       Label(e.tittle, ".sub_tittle"),
       Div([
        Label("Institucion : ",".label_institution"),
-       A(e.url, e.institution, ".sub_institution"),],".conten_int"),
-      
+       A(e.url, e.institution, ".sub_institution")],".conten_int"),
       e.tittle_img !== "" ?
-       Img(e.tittle_img, "Imagen del titutlo", ".sub_img_tittle")
+      Img(e.tittle_img, "Imagen del titutlo", ".sub_img_tittle")
       : null
       
       ], ".sub_container_education"));
