@@ -2,11 +2,11 @@ export const P = '#1562ff';
 export const S = '#000000';
 export const T = '#0096ff';
 export const C = '#ff00f1';
-/*
+
 export const source = '/resource/';
 
 export const base_url = `${location.protocol}//${location.host}`;
-*/
+
 export const addCI = (elem, classId) => {
     
    if(typeof classId !== "undefined") 
