@@ -1,5 +1,5 @@
 import { P, T } from "../js/tools.js";
-import { Div, Label, addCI, Img } from "../js/tools.js";
+import { Div, Label } from "../js/tools.js";
 
 export default function reference(element, reference) {
 
