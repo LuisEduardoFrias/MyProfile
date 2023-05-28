@@ -3,7 +3,9 @@ export const S = '#000000';
 export const T = '#0096ff';
 export const C = '#ff00f1';
 
-export const source = './resource/';
+export const source = '/resource/';
+
+export const base_url = `${location.protocol}//${location.host}`;
 
 export const addCI = (elem, classId) => {
     
@@ -18,6 +20,15 @@ export const addCI = (elem, classId) => {
    }
    
 }
+
+export const removeChild = (Node) => { 
+ if(isNode(Node)) {
+     while (Node.firstChild) { Node.removeChild(Node.lastChild); }
+ }
+ else
+ {
+     console.log("La propiedad no es un Nodo, remove child");
+ }}
 
 export const  Label = (text, classId) =>
 {
@@ -47,11 +58,13 @@ export const Div = (array, classId) => {
         
         array.forEach(element => {
         
-            if (isNode(element)) {
-                div.appendChild(element);
-            }
-            else {
-                console.log(`El elemento ${i} del Array no es un elemento html`);
+            if(element !== null) {
+                if (isNode(element)){
+                    div.appendChild(element);
+                }
+                else {
+                    console.log(`El elemento ${i} del Array no es un elemento html`);
+                }
             }
         } );
     }
@@ -64,7 +77,6 @@ export const Div = (array, classId) => {
 
 export const isNode = (element) => element instanceof Element || element instanceof HTMLDocument;
 
-/*obj.toString().indexOf(' HTML')>0;*/
 
 export const Buttom = (text, classId) => {
     const buttom = document.createElement("button");
@@ -85,4 +97,38 @@ export const A = (href, text, classId) => {
     addCI(node, classId);
       
     return node;
+}
+
+export const Hr = () => document.createElement("hr");
+
+export const Select = (ele) => {
+ 
+ const _char = ele.charAt(0);
+  
+ return _char == "." ? document.querySelector(ele) :
+        _char == "#" ? document.querySelector(ele) :
+ console.log('El strig no corresponde con un atributo de class o Id.') ;
+ 
+};
+
+export const mediaQuery = (query, matches, no_matches) => {
+ 
+const mediaQuery = window.matchMedia(`(${query})`);
+ 
+function handleTabletChange(e) 
+{
+  if (e.matches) 
+  {
+    matches();
+  }
+  else 
+  {
+    no_matches();
+  }
+}
+ 
+mediaQuery.addListener(handleTabletChange)
+
+handleTabletChange(mediaQuery)
+
 }

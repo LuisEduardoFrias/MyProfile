@@ -1,10 +1,10 @@
 import { P, S, T } from '../js/tools.js';
 
-import { source, Div, Img, Label, Buttom } from '../js/tools.js';
+import { /*source, base_url,*/ Div, Img, Label, Buttom } from '../js/tools.js';
 
 export default function skill(element, name, url) {
 
-    const img = Img(source + url); 
+    const img = Img(/*base_url + source*/ "http://localhost:8080/resource/" + url); 
 
     img.style.width = '50px';
 

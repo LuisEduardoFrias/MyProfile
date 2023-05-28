@@ -1,13 +1,13 @@
-import { P, T } from "../js/tools.js";
+import { P, T/*, base_url, source*/ } from "../js/tools.js";
 import { Div, Label, addCI, Img, A } from "../js/tools.js";
 
 export default function education(element, education) {
 
  const labelT = Label(education.tittle, ".tittle");
  const labelI = Label(education.institution, ".institution");
- const img = Img(education.tittle_img, "Imagen de titulo.", ".img_tittle");
  
- const contaP = Div([labelT, labelI, img], ".containerP");
+ const contaP = Div([labelT, labelI, 
+ education.tittle_img !== "" ? Img(/*base_url + source*/ "http://localhost:8080/resource/" + education.tittle_img, "Imagen de titulo.", ".img_tittle") : null], ".containerP");
  const contaS = Div([], ".containerS");
 
  education.more_education.forEach((e) => {
@@ -15,18 +15,17 @@ export default function education(element, education) {
       Label(e.tittle, ".sub_tittle"),
       Div([
        Label("Institucion : ",".label_institution"),
-       A(e.url, e.institution, ".sub_institution")],".conten_int"),
+       e.url !== "" ?
+       A(e.url, e.institution, ".sub_institution_link") :
+       Label(e.institution,".sub_institution")],".conten_int"),
       e.tittle_img !== "" ?
-      Img(e.tittle_img, "Imagen del titutlo", ".sub_img_tittle")
+      Img(/*base_url + source*/ "http://localhost:8080/resource/" + e.tittle_img, "Imagen del titutlo", ".sub_img_tittle")
       : null
       
       ], ".sub_container_education"));
  });
  
  const conta = Div([contaP, contaS], ".container_education");
- 
- contaP.style.border = "1px solid silver";
- contaS.style.border = "1px solid silver";
   
  conta.style.borderWidth = "2px";
  conta.style.borderStyle = "double";
