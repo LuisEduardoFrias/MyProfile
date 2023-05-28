@@ -17,25 +17,24 @@
     box-shadow: inset -3px -3px 3px 0px #304990, -3px -3px 5px 0px #304990, 0px 0px 1px 1px #5582ff;
     padding: 10px 10px;
     box-sizing: border-box;
-    gap: 10px;
+    gap: 20px;
 }
 
-.tittle_education {
- 
-}
 
 .institution {
-border: 1px solid red;
+font-size: 14px;
 }
 
 .img_tittle {
- border: 1px solid red;
+ width: 90%;
+ cursor: pointer;
 }
 
 .containerP {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 10px;
 }
 
 .containerS {
@@ -46,23 +45,32 @@ border: 1px solid red;
 }
 
 .sub_tittle {
- 
+  font-size: 12px;
+}
+
+.sub_institution_link {
+ font-size: 10px;
+ text-decoration-line: underline;
+ text-decoration-color: var(--C);
+ cursor: pointer;
 }
 
 .sub_institution {
- 
+ font-size: 10px;
 }
 
 .sub_img_tittle {
- 
+ width: 50px;
+ height: 50px;
+ position: relative;
+ margin: auto;
+ cursor: pointer;
 }
+
 
 .label_institution{
- 
-}
-
-.conten_int {
- 
+ font-size: 10px;
+ font-weight: 900;
 }
 
 .sub_container_education {
