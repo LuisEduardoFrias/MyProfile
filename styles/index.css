@@ -42,7 +42,7 @@ a{
     
 .container{
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 100%;
     grid-template-rows: 380px 1fr;
     grid-template-areas: "profile" "main";
     grid-row-gap: 5px;
@@ -54,7 +54,17 @@ a{
 /* PROFILE */
 /*  */
 
-.container-profile section {
+.f-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-profile {
+    gap:90px;
+}
+
+.container-profile profile {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -92,7 +102,7 @@ a{
     margin-right: 5px;
 }
 
-.profile{
+.profile-img{
     width: 150px;
     height: 200px;
 }
@@ -119,21 +129,22 @@ li {
     list-style: none;
 }
 
-li a{
+li button{
     background-color: var(--P);
     border-radius: 3px;
     box-shadow: 0px 6px 4px 4px rgba(0,0,0,0.6);
     height: 20px;
     margin-left: 25px;
     margin-right: 25px;
-    min-width: 200px;
-    max-width: 200px;
+    min-width: 180px;
+    max-width: 195px;
     display: flex;
+    border-radius: 10px 10px;
     justify-content: center;
 }
 
-li a:active{
-    transform: scale(0.9) translate(-18px,-18px);
+li button:active{
+    transform: scale(1);
 }
 
 /*  */
@@ -178,18 +189,44 @@ hr {
 /*  */
 /* MEDIA */
 /*  */
+@media (min-width: 600px){
+
+    .container-profile {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        gap:15px;
+    }
+}
 
 @media (min-width: 900px){ 
     
     .container {
-        grid-template-columns: 300px 1fr;
-        grid-template-rows: 60px  1fr;
+        grid-template-columns: 300px Calc(100% - 300px);
+        grid-template-rows: 25px  Calc(100% - 25px);
         grid-template-areas: "profile menu" "profile main";
+        height: 500px;
+        position: relative;
+        margin: auto;
     }
     
+    .container-profile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap:15px;
+    }
+
     .container-menu{
         position: static;
         opacity: 1;
+    }
+    
+    .container-main {
+      overflow: auto;
+      padding-block: 10px 10px;
     }
     
     .container-main hr {
