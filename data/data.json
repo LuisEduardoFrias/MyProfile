@@ -188,19 +188,19 @@
       {
          "tittle" : "Técnico Superior en Desarrollo del Software",
          "institution" : "Instituto Técnico Superior Comunitario (ITSC)",
-        "tittle_img" : "",
+        "tittle_img" : "diploma.jpg",
         "more_education" : [
            {
               "tittle" : "Desarrollando Aplicaciones en Angular 10 y ASP.NET Core 5", 
               "institution" : "udemy",
-              "url" : "",
+              "url" : "https://www.udemy.com",
               "tittle_img" : ""
            },
            {
               "tittle" : "Desarrollando Aplicaciones en Angular 10 y ASP.NET Core 5", 
               "institution" : "udemy",
               "url" : "",
-              "tittle_img" : ""
+              "tittle_img" : "diploma.jpg"
            }
          ]
       }
