@@ -2,7 +2,10 @@ import { base_url } from "../js/tools.js"
 
 export async function getdata(t) { 
   return await fetch(base_url + "data/data.json")
-        .then((response) => response.json())
+        .then((response) =>   { 
+           alert(JSON.stringify(response));
+           return response.json();
+        })
         .then((json) =>
         {     
             switch (t) {
