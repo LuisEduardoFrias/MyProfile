@@ -1,8 +1,5 @@
-import {base_url} from "../js/tools.js";
-const url = `${base_url}/data/data.json`;
-
 export async function getdata(t) { 
-  return await fetch(url)
+  return await fetch("http://localhost:8080/data/data.json")
         .then((response) => response.json())
         .then((json) =>
         {     
