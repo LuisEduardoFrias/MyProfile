@@ -1,11 +1,9 @@
 import { base_url } from "../js/tools.js"
+import data from './data.json' assert { type: 'json' }
 
 export async function getdata(t) { 
   return await fetch(base_url + "data/data.json")
-        .then((response) =>   { 
-           alert(JSON.stringify(response));
-           return response.json();
-        })
+        .then((response) => data /*response.json()*/)
         .then((json) =>
         {     
             switch (t) {
