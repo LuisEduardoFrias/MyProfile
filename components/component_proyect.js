@@ -1,46 +1,33 @@
 import { P, T } from "../js/tools.js";
-import { Div, Label, addCI } from "../js/tools.js";
+import { Div, Label, A, addCI } from "../js/tools.js";
 import { float_button } from "../js/float_button.js";
 
 export default function proyect(element, proyect) {
  
- const labelT = Label(proyect.tittle, ".tittle");
- const labelD = Label(proyect.description, ".description");
- const labelTT = Label("Tegnologias", ".titleTegnology");
-
- const divT = Div([], ".container-tegnology");
- const divR = Div([], ".container-repository");
+ const labelT = Label(proyect.tittle, ".proyect-tittle");
+ const labelD = Label(proyect.description, ".proyect-description");
+ const divCT = Div([Label("Tegnologias", ".proyect-titleTegnology")],".proyect-container-tegnology-base");
+ 
+ const divT = Div([], ".proyect-container-tegnology");
+ const divR = Div([], ".proyect-container-repository");
 
  proyect.tegnologys.forEach((element) => {
-  divT.appendChild(Div([Label(element, ".tenology")], ".contan-tegnology"));
+     divT.appendChild(Label(element, ".proyect-tenology"));
  });
+ 
+ divCT.appendChild(divT);
 
  proyect.repositorys.forEach((element) => {
-
-      const node = document.createElement("a");
-     
-      node.appendChild(document.createTextNode(element));
-      node.href = element;
-      node.setAttribute("rel", "noopener noreferrer"); 
-      node.setAttribute("target", "_blank");
-   
-      addCI(node, ".repository");
-
-      divR.appendChild(Div([node], ".contan-repository"));
+     divR.appendChild(A(element, element,".proyect-repository",""));
  });
 
  divT.style.border = "1px solid silver";
  divR.style.border = "1px solid silver";
 
-let div = document.node;
-if(proyect.repositorys[0] === undefined ) {
- div = Div(
-  [labelT, labelD, labelTT, divT ],".constainer-experience" );
-}
-else {
-div = Div(
-  [labelT, labelD, labelTT, divT, divR ],".constainer-experience" );
-}
+ const div = proyect.repositorys[0] === undefined ?
+ Div([labelT, labelD, divCT ],".proyect-constainer-experience" ) :
+ Div([labelT, labelD, divCT, divR ],".proyect-constainer-experience" );
+
   
  div.style.borderWidth = "2px";
  div.style.borderStyle = "double";
