@@ -18,6 +18,7 @@ export default function matches() {
     main.appendChild(cp_profile());
     
     (async () => {
+     alert("create")
         main.appendChild(Section([
             Div([
                 Hr(),
