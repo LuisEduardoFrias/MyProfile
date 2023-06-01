@@ -19,7 +19,7 @@ export default function education(element, education) {
        A(e.url, e.institution, ".education-sub-institution-link") :
        Label(e.institution,".education-sub-institution")],".education-contaiber-institution"),
       e.tittle_img !== "" ?
-      Img(source + e.tittle_img, "Imagen del titutlo", ".education-img-sub-tittle","",true)
+      Img(e.tittle_img, "Imagen del titutlo", ".education-img-sub-tittle","",true)
       : null
       
       ], ".education-container-sub-education"));
