@@ -20,12 +20,7 @@ export async function getdata(t) {
             }
         })
         .catch(error => {
-            if (error instanceof TypeError && error.message.includes('API key')) 
-            {
-                console.error('Invalid API key:', error);
-            } else {
-                console.error('There was a problem with the Fetch operation:', error);
-            }
+            console.error('There was a problem with the Fetch operation:', error);
         });
 }
 
