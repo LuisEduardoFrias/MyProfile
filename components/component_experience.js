@@ -1,25 +1,24 @@
 import { P, S, T } from '../js/tools.js';
 import { Div, Label } from '../js/tools.js';
-import { float_button } from '../js/float_button.js';
 
 export default function experience(element, experience) {
 
-    const labelC = Label(experience.company, ".company");
-    const labelD = Label(experience.descripcion, ".description");
-    const labelP = Label(experience.position, ".position");
-    const labelTs = Label("logros/tareas", ".titleTack");
-    const divT = Div([], ".container-tacks");    
+    const labelC = Label(experience.company, ".experience_company");
+    const labelD = Label(experience.descripcion, ".experience_description");
+    const labelP = Label(experience.position, ".experience_position");
     
-    experience.tacks.forEach(element => {
-        const div = Div([ Label(element.tack, ".tack") ], ".contan-tack");
-        
-        divT.appendChild(div);
-        
-    })
+    const divCT = Div([Label("logros/tareas", ".experience_titleTack")],".experience-container-logros-base");
+    
+    const divT = Div([], ".experience_container-tacks");    
+    
+    experience.tacks.forEach(element => 
+        divT.appendChild(Label(element.tack, ".experience_tack")))
     
     divT.style.border = "1px solid silver";
- 
-    const div = Div([ labelC, labelD, labelP, labelTs, divT ], ".constainer-experience");
+  
+    divCT.appendChild(divT);
+    
+    const div = Div([ labelC, labelD, labelP, divCT], ".experience_constainer");
    
     div.style.borderWidth = "2px";
     div.style.borderStyle = "double";
