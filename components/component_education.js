@@ -6,7 +6,7 @@ export default function education(element, education) {
     const contaLT = Div([
         Label(education.tittle, ".education-tittle"),
         Label(education.institution, ".education-institution"),
-        Img(source + education.tittle_img, "Imagen de titulo.", ".education-img-tittle","",true)], ".education-container-last-tittle");
+        Img(education.tittle_img, "Imagen de titulo.", ".education-img-tittle","",true)], ".education-container-last-tittle");
  
  const contaS = Div([], ".education-container-sub-tittle");
 
@@ -19,7 +19,7 @@ export default function education(element, education) {
        A(e.url, e.institution, ".education-sub-institution-link") :
        Label(e.institution,".education-sub-institution")],".education-contaiber-institution"),
       e.tittle_img !== "" ?
-      Img(source + e.tittle_img, "Imagen del titutlo", ".education-img-sub-tittle","",true)
+      Img(e.tittle_img, "Imagen del titutlo", ".education-img-sub-tittle","",true)
       : null
       
       ], ".education-container-sub-education"));

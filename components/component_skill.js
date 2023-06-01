@@ -5,7 +5,7 @@ import { source, Div, Img, Label } from '../js/tools.js';
 export default function skill(element, skill) {
 
     const div = Div([ 
-         Img(source + skill.url, skill.name, ".skill-img", "width: 70%; height: 70%;"), 
+         Img(skill.img, skill.name, ".skill-img", "width: 70%; height: 70%;"), 
          Label(skill.name,".skill-name") 
          ],".skill-container");
     

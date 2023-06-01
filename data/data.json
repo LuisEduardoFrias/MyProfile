@@ -8,40 +8,36 @@
 
     "skills" : [
 
-        { "name" : "C#",          "url" : "cShart.png" },
+        { "name" : "C#",          "img" : "cShart.png" },
 
-        { "name" : "C#",          "url" : "cShart.png" },
+        { "name" : "C#",          "img" : "cShart.png" },
 
-        { "name" : "React",       "url" : "react.png" },
+        { "name" : "React",       "img" : "react.png" },
 
-        { "name" : "Html 5",      "url" : "html5.png" },
+        { "name" : "Html 5",      "img" : "html5.png" },
 
-        { "name" : "Css 3",       "url" : "css3.png" },
+        { "name" : "Css 3",       "img" : "css3.png" },
 
-        { "name" : "Java Script", "url" : "javaScript.png" },
+        { "name" : "Java Script", "img" : "javaScript.png" },
 
-        { "name" : "Sql Server",  "url" : "sqlServer.png" },
+        { "name" : "Sql Server",  "img" : "sqlServer.png" },
 
-        { "name" : "Oracle",      "url" : "oracle.png" },
+        { "name" : "Oracle",      "img" : "oracle.png" },
 
-        { "name" : "Type Script", "url" : "typeScript.png" },
+        { "name" : "Type Script", "img" : "typeScript.png" },
 
-        { "name" : "GitHub",      "url" : "github.svg" },
+        { "name" : "GitHub",      "img" : "github.svg" },
 
-        { "name" : "Node",        "url" : "node.png" },
+        { "name" : "Node",        "img" : "node.png" },
 
-        { "name" : "BootStrap",   "url" : "bootStrap.png" }
+        { "name" : "BootStrap",   "img" : "bootStrap.png" }
 
     ],
 
     "experiences" : [
 
         { 
-
-        
-
             "company" : "Rancom Vitrinas y Decoraciones SRL",                             
-
             "descripcion" : "Ramco vitrinas y decorasiones es una empresa de fabricacion de mobiliarios, en especifico para comercio.", 
 
             "position" : "Analista de costos", 
@@ -59,11 +55,8 @@
              ]
 
         },
-
-        
  
         { 
-
             "company" : "EC Mobiliario Creativo SRL", 
 
             "descripcion" : "EC Mobiliario Creativo es una empresa de fabricacion de mobiliarios en general.", 
@@ -80,8 +73,6 @@
 
         },
 
-        
-
         { 
 
             "company" : "Tegnología y Sistema Computarizado SRL", 
@@ -97,15 +88,10 @@
                 {"tack" : "User las ternilias winforms, as.net core api 3.1, Sql server, Entity Framework core."}, 
 
                 {"tack" : "Creacion de inferfaces para comunicar aplicacion en cobol con sistema de verifone carNet y visaNet."} 
-
             ]
-
         },
 
-        
-
         { 
-
             "company" : "Aloe Software", 
 
             "descripcion" : "Aloe software es una empresa dedicada al desarrollo y gestión software, infraestructura tecnológica y servicios informáticos, asi como cualquier otra actividad del entorno de TI.", 
@@ -119,15 +105,11 @@
                 {"tack" : "Desarrollar software de calidad, enfocado en las metodologias agiles."}, 
 
                 {"tack" : "Trabajar con metodologia de trabajo Scrum."}
-
              ]
-
         }
-
    ],
    
    "proyects" : [
-       
        { 
            "tittle": "Tridente SC", 
            "description" : "Administrador de tienda de celulares.", 
@@ -140,7 +122,6 @@
            ], 
            "repositorys" : []
        },
-
        { 
            "tittle": "ARS Afiliados", 
            "description" : "Sistema de afiliados",     
