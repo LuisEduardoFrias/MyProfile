@@ -7,7 +7,7 @@ export async function getdata(t) {
   return await fetch(base_url + "data/data.json")
         .then((response) =>  { 
             alert(response);
-           return response.json()
+           return response.json();
         })
         .then((json) =>
         {     alert("in fetch " + json)
