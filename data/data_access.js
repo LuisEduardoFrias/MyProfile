@@ -5,7 +5,10 @@ export async function getdata(t) {
  alert(base_url + "get data metod");
  
   return await fetch(base_url + "data/data.json")
-        .then((response) => response.json())
+        .then((response) =>  { 
+            alert(response);
+           return response.json()
+        })
         .then((json) =>
         {     alert("in fetch " + json)
             switch (t) {
