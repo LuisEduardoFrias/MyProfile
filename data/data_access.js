@@ -1,9 +1,6 @@
 import { base_url } from "../js/tools.js"
 
 export async function getdata(t) { 
- 
- alert(base_url + "get data metod");
- 
   return await fetch(base_url + "data/data.json")
         .then((response) =>  { 
             alert(JSON.stringify(response));
