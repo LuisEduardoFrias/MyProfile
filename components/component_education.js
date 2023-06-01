@@ -1,31 +1,31 @@
-import { P, T/*, base_url, source*/ } from "../js/tools.js";
+import { P, T, source } from "../js/tools.js";
 import { Div, Label, addCI, Img, A } from "../js/tools.js";
 
 export default function education(element, education) {
-
- const labelT = Label(education.tittle, ".tittle");
- const labelI = Label(education.institution, ".institution");
  
- const contaP = Div([labelT, labelI, 
- education.tittle_img !== "" ? Img(/*base_url + source*/ "http://localhost:8080/resource/" + education.tittle_img, "Imagen de titulo.", ".img_tittle") : null], ".containerP");
- const contaS = Div([], ".containerS");
+    const contaLT = Div([
+        Label(education.tittle, ".education-tittle"),
+        Label(education.institution, ".education-institution"),
+        Img(source + education.tittle_img, "Imagen de titulo.", ".education-img-tittle","",true)], ".education-container-last-tittle");
+ 
+ const contaS = Div([], ".education-container-sub-tittle");
 
  education.more_education.forEach((e) => {
   contaS.appendChild( Div( [
-      Label(e.tittle, ".sub_tittle"),
+      Label(e.tittle, ".education-sub-tittle"),
       Div([
-       Label("Institucion : ",".label_institution"),
+       Label("Institucion : ",".educstion-label-institution"),
        e.url !== "" ?
-       A(e.url, e.institution, ".sub_institution_link") :
-       Label(e.institution,".sub_institution")],".conten_int"),
+       A(e.url, e.institution, ".education-sub-institution-link") :
+       Label(e.institution,".education-sub-institution")],".education-contaiber-institution"),
       e.tittle_img !== "" ?
-      Img(/*base_url + source*/ "http://localhost:8080/resource/" + e.tittle_img, "Imagen del titutlo", ".sub_img_tittle")
+      Img(source + e.tittle_img, "Imagen del titutlo", ".education-img-sub-tittle","",true)
       : null
       
-      ], ".sub_container_education"));
+      ], ".education-container-sub-education"));
  });
  
- const conta = Div([contaP, contaS], ".container_education");
+ const conta = Div([contaLT, contaS], ".education-container_education");
   
  conta.style.borderWidth = "2px";
  conta.style.borderStyle = "double";

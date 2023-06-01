@@ -1,0 +1,54 @@
+@import "tools.css";
+
+.menu-container{
+    overflow-x: scroll;
+    padding-left: 5px;
+    padding-right: 15px;
+    height: 55px;
+}
+
+ul{
+    display: flex;
+    gap: 5px;
+}
+
+li {
+    list-style: none;
+}
+
+li button{
+    background-color: var(--P);
+    box-shadow: 0 6px 3px 2px #3d3b3b;
+    height: 30px;
+    min-width: 150px;
+    max-width: 155px;
+    border-radius: 2px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+}
+
+li button:active{
+    transform: scale(0.9);
+}
+
+.memu-btn-skill {
+   
+}
+
+.menu-btn-experience {
+ 
+}
+
+.menu-btn-education {
+ 
+}
+
+.menu-btn-proyect {
+ 
+}
+
+.menu-btn-reference {
+ 
+}

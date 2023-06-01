@@ -1,8 +1,7 @@
-import {base_url} from "../js/tools.js";
-const url = `${base_url}/data/data.json`;
+import { base_url } from "../js/tools.js"
 
 export async function getdata(t) { 
-  return await fetch(url)
+  return await fetch(base_url + "data/data.json")
         .then((response) => response.json())
         .then((json) =>
         {     
