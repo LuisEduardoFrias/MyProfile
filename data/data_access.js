@@ -25,7 +25,8 @@ export async function getdata(t) {
                 console.error('Invalid API key:', error);
             } else {
                 console.error('There was a problem with the Fetch operation:', error);
-  }
+         
+            }
 });
 }
 
