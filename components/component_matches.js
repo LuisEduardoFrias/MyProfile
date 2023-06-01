@@ -58,9 +58,11 @@ export default function matches() {
             ],".matches-div matches_container_section")
         
         ],".container") );
+        
         alert("get data");
         const data = await getdata(all);
         alert("data - " + data);
+        
         data.skills?.forEach(i =>
         cp_skill(Select('.skills'), i));
 
