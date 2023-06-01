@@ -88,13 +88,10 @@
                 {"tack" : "User las ternilias winforms, as.net core api 3.1, Sql server, Entity Framework core."}, 
 
                 {"tack" : "Creacion de inferfaces para comunicar aplicacion en cobol con sistema de verifone carNet y visaNet."} 
-
             ]
-
         },
 
         { 
-
             "company" : "Aloe Software", 
 
             "descripcion" : "Aloe software es una empresa dedicada al desarrollo y gestión software, infraestructura tecnológica y servicios informáticos, asi como cualquier otra actividad del entorno de TI.", 
@@ -108,15 +105,11 @@
                 {"tack" : "Desarrollar software de calidad, enfocado en las metodologias agiles."}, 
 
                 {"tack" : "Trabajar con metodologia de trabajo Scrum."}
-
              ]
-
         }
-
    ],
    
    "proyects" : [
-       
        { 
            "tittle": "Tridente SC", 
            "description" : "Administrador de tienda de celulares.", 
@@ -129,7 +122,6 @@
            ], 
            "repositorys" : []
        },
-
        { 
            "tittle": "ARS Afiliados", 
            "description" : "Sistema de afiliados",     
