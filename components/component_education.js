@@ -6,7 +6,7 @@ export default function education(element, education) {
     const contaLT = Div([
         Label(education.tittle, ".education-tittle"),
         Label(education.institution, ".education-institution"),
-        Img(source + education.tittle_img, "Imagen de titulo.", ".education-img-tittle","",true)], ".education-container-last-tittle");
+        Img(education.tittle_img, "Imagen de titulo.", ".education-img-tittle","",true)], ".education-container-last-tittle");
  
  const contaS = Div([], ".education-container-sub-tittle");
 
