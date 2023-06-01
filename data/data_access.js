@@ -1,6 +1,9 @@
 import { base_url } from "../js/tools.js"
 
 export async function getdata(t) { 
+ 
+ alert(base_url);
+ 
   return await fetch(base_url + "data/data.json")
         .then((response) => response.json())
         .then((json) =>
@@ -15,7 +18,7 @@ export async function getdata(t) {
                 case all:         return json;
                 default:          return undefined;
             }
-        });
+        }).;
 }
 
 /*
