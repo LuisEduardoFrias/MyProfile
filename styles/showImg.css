@@ -1,0 +1,30 @@
+.showImg-container {
+    width: 100%; 
+    height: 100%; 
+    background-color: #000000c2;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    left: 0;
+    padding: 10px 10px;
+    box-sizing: border-box;
+}
+
+.showImg-btn-close {
+    border: 0 solid transparent;
+    background-color: transparent;
+}
+
+.showImg-btn-close:hover {
+    transform: scale(0.8);
+}
+
+.showImg-btn {
+    
+}
+
+.showImg-img {
+     box-sizing: border-box;
+}
