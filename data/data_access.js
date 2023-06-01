@@ -26,7 +26,6 @@ export async function getdata(t) {
             } else {
                 console.error('There was a problem with the Fetch operation:', error);
             }
-         
         });
 }
 
