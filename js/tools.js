@@ -3,7 +3,7 @@ export const S = '#000000';
 export const T = '#0096ff';
 export const C = '#ff00f1';
 
-export const source =  `${location.protocol}//${location.host}/resource/`;
+export const source =  `${location.protocol}//${location.host}/MyProfile/resource/`;
 
 export const base_url = `${location.protocol}//${location.host}/`;
 
@@ -174,15 +174,14 @@ export const Ul = (array, style, li_style) => {
  
 export const Img = (src, alt, classId, style, event_click) => {
    const img = document.createElement("img");
-    alert(src);
-   img.src = src;
+   img.src = source + src;
    img.alt = alt;
    addCI(img, classId);
    
    if(event_click === true)
    {
        img.addEventListener("click",(e) => 
-       showImg(src,alt));
+       showImg(source + src,alt));
    }
    
     if(style !== undefined && style !== null)
