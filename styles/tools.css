@@ -4,3 +4,23 @@
     --T: #0096ff;
     --C: #e55f85;
 }
+
+.error-input_ {
+    opacity: 0;
+    color: #a10303;
+}
+
+.text-box-input_:invalid + .error-input_ {
+    opacity: 1;
+}
+
+.text-box-input_:invalid {
+    border-color: #a10303;
+    background: transparent;
+}
+
+.container-input_ {
+   display: flex;
+   flex-direction: column;
+   
+}
