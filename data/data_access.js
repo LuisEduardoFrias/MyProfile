@@ -7,7 +7,7 @@ export async function getdata(t) {
   return await fetch(base_url + "data/data.json")
         .then((response) => response.json())
         .then((json) =>
-        {     
+        {     alert("in fetch " + json)
             switch (t) {
                 case skills:      return json.skills;
                 case segurity:    return json.segurity;
