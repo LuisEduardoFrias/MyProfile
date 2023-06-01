@@ -1,11 +1,11 @@
 import { Label, Div, Icon, A, Img, source } from '../js/tools.js'
  
 export default function profile() {
-  
+    console.log(source);
     return Div([
                Div([
                    Div([
-                       Img(`${source}imgProfile.jpg`,"my image profile",".profile-img","width: 150px; height: 200px;")
+                       Img(`https://luiseduardofrias.github.io/MyProfile/resource/imgProfile.jpg`,"my image profile",".profile-img","width: 150px; height: 200px;")
                        
                    ],".profile-container-img"),
                    Div([
