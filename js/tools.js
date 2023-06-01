@@ -174,6 +174,7 @@ export const Ul = (array, style, li_style) => {
  
 export const Img = (src, alt, classId, style, event_click) => {
    const img = document.createElement("img");
+    alert(src);
    img.src = src;
    img.alt = alt;
    addCI(img, classId);
