@@ -18,7 +18,7 @@ export default function matches() {
     main.appendChild(cp_profile());
     
     (async () => {
-     alert("create")
+     
         main.appendChild(Section([
             Div([
                 Hr(),
@@ -59,9 +59,7 @@ export default function matches() {
         
         ],".container") );
         
-        alert("get data");
         const data = await getdata(all);
-        alert("data - " + data);
         
         data.skills?.forEach(i =>
         cp_skill(Select('.skills'), i));
