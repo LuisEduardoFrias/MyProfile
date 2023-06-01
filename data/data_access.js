@@ -7,7 +7,7 @@ export async function getdata(t) {
            return response.json();
         })
         .then((json) =>
-        {     alert("in fetch " + json)
+        {     
             switch (t) {
                 case skills:      return json.skills;
                 case segurity:    return json.segurity;
