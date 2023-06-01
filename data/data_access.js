@@ -6,7 +6,7 @@ export async function getdata(t) {
  
   return await fetch(base_url + "data/data.json")
         .then((response) =>  { 
-            alert(response);
+            alert(JSON.stringify(response));
            return response.json();
         })
         .then((json) =>
