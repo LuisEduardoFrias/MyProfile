@@ -21,6 +21,7 @@ export async function getdata(t) {
         })
         .catch(error => {
             console.error('There was a problem with the Fetch operation:', error);
+            alert(error);
         });
 }
 
