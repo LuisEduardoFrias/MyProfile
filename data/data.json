@@ -174,14 +174,50 @@
            {
               "tittle" : "Desarrollando Aplicaciones en Angular 10 y ASP.NET Core 5", 
               "institution" : "udemy",
-              "url" : "https://www.udemy.com",
+              "url" : "https://www.udemy.com/course/desarrollando-aplicaciones-en-angular-y-aspnet-core/",
+              "tittle_img" : ""
+           },
+           {
+              "tittle" : "Entity Framework Core y SQL Server / MySQL", 
+              "institution" : "udemy",
+              "url" : "https://www.udemy.com/course-dashboard-redirect/?course_id=3072640",
+              "tittle_img" : ""
+           },
+           {
+              "tittle" : "Creación de API web Restful con ASP.NET Core 3.1", 
+              "institution" : "udemy",
+              "url" : "https://www.udemy.com/course-dashboard-redirect/?course_id=2156664",
+              "tittle_img" : ""
+           },
+           {
+              "tittle" : "Introducción a la concurrencia en C # - Async y Paralelismo", 
+              "institution" : "udemy",
+              "url" : "https://www.udemy.com/course-dashboard-redirect/?course_id=3401576",
+              "tittle_img" : ""
+           },
+           {
+              "tittle" : "Introducción a la inyección SQL", 
+              "institution" : "udemy",
+              "url" : "https://www.udemy.com/course-dashboard-redirect/?course_id=2908130",
+              "tittle_img" : ""
+           },
+           {
+              "tittle" : "Diseño y programación orientados a objetos en C #", 
+              "institution" : "udemy",
+              "url" : "https://www.udemy.com/course-dashboard-redirect/?course_id=2442390",
               "tittle_img" : ""
            },
            {
               "tittle" : "Desarrollando Aplicaciones en Angular 10 y ASP.NET Core 5", 
               "institution" : "udemy",
-              "url" : "",
-              "tittle_img" : "diploma.jpg"
+              "url" : "https://www.udemy.com/course-dashboard-redirect/?course_id=3548864",
+              "tittle_img" : ""
+           },
+           {
+              "tittle" : "React: De cero a experto (Hooks y MERN)",
+              "institution" : "udemy",
+              "url" : "https://www.udemy.com/course-dashboard-redirect/?course_id=3096364",
+              "tittle_img" : ""
            }
          ]
       }
