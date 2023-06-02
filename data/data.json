@@ -174,16 +174,9 @@
            {
               "tittle" : "Desarrollando Aplicaciones en Angular 10 y ASP.NET Core 5", 
               "institution" : "udemy",
-              "url" : "https://www.udemy.com",
+              "url" : "://www.udemy.com",
               "tittle_img" : ""
            },
-           {
-              "tittle" : "Desarrollando Aplicaciones en Angular 10 y ASP.NET Core 5", 
-              "institution" : "udemy",
-              "url" : "",
-              "tittle_img" : ""
-           }
-,
            {
               "tittle" : "Dentity Framework Core y SQL Server / MySQL", 
               "institution" : "udemy",
