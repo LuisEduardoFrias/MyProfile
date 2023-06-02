@@ -182,71 +182,61 @@
               "institution" : "udemy",
               "url" : "",
               "tittle_img" : ""
-           }
-,
+           },
            {
               "tittle" : "Creación de API web Restful con ASP.NET Core 3.1", 
               "institution" : "udemy",
               "url" : "",
               "tittle_img" : ""
-           }
-,
+           },
            {
               "tittle" : "Introducción a la concurrencia en C # - Async y Paralelismo", 
               "institution" : "udemy",
               "url" : "",
               "tittle_img" : ""
-           }
-,
+           },
            {
               "tittle" : "SQL: Creación de base de datos (de cero a profesional)", 
               "institution" : "udemy",
               "url" : "",
               "tittle_img" : ""
-           }
-,
+           },
            {
               "tittle" : "Introducción a la inyección SQL", 
               "institution" : "udemy",
               "url" : "",
               "tittle_img" : ""
-           }
-,
+           },
            {
               "tittle" : "Net Core esencial", 
               "institution" : "udemy",
               "url" : "",
               "tittle_img" : ""
-           }
-,
+           },
            {
               "tittle" : "Diseño y programación orientados a objetos en C #", 
               "institution" : "udemy",
               "url" : "",
               "tittle_img" : ""
-           }
-,
+           },
            {
               "tittle" : "Curso de C # 8 .NET Core desde cero hasta avanzado", 
               "institution" : "udemy",
               "url" : "",
               "tittle_img" : ""
-           }
-,
+           },
            {
               "tittle" : "Desarrollando Aplicaciones en Angular 10 y ASP.NET Core 5", 
               "institution" : "udemy",
               "url" : "",
               "tittle_img" : ""
-           }
-,
+           },
            {
               "tittle" : "React: De cero a experto (Hooks y MERN)", 
               "institution" : "udemy",
               "url" : "",
               "tittle_img" : ""
            }
-
          ]
       }
    ],
