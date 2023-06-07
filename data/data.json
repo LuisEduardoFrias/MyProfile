@@ -116,12 +116,8 @@
       {
          "tittle": "DaJ",
          "description": "Una librería de JS que te permite manejar datos en tu aplicación, estos datos se guardan en el sistema como archivos de tipo JSON.",
-         "tegnologys": [
-            " Node Js",
-         ],
-         "repositorys": [
-            "https://github.com/LuisEduardoFrias/DaJ.git"
-         ]
+         "tegnologys": [" Node Js"],
+         "repositorys": ["https://github.com/LuisEduardoFrias/DaJ.git"]
       },
       {
          "tittle": "ARS Afiliados",
