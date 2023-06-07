@@ -113,18 +113,12 @@
          ],
          "repositorys": []
       },
-        {
+      {
          "tittle": "DaJ",
-         "description": "Sistema de afiliados",
+         "description": "Una librería de JS que te permite manejar datos en tu aplicación, estos datos se guardan en el sistema como archivos de tipo JSON.
+",
          "tegnologys": [
-            "Angular 11",
-            "Asp.Net Core Api 3.1",
-            "Ado.net",
-            "Entity Framework",
-            "Sql Server",
-            "Identity",
-            "Bootstrap",
-            "Madia-Type vnd"
+            " Node Js",
          ],
          "repositorys": [
             "https://github.com/LuisEduardoFrias/Back-End",
