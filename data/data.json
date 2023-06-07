@@ -1,239 +1,242 @@
 {
+   "segurity": {
+      "password": "Robert190114"
+   },
 
-    "segurity" : {
+   "skills": [
+      { "name": "C#", "img": "cShart.png" },
 
-        "password" : "Robert190114"
+      { "name": "C#", "img": "cShart.png" },
 
-    },
+      { "name": "React", "img": "react.png" },
 
-    "skills" : [
+      { "name": "Html 5", "img": "html5.png" },
 
-        { "name" : "C#",          "img" : "cShart.png" },
+      { "name": "Css 3", "img": "css3.png" },
 
-        { "name" : "C#",          "img" : "cShart.png" },
+      { "name": "Java Script", "img": "javaScript.png" },
 
-        { "name" : "React",       "img" : "react.png" },
+      { "name": "Sql Server", "img": "sqlServer.png" },
 
-        { "name" : "Html 5",      "img" : "html5.png" },
+      { "name": "Oracle", "img": "oracle.png" },
 
-        { "name" : "Css 3",       "img" : "css3.png" },
+      { "name": "Type Script", "img": "typeScript.png" },
 
-        { "name" : "Java Script", "img" : "javaScript.png" },
+      { "name": "GitHub", "img": "github.svg" },
 
-        { "name" : "Sql Server",  "img" : "sqlServer.png" },
+      { "name": "Node", "img": "node.png" },
 
-        { "name" : "Oracle",      "img" : "oracle.png" },
-
-        { "name" : "Type Script", "img" : "typeScript.png" },
-
-        { "name" : "GitHub",      "img" : "github.svg" },
-
-        { "name" : "Node",        "img" : "node.png" },
-
-        { "name" : "BootStrap",   "img" : "bootStrap.png" }
-
-    ],
-
-    "experiences" : [
-
-        { 
-            "company" : "Rancom Vitrinas y Decoraciones SRL",                             
-            "descripcion" : "Ramco vitrinas y decorasiones es una empresa de fabricacion de mobiliarios, en especifico para comercio.", 
-
-            "position" : "Analista de costos", 
-
-            "tacks" : [ 
-
-                {"tack" : "Ayudante de ensamblado"}, 
-
-                {"tack" : "Encargado de ensamblado"}, 
-
-                {"tack" : "Encargado área modular"}, 
-
-                {"tack" : "Analista de costos"}
-
-             ]
-
-        },
- 
-        { 
-            "company" : "EC Mobiliario Creativo SRL", 
-
-            "descripcion" : "EC Mobiliario Creativo es una empresa de fabricacion de mobiliarios en general.", 
-
-            "position" : "Ebanista", 
-
-            "tacks" : [ 
-
-                {"tack" : "Ensamblado"}, 
-
-                {"tack" : "Ebanista"}
-
-             ]
-
-        },
-
-        { 
-
-            "company" : "Tegnología y Sistema Computarizado SRL", 
-
-            "descripcion" : "Tecnosis es una compañia de servicios de sistemas infomáticos.", 
-
-            "position" : "Desarrollador", 
-
-            "tacks" : [ 
-
-                {"tack" : "Migrarcion del sistema de facturacíon y ventas con contabilidad, cobol a c#."},
-
-                {"tack" : "User las ternilias winforms, as.net core api 3.1, Sql server, Entity Framework core."}, 
-
-                {"tack" : "Creacion de inferfaces para comunicar aplicacion en cobol con sistema de verifone carNet y visaNet."} 
-            ]
-        },
-
-        { 
-            "company" : "Aloe Software", 
-
-            "descripcion" : "Aloe software es una empresa dedicada al desarrollo y gestión software, infraestructura tecnológica y servicios informáticos, asi como cualquier otra actividad del entorno de TI.", 
-
-            "position" : "Desarrollador de software", 
-
-            "tacks" : [
-
-                {"tack" : "Migrar ´sistema de operaciones´ en delphy 5 a .net 5 y react."}, 
-
-                {"tack" : "Desarrollar software de calidad, enfocado en las metodologias agiles."}, 
-
-                {"tack" : "Trabajar con metodologia de trabajo Scrum."}
-             ]
-        }
+      { "name": "BootStrap", "img": "bootStrap.png" }
    ],
-   
-   "proyects" : [
-       { 
-           "tittle": "Tridente SC", 
-           "description" : "Administrador de tienda de celulares.", 
-           "tegnologys" : [
-               "WinForms",
-               "Sql Server",
-               "Entity Framework",
-               "SignalR",
-               "Asp.net Core"
-           ], 
-           "repositorys" : []
-       },
-       { 
-           "tittle": "ARS Afiliados", 
-           "description" : "Sistema de afiliados",     
-           "tegnologys" : [
-               "Angular 11",
-               "Asp.Net Core Api 3.1",
-               "Ado.net",
-               "Entity Framework",
-               "Sql Server",
-               "Identity",
-               "Bootstrap",
-               "Madia-Type vnd"
-            ], 
-            "repositorys" : [
-                "https://github.com/LuisEduardoFrias/Back-End",
-"https://github.com/LuisEduardoFrias/front-end-ars-afiliados"
-            ]
-       },
-      
-       { 
-           "tittle": "PokeSite",
-           "description" : "Guía de pokemones", 
-           "tegnologys" : [
-               "Angular 11",
-               "Asp.Net Core Api 3.1",
-               "Bootstrap"
-           ],
-           "repositorys" : []
-       },
- 
-       { 
-           "tittle": "DSRG", 
-           "description" : "Generador de reporte de la estructura tu base de datos.", 
-           "tegnologys" : [
-               "WindowsForms",
-               "Telerik report",
-               "SpreadsheetLight - Excel"
-            ],     
-            "repositorys" : [
-            "https://github.com/LuisEduardoFrias/DSRG"
-            ]
-       }
-   ],
-   "educations" : [
+
+   "experiences": [
       {
-         "tittle" : "Técnico Superior en Desarrollo del Software",
-         "institution" : "Instituto Técnico Superior Comunitario (ITSC)",
-        "tittle_img" : "diploma.jpg",
-        "more_education" : [
-           {
-              "tittle" : "Desarrollando Aplicaciones en Angular 10 y ASP.NET Core 5", 
-              "institution" : "udemy",
-              "url" : "https://www.udemy.com/course/desarrollando-aplicaciones-en-angular-y-aspnet-core/",
-              "tittle_img" : ""
-           },
-           {
-              "tittle" : "Entity Framework Core y SQL Server / MySQL", 
-              "institution" : "udemy",
-              "url" : "https://www.udemy.com/course-dashboard-redirect/?course_id=3072640",
-              "tittle_img" : ""
-           },
-           {
-              "tittle" : "Creación de API web Restful con ASP.NET Core 3.1", 
-              "institution" : "udemy",
-              "url" : "https://www.udemy.com/course-dashboard-redirect/?course_id=2156664",
-              "tittle_img" : ""
-           },
-           {
-              "tittle" : "Introducción a la concurrencia en C # - Async y Paralelismo", 
-              "institution" : "udemy",
-              "url" : "https://www.udemy.com/course-dashboard-redirect/?course_id=3401576",
-              "tittle_img" : ""
-           },
-           {
-              "tittle" : "Introducción a la inyección SQL", 
-              "institution" : "udemy",
-              "url" : "https://www.udemy.com/course-dashboard-redirect/?course_id=2908130",
-              "tittle_img" : ""
-           },
-           {
-              "tittle" : "Diseño y programación orientados a objetos en C #", 
-              "institution" : "udemy",
-              "url" : "https://www.udemy.com/course-dashboard-redirect/?course_id=2442390",
-              "tittle_img" : ""
-           },
-           {
-              "tittle" : "Desarrollando Aplicaciones en Angular 10 y ASP.NET Core 5", 
-              "institution" : "udemy",
-              "url" : "https://www.udemy.com/course-dashboard-redirect/?course_id=3548864",
-              "tittle_img" : ""
-           },
-           {
-              "tittle" : "React: De cero a experto (Hooks y MERN)",
-              "institution" : "udemy",
-              "url" : "https://www.udemy.com/course-dashboard-redirect/?course_id=3096364",
-              "tittle_img" : ""
-           }
+         "company": "Rancom Vitrinas y Decoraciones SRL",
+         "descripcion": "Ramco vitrinas y decorasiones es una empresa de fabricacion de mobiliarios, en especifico para comercio.",
+
+         "position": "Analista de costos",
+
+         "tacks": [
+            { "tack": "Ayudante de ensamblado" },
+
+            { "tack": "Encargado de ensamblado" },
+
+            { "tack": "Encargado área modular" },
+
+            { "tack": "Analista de costos" }
+         ]
+      },
+
+      {
+         "company": "EC Mobiliario Creativo SRL",
+
+         "descripcion": "EC Mobiliario Creativo es una empresa de fabricacion de mobiliarios en general.",
+
+         "position": "Ebanista",
+
+         "tacks": [{ "tack": "Ensamblado" }, { "tack": "Ebanista" }]
+      },
+
+      {
+         "company": "Tegnología y Sistema Computarizado SRL",
+
+         "descripcion": "Tecnosis es una compañia de servicios de sistemas infomáticos.",
+
+         "position": "Desarrollador",
+
+         "tacks": [
+            {
+               "tack": "Migrarcion del sistema de facturacíon y ventas con contabilidad, cobol a c#."
+            },
+
+            {
+               "tack": "User las ternilias winforms, as.net core api 3.1, Sql server, Entity Framework core."
+            },
+
+            {
+               "tack": "Creacion de inferfaces para comunicar aplicacion en cobol con sistema de verifone carNet y visaNet."
+            }
+         ]
+      },
+
+      {
+         "company": "Aloe Software",
+
+         "descripcion": "Aloe software es una empresa dedicada al desarrollo y gestión software, infraestructura tecnológica y servicios informáticos, asi como cualquier otra actividad del entorno de TI.",
+
+         "position": "Desarrollador de software",
+
+         "tacks": [
+            {
+               "tack": "Migrar ´sistema de operaciones´ en delphy 5 a .net 5 y react."
+            },
+
+            {
+               "tack": "Desarrollar software de calidad, enfocado en las metodologias agiles."
+            },
+
+            { "tack": "Trabajar con metodologia de trabajo Scrum." }
          ]
       }
    ],
-   "references" : [
+
+   "proyects": [
       {
-         "name" : "Ing. José Manuel Tejeda Contacto",
-         "phone_number" : "809-436-7126"
+         "tittle": "Tridente SC",
+         "description": "Administrador de tienda de celulares.",
+         "tegnologys": [
+            "WinForms",
+            "Sql Server",
+            "Entity Framework",
+            "SignalR",
+            "Asp.net Core"
+         ],
+         "repositorys": []
+      },
+        {
+         "tittle": "DaJ",
+         "description": "Sistema de afiliados",
+         "tegnologys": [
+            "Angular 11",
+            "Asp.Net Core Api 3.1",
+            "Ado.net",
+            "Entity Framework",
+            "Sql Server",
+            "Identity",
+            "Bootstrap",
+            "Madia-Type vnd"
+         ],
+         "repositorys": [
+            "https://github.com/LuisEduardoFrias/Back-End",
+            "https://github.com/LuisEduardoFrias/front-end-ars-afiliados"
+         ]
       },
       {
-         "name" : "Lic. Jairo Esteban Lora Mejía Contacto",
-         "phone_number" : "829-983-1386"
+         "tittle": "ARS Afiliados",
+         "description": "Sistema de afiliados",
+         "tegnologys": [
+            "Angular 11",
+            "Asp.Net Core Api 3.1",
+            "Ado.net",
+            "Entity Framework",
+            "Sql Server",
+            "Identity",
+            "Bootstrap",
+            "Madia-Type vnd"
+         ],
+         "repositorys": [
+            "https://github.com/LuisEduardoFrias/Back-End",
+            "https://github.com/LuisEduardoFrias/front-end-ars-afiliados"
+         ]
       },
+
       {
-         "name" : "Ing. Julio Angel Florentino Contacto",
-         "phone_number" : "829-854-7130"
+         "tittle": "PokeSite",
+         "description": "Guía de pokemones",
+         "tegnologys": ["Angular 11", "Asp.Net Core Api 3.1", "Bootstrap"],
+         "repositorys": []
+      },
+
+      {
+         "tittle": "DSRG",
+         "description": "Generador de reporte de la estructura tu base de datos.",
+         "tegnologys": [
+            "WindowsForms",
+            "Telerik report",
+            "SpreadsheetLight - Excel"
+         ],
+         "repositorys": ["https://github.com/LuisEduardoFrias/DSRG"]
       }
-    ]
+   ],
+   "educations": [
+      {
+         "tittle": "Técnico Superior en Desarrollo del Software",
+         "institution": "Instituto Técnico Superior Comunitario (ITSC)",
+         "tittle_img": "diploma.jpg",
+         "more_education": [
+            {
+               "tittle": "Desarrollando Aplicaciones en Angular 10 y ASP.NET Core 5",
+               "institution": "udemy",
+               "url": "https://www.udemy.com/course/desarrollando-aplicaciones-en-angular-y-aspnet-core/",
+               "tittle_img": ""
+            },
+            {
+               "tittle": "Entity Framework Core y SQL Server / MySQL",
+               "institution": "udemy",
+               "url": "https://www.udemy.com/course-dashboard-redirect/?course_id=3072640",
+               "tittle_img": ""
+            },
+            {
+               "tittle": "Creación de API web Restful con ASP.NET Core 3.1",
+               "institution": "udemy",
+               "url": "https://www.udemy.com/course-dashboard-redirect/?course_id=2156664",
+               "tittle_img": ""
+            },
+            {
+               "tittle": "Introducción a la concurrencia en C # - Async y Paralelismo",
+               "institution": "udemy",
+               "url": "https://www.udemy.com/course-dashboard-redirect/?course_id=3401576",
+               "tittle_img": ""
+            },
+            {
+               "tittle": "Introducción a la inyección SQL",
+               "institution": "udemy",
+               "url": "https://www.udemy.com/course-dashboard-redirect/?course_id=2908130",
+               "tittle_img": ""
+            },
+            {
+               "tittle": "Diseño y programación orientados a objetos en C #",
+               "institution": "udemy",
+               "url": "https://www.udemy.com/course-dashboard-redirect/?course_id=2442390",
+               "tittle_img": ""
+            },
+            {
+               "tittle": "Desarrollando Aplicaciones en Angular 10 y ASP.NET Core 5",
+               "institution": "udemy",
+               "url": "https://www.udemy.com/course-dashboard-redirect/?course_id=3548864",
+               "tittle_img": ""
+            },
+            {
+               "tittle": "React: De cero a experto (Hooks y MERN)",
+               "institution": "udemy",
+               "url": "https://www.udemy.com/course-dashboard-redirect/?course_id=3096364",
+               "tittle_img": ""
+            }
+         ]
+      }
+   ],
+   "references": [
+      {
+         "name": "Ing. José Manuel Tejeda Contacto",
+         "phone_number": "809-436-7126"
+      },
+      {
+         "name": "Lic. Jairo Esteban Lora Mejía Contacto",
+         "phone_number": "829-983-1386"
+      },
+      {
+         "name": "Ing. Julio Angel Florentino Contacto",
+         "phone_number": "829-854-7130"
+      }
+   ]
 }
