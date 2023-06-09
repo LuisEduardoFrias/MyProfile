@@ -1,6 +1,6 @@
 import { Ui } from "../js/tools.js";
 
-export default function educati_page() {
+export default function skill_page() {
    const { Div, Label, Button, Input, Form } = Ui;
    return Form(
       [
