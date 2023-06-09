@@ -1,0 +1,39 @@
+@import "tools.css";
+
+.setting {
+   margin-top: 10px;
+   width: 100%;
+   box-sizing: border-box;
+}
+
+.setting-container-form {
+   width: 80%;
+   block-size: border-box;
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+   justify-content: center;
+   align-items: center;
+}
+
+.tittle-section {
+   margin-bottom: 5px;
+}
+
+.section {
+   width: 100%;
+   padding: 5px 5px;
+   box-sizing: border-box;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   gap: 5px;
+   
+}
+
+.btn-setting {
+   width: 50%;
+   border: 3px solid black;
+   background-color: gray;
+}
