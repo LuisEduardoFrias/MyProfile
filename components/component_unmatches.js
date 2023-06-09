@@ -1,6 +1,6 @@
 import { getdata, skills, experiences, proyects, educations, references } from '../data/data_access.js';
 
-import { Select, removeChild, Div, Section } from "../js/tools.js";
+import { Select, RemoveChild, Ui} from "../js/tools.js";
 
 import cp_skill from './component_skill.js';
 import cp_experience from './component_experience.js';
@@ -12,10 +12,12 @@ import cp_menu from './component_menu.js';
 
 export default function unmatches() {
  
+ const {Div, Section } = Ui;
+ 
  const main = Select(".container-main");
  const section = Div([],".container");
  
- removeChild(main);
+ RemoveChild(main);
  main.appendChild(cp_profile());
  main.appendChild(cp_menu());
  main.appendChild(section);
@@ -33,7 +35,7 @@ export default function unmatches() {
   
   /*if(location.href !== href) {
    */
-  removeChild(section);
+  RemoveChild(section);
   
   (async () => {
 
@@ -62,7 +64,7 @@ export default function unmatches() {
 /*  history.pushState(null, "", "experiences");*/
   
   /*if(location.href !== href) {*/
-   removeChild(section);
+   RemoveChild(section);
 
    (async () => {
     
@@ -85,7 +87,7 @@ export default function unmatches() {
  
   /*if(location.href !== href) {*/
   
-   removeChild(section);
+   RemoveChild(section);
 
    (async () => {
 
@@ -109,7 +111,7 @@ export default function unmatches() {
   
   /*if(location.href !== href) {*/
   
-   removeChild(section);
+   RemoveChild(section);
 
    (async () => {
 
@@ -133,7 +135,7 @@ export default function unmatches() {
   
   /*if(location.href !== href) {*/
   
-   removeChild(section);
+   RemoveChild(section);
 
    (async () => {
     
