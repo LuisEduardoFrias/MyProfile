@@ -14,7 +14,7 @@ export default function education_page() {
                Button("save", ".btn-section"),
             ],
             ".section"
-         )
+         ),
       ],
       ".setting-container-form"
    );
