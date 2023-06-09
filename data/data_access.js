@@ -19,33 +19,6 @@ export async function getdata(t) {
         });
 }
 
-/*
-export function getalldata(exe) {
- 
-    Document.prototype.fetchName = function() { 
-
-       fetch('http://localhost:8080/data/data.json')
-       .then((response) => response.json())
-       .then((json) => {
-       
-           document.dispatchEvent(
-            new CustomEvent('jsonFetched', { json: {
-                segurity : json.segurity,
-                skills : json.skills,
-                experiences : json.experiences,
-                proyects : json.proyects,
-                educations : json.educations,
-                references : json.references } }
-           ));
-           
-       }); 
-    } 
-    
-    document.addEventListener('jsonFetched', exe); 
-
-    document.fetchName();
-}
-*/
 
 export const segurity = {};
 export const skills = {};
@@ -54,7 +27,3 @@ export const proyects = {};
 export const educations = {};
 export const references = {};
 export const all = {};
-
-/*import {base_url} from "../js/tools.js";
-const url = `${base_url}/data/data.json`;
- */
