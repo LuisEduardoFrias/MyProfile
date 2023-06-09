@@ -28,11 +28,20 @@ export default function profile() {
          ),
          Ui.Div(
             [
-               Ui.Div([Ui.Icon("email"), Ui.Label("luiseduardofrias27@gmail.com")]),
+               Ui.Div([
+                  Ui.Icon("email"),
+                  Ui.Label("luiseduardofrias27@gmail.com"),
+               ]),
 
-               Ui.Div([Ui.Icon("phone_iphone"), Ui.Label("Personal 849-228-0058")]),
+               Ui.Div([
+                  Ui.Icon("phone_iphone"),
+                  Ui.Label("Personal 849-228-0058"),
+               ]),
 
-               Ui.Div([Ui.Icon("phone_iphone"), Ui.Label("Esposa 849-356-5151")]),
+               Ui.Div([
+                  Ui.Icon("phone_iphone"),
+                  Ui.Label("Esposa 849-356-5151"),
+               ]),
 
                Ui.Div([
                   Ui.Icon("home"),
