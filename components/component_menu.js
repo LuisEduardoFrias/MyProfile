@@ -1,6 +1,7 @@
-import { Nav, Ul, Button } from '../js/tools.js'
+import { Ui } from '../js/tools.js'
  
 export default function menu() {
+   const { Nav, Ul, Button } = Ui;
     return Nav([
         Ul([
             Button("Habilidaded",".memu-btn-skill"),
