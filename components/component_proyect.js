@@ -1,42 +1,50 @@
-import { P, T } from "../js/tools.js";
-import { Div, Label, A, addCI } from "../js/tools.js";
-import { float_button } from "../js/float_button.js";
+import { Colors, Ui } from "../js/tools.js";
 
 export default function proyect(element, proyect) {
- 
- const labelT = Label(proyect.tittle, ".proyect-tittle");
- const labelD = Label(proyect.description, ".proyect-description");
- const divCT = Div([Label("Tegnologias", ".proyect-titleTegnology")],".proyect-container-tegnology-base");
- 
- const divT = Div([], ".proyect-container-tegnology");
- const divR = Div([], ".proyect-container-repository");
+   const { P, T } = Colors;
+   const { Div, Label, Link } = Ui;
 
- proyect.tegnologys.forEach((element) => {
-     divT.appendChild(Label(element, ".proyect-tenology"));
- });
- 
- divCT.appendChild(divT);
+   const labelT = Label(proyect.tittle, ".proyect-tittle");
+   const labelD = Label(proyect.description, ".proyect-description");
+   const divCT = Div(
+      [Label("Tegnologias", ".proyect-titleTegnology")],
+      ".proyect-container-tegnology-base"
+   );
 
- proyect.repositorys.forEach((element) => {
-     divR.appendChild(A(element, element,".proyect-repository",""));
- });
+   const divT = Div(
+      [],
+      ".proyect-container-tegnology",
+      `border:1px solid silver;`
+   );
 
- divT.style.border = "1px solid silver";
- divR.style.border = "1px solid silver";
+   const divR = Div(
+      [],
+      ".proyect-container-repository",
+      `border:1px solid silver;`
+   );
 
- const div = proyect.repositorys[0] === undefined ?
- Div([labelT, labelD, divCT ],".proyect-constainer-experience" ) :
- Div([labelT, labelD, divCT, divR ],".proyect-constainer-experience" );
+   proyect.tegnologys.forEach((element) => {
+      divT.appendChild(Label(element, ".proyect-tenology"));
+   });
 
-  
- div.style.borderWidth = "2px";
- div.style.borderStyle = "double";
- div.style.borderBottomColor = `${P}`;
- div.style.borderLeftColor = `${P}`;
- div.style.borderTopColor = `${T}`;
- div.style.borderRightColor = `${T}`;
+   divCT.appendChild(divT);
 
- element.appendChild(div);
+   proyect.repositorys.forEach((element) => {
+      divR.appendChild(Link(element, element, ".proyect-repository", ""));
+   });
 
- return element;
+   const styles = `
+         border-width: 2px;
+         border-style: double;
+         border-bottom-color: ${P};
+         border-left-color: ${P};
+         border-top-color: ${T};
+         border-right-color: ${T};`;
+
+   const div =
+      proyect.repositorys[0] === undefined
+         ? Div([labelT, labelD, divCT], ".proyect-constainer-experience",styles)
+         : Div([labelT, labelD, divCT, divR], ".proyect-constainer-experience",styles);
+
+   element.appendChild(div);
 }
