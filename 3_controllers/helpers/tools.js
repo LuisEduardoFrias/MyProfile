@@ -1,25 +1,3 @@
-//components
-import cp_profile from "../../3_views/components/component_profile.js";
-//pages add
-import addSkillPage from "../../3_views/pages/add_data/add_skill_page.js";
-import addExperiencePage from "../../3_views/pages/add_data/add_experience_page.js";
-import addProyectPage from "../../3_views/pages/add_data/add_proyect_page.js";
-import addEducationPage from "../../3_views/pages/add_data/add_education_page.js";
-import addReferencePage from "../../3_views/pages/add_data/add_reference_page.js";
-//pages view
-import viewSkillPage from "../../3_views/pages/view_data/view_skill_page.js";
-import viewExperiencePage from "../../3_views/pages/view_data/view_experience_page.js";
-import viewProyectPage from "../../3_views/pages/view_data/view_proyect_page.js";
-import viewEducationPage from "../../3_views/pages/view_data/view_education_page.js";
-import viewReferencePage from "../../3_views/pages/view_data/view_reference_page.js";
-//pages
-import cp_home_vertical from "../../3_views/pages/home_vertical_page.js";
-import cp_home_horizontal from "../../3_views/pages/home_horizontal_page.js";
-import settingPage from "../../3_views/pages/occion_settings_page.js";
-import errorpage from "../../3_views/pages/error_page.js";
-//
-export const source = `${location.protocol}//${location.host}/aserts/`;
-
 export const base_url = `${location.protocol}//${location.host}/`;
 
 const AddCI = (elem, classId) => {
@@ -63,7 +41,6 @@ export const RemoveChild = (Node, child) => {
       console.log("La propiedad no es un Nodo, remove child");
    }
 };
-
 
 export const IsNode = (element) =>
    element instanceof Element || element instanceof HTMLDocument;
