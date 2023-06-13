@@ -393,6 +393,30 @@ export class Ui {
       return img;
    }
 
+
+   ShowImg(src, alt){
+   const btn = Ui.Button(
+      Ui.Icon("cancel", ".showImg-btn"),
+      ".showImg-btn-close",
+      null,
+      (e) => {
+         document.body.style.overflow = "auto";
+         RemoveChild(main, ".showImg-container");
+      }
+   );
+
+   const main = Select(".container-main");
+
+   document.body.style.overflow = "hidden";
+
+   main.appendChild(
+      Ui.Div(
+         [btn, Ui.Img(src, alt, ".showImg-img", "--width: 95%; height: 70%;")],
+         ".showImg-container",
+         `top: ${-1 * document.body.getBoundingClientRect().y}px;`
+      )
+   );
+};
    //////
    //////     DIV
    //////
