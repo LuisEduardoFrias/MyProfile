@@ -1,17 +1,20 @@
 @import "tools.css";
 /*pages*/
-@import "settings_page.css";
-@import "home_page.css";
-@import "error_page.css";
+@import "./pages/settings_page.css";
+@import "./pages/home_page.css";
+@import "./pages/error_page.css";
+@import "./pages/pages.css";
+@import "./pages/view_skill_page.css";
 /*component*/
-@import "components/cp_experience.css";
-@import "components/cp_proyect.css";
-@import "components/cp_education.css";
-@import "components/cp_reference.css";
-@import "components/cp_profile.css";
-@import "components/cp_skill.css";
-@import "components/cp_menu.css";
-@import "components/cp_viewdata.css";
+@import "./components/cp_experience.css";
+@import "./components/cp_proyect.css";
+@import "./components/cp_education.css";
+@import "./components/cp_reference.css";
+@import "./components/cp_profile.css";
+@import "./components/cp_skill.css";
+@import "./components/cp_menu.css";
+/*helper*/
+@import "./helper/cp_viewdata.css";
 
 * {
    margin: 0;
