@@ -3,6 +3,19 @@ const { home_horizontal_page } from
 '../../2_views/pages/home_horizontal_page.js';
 const { home_vertical_page } from
 '../../2_views/pages/home_vertical_page.js';
+//
+const { } from '../../2_views/pages/add_pages/view_skill_page.js';
+const { } from '../../2_views/pages/add_pages/view_experience_page.js';
+const { } from '../../2_views/pages/add_pages/view_proyect_page.js';
+const { } from '../../2_views/pages/add_pages/view_education_page.js';
+const { } from '../../2_views/pages/add_pages/view_reference_page.js';
+//
+const { } from '../../2_views/pages/view_page/view_skill_page.js';
+const { } from '../../2_views/pages/view_page/view_experience_page.js';
+const { } from '../../2_views/pages/view_page/view_proyect_page.js';
+const { } from '../../2_views/pages/view_page/view_education_page.js';
+const { } from '../../2_views/pages/view_page/view_ref_page.js';
+
 
 export class handleUrl {
    
