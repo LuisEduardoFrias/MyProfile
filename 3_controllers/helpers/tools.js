@@ -1,6 +1,13 @@
 export const base_url = `${location.protocol}//${location.host}/`;
 export const source = `${location.protocol}//${location.host}/aserts/`;
 
+export class Colors {
+   static P = "#1562ff";
+   static S = "#000000";
+   static T = "#0096ff";
+   static C = "#e55f85";
+}
+
 const AddCI = (elem, classId) => {
    if (classId !== undefined && classId !== null && classId !== "") {
       const _char = classId.charAt(0);
@@ -71,10 +78,3 @@ const MediaQuery = (query, matches, no_matches) => {
 
    handleTabletChange(MediaQuery);
 };
-
-export class Colors {
-   static P = "#1562ff";
-   static S = "#000000";
-   static T = "#0096ff";
-   static C = "#e55f85";
-}
