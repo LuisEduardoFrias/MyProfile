@@ -1,43 +1,34 @@
-import { Ui, Select, handleUrl } from "../../../1_controllers/js/tools.js";
-import { getdata, all } from "../data/data_access.js";
+import { ui } from "../../../1_controllers/js/ui.js";
+import { handleUrl } from "../../../1_controllers/js/handleUrl.js";
 
-export default function viewExperience() {
+export default function viewExperience(data) {
    const { Div, ViewData, Label, Button } = Ui;
-
-   (async () => {
-      const data = {};//await getdata(all);
-      const div = Select(".viewexperience");
-      div.appendChild(
-         ViewData(data.experiences,             () => {
-               handleUrl.changePageEvenClick({
-                  target: { href: "/add/experience" },
-               });
-            },
-            (key) => {}
-         )
-      );
-   })();
 
    return Div(
       [
-         Div([Label("Experience")], ".view-container-data viewexperience"),
          Div(
             [
-               Button(
-                  "back",
-                  null,
-                  `
-            background-color:black;
-            border-radius:10px 10px;
-            width:100px;
-            height:35px;`,
-                  (e) => handleUrl.back()
+               Label("reference", ".tittle-page experience-page-tittle"),
+               ViewData(
+                  data,
+                  () => {
+                     handleUrl.changePageEvenClick({
+                        target: { href: "/add/experience" },
+                     });
+                  },
+                  (key) => {
+                     // skill.key = key;
+                     /*  gate.delete((e) => alert(e), skill);*/
+                  }
                ),
             ],
-            ".view-container-btn"
+            ".view-container-data experience-container-viewexperience"
+         ),
+         Div(
+            [Button("back", ".back-button", null, (e) => handleUrl.back())],
+            ".view-container-back-btn"
          ),
       ],
-      ".view-container"
+      ".view-container-page experience-container-page"
    );
 }
-
