@@ -1,18 +1,14 @@
-import { Ui, handleUrl } from "../../../1_controllers/js/tools.js";
+import { Ui } from "../../../3_controllers/helpers/ui.js";
+import { handleUrl } from "../../../3_controllers/helpers/handleUrl.js";
+import { controller_ } from "../../../3_controllers/controller_";
 
 export default function addEducation() {
    const { Div, Label, Button, Input, Form } = Ui;
    return Div([
-      Button(
-         "back",
-         null,
-         `
-                  background-color:gray;
-                  border-radius:10px 10px;
-                  width:100px;
-                  height:35px;`,
-         (e) => handleUrl.back()
-      ),
+      Div(
+            [Button("back", ".back-button", null, (e) => handleUrl.back())],
+            ".view-container-back-btn"
+         ),
       Form(
          [
             Div(
@@ -25,12 +21,9 @@ export default function addEducation() {
                   Button(
                      "save",
                      ".btn-section",
-                     `
-                  background-color:rgb(55,255,67);
-                  border-radius:10px 10px;
-                  width:100px;
-                  height:35px;`
-                  )
+                     null,
+                     (e) =>  controller_.post()
+                  ),
                ],
                ".section"
             ),
