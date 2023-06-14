@@ -93,7 +93,7 @@ main {
       border-right-width: 5px;
       border-right-style: double;
       border-right-color: var(--C);
-
+box-sizing: border-box;
       box-shadow: 2px 2px 0 2px blue, -2px -2px 0 2px blue;
    }
 
