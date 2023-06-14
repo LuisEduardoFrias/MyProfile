@@ -28,6 +28,6 @@ export default function viewSkill(data) {
             ".view-container-back-btn"
          ),
       ],
-      ".view-container"
+      ".view-container-page skill-page"
    );
 }
