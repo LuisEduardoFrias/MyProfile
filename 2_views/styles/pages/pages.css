@@ -4,10 +4,9 @@
 .view-container-data {
 }
 
- .tittle-page {
-    
- }
- 
+.tittle-page {
+}
+
 .view-container-back-btn {
 }
 
@@ -19,8 +18,8 @@
 }
 
 .save-button {
-   background-color:rgb(55,255,67);
-                  border-radius:10px 10px;
-                  width:100px;
-                  height:35px;
+   background-color: rgb(55, 255, 67);
+   border-radius: 10px 10px;
+   width: 100px;
+   height: 35px;
 }
