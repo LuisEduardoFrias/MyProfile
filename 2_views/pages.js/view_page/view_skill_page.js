@@ -9,7 +9,7 @@ export default function viewSkill(data) {
             [
                Label("skill"),
                ViewData(
-                  data.skills,
+                  data,
                   () => {
                      handleUrl.changePageEvenClick({
                         target: { href: "/add/skill" },
