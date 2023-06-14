@@ -17,3 +17,10 @@
    width: 100px;
    height: 35px;
 }
+
+.save-button {
+   background-color:rgb(55,255,67);
+                  border-radius:10px 10px;
+                  width:100px;
+                  height:35px;
+}
