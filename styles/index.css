@@ -94,9 +94,10 @@ main {
       /*border-right-width: 5px;
     border-right-style: double;
      border-right-color: var(--C);*/
-      margin: 5px 5px;
+      margin: 10px 10px;
       box-sizing: border-box;
-      box-shadow: 0 0 0 6px rgb(64,64,64), inset 0 0 3px 2px rgb(225, 225, 225);
+      box-shadow: 0 0 0 6px rgb(64, 64, 64),
+         inset 0 0 3px 2px rgb(225, 225, 225);
    }
 
    .container {
