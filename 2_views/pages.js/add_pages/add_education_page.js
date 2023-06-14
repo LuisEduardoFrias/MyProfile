@@ -1,6 +1,6 @@
 import { Ui } from "../../../3_controllers/helpers/ui.js";
 import { handleUrl } from "../../../3_controllers/helpers/handleUrl.js";
-import { controller_ } from "../../../3_controllers/controller_";
+import { controller_education } from "../../../3_controllers/controller_";
 
 export default function addEducation() {
    const { Div, Label, Button, Input, Form } = Ui;
@@ -22,7 +22,7 @@ export default function addEducation() {
                      "save",
                      ".btn-section",
                      null,
-                     (e) =>  controller_.post()
+                     (e) =>  controller_education.post()
                   ),
                ],
                ".section"
