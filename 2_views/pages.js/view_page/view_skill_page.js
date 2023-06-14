@@ -1,39 +1,28 @@
-import { Ui, Select, handleUrl } from "../../../1_controllers/js/tools.js";
-//import { getdata, all } from "../data/data_access.js";
-//import { models } from "../models/models.js";
-//import gate from "../data/daj.js";
+import { Ui, handleUrl } from "../../../1_controllers/js/tools.js";
 
-export default function viewSkill() {
+export default function viewSkill(data) {
    const { Div, ViewData, Label, Button } = Ui;
-
-   (async () => {
-      // const data = await getdata(all);
-      //const skill = models.Skill();
-      let dataskills = {};
-      /*gate.get((e) => {
-         dataskills = e;
-      }, skill);*/
-      console.log("aja: " + JSON.stringify(dataskills));
-      const div = Select(".viewskill");
-      div.appendChild(
-         ViewData(
-            data.skills,
-            () => {
-               handleUrl.changePageEvenClick({
-                  target: { href: "/add/skill" },
-               });
-            },
-            (key) => {
-               // skill.key = key;
-               /*  gate.delete((e) => alert(e), skill);*/
-            }
-         )
-      );
-   })();
 
    return Div(
       [
-         Div([Label("skill")], ".view-container-data viewskill"),
+         Div(
+            [
+               Label("skill"),
+               ViewData(
+                  data.skills,
+                  () => {
+                     handleUrl.changePageEvenClick({
+                        target: { href: "/add/skill" },
+                     });
+                  },
+                  (key) => {
+                     // skill.key = key;
+                     /*  gate.delete((e) => alert(e), skill);*/
+                  }
+               ),
+            ],
+            ".view-container-data viewskill"
+         ),
          Div(
             [
                Button(
