@@ -8,7 +8,7 @@ export class Colors {
    static C = "#e55f85";
 }
 
-const AddCI = (elem, classId) => {
+function AddCI(elem, classId) {
    if (classId !== undefined && classId !== null && classId !== "") {
       const _char = classId.charAt(0);
 
