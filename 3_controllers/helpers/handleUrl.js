@@ -3,18 +3,20 @@ const { home_horizontal_page } from
 '../../2_views/pages/home_horizontal_page.js';
 const { home_vertical_page } from
 '../../2_views/pages/home_vertical_page.js';
+const { error_page} from '../../2_views/pages/error_page.js';
+const { setting_page} from '../../2_views/pages/setting_page.js';
 //
-const { } from '../../2_views/pages/add_pages/view_skill_page.js';
-const { } from '../../2_views/pages/add_pages/view_experience_page.js';
-const { } from '../../2_views/pages/add_pages/view_proyect_page.js';
-const { } from '../../2_views/pages/add_pages/view_education_page.js';
-const { } from '../../2_views/pages/add_pages/view_reference_page.js';
+const { add_skill_page} from '../../2_views/pages/add_pages/add_skill_page.js';
+const {add_experience_page } from '../../2_views/pages/add_pages/add_experience_page.js';
+const {add_proyect_page } from '../../2_views/pages/add_pages/add_proyect_page.js';
+const {add_education_page } from '../../2_views/pages/add_pages/add_education_page.js';
+const { add_reference_page} from '../../2_views/pages/add_pages/add_reference_page.js';
 //
-const { } from '../../2_views/pages/view_page/view_skill_page.js';
-const { } from '../../2_views/pages/view_page/view_experience_page.js';
-const { } from '../../2_views/pages/view_page/view_proyect_page.js';
-const { } from '../../2_views/pages/view_page/view_education_page.js';
-const { } from '../../2_views/pages/view_page/view_reference_page.js';
+const {view_skill_page } from '../../2_views/pages/view_page/view_skill_page.js';
+const {view_experience_page } from '../../2_views/pages/view_page/view_experience_page.js';
+const { view_proyect_page} from '../../2_views/pages/view_page/view_proyect_page.js';
+const {view_education_page } from '../../2_views/pages/view_page/view_education_page.js';
+const { view_reference_page} from '../../2_views/pages/view_page/view_reference_page.js';
 
 
 export class handleUrl {
