@@ -1,4 +1,11 @@
+const {Select} from './tools.js';
+const { home_horizontal_page } from
+'../../2_views/pages/home_horizontal_page.js';
+const { home_vertical_page } from
+'../../2_views/pages/home_vertical_page.js';
+
 export class handleUrl {
+   
    static clearAdd(page) {
       const main = Select(".container-main");
       RemoveChild(main);
