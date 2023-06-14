@@ -1,4 +1,7 @@
 const {Select} from './tools.js';
+//
+const {component_profile } from '../../2_view/componemts/component_profile.js'
+//
 const { home_horizontal_page } from
 '../../2_views/pages/home_horizontal_page.js';
 const { home_vertical_page } from
