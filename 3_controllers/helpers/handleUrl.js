@@ -14,7 +14,7 @@ const { } from '../../2_views/pages/view_page/view_skill_page.js';
 const { } from '../../2_views/pages/view_page/view_experience_page.js';
 const { } from '../../2_views/pages/view_page/view_proyect_page.js';
 const { } from '../../2_views/pages/view_page/view_education_page.js';
-const { } from '../../2_views/pages/view_page/view_ref_page.js';
+const { } from '../../2_views/pages/view_page/view_reference_page.js';
 
 
 export class handleUrl {
