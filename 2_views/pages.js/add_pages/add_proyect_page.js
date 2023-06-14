@@ -1,6 +1,6 @@
 import { Ui } from "../../../3_controllers/helpers/ui.js";
 import { handleUrl } from "../../../3_controllers/helpers/handleUrl.js";
-import { controller_ } from "../../../3_controllers/controller_";
+import { controller_proyect } from "../../../3_controllers/controller_";
 
 export default function addProyect() {
    const { Div, Label, Button, Input, Form } = Ui;
@@ -19,7 +19,7 @@ export default function addProyect() {
                   Input("", "placeholder", "t", "error", "name"),
                   Input("", "placeholder", "t", "error", "name"),
                   Button("save", ".btn-section", null, (e) =>
-                     controller_.post()
+                     controller_proyect.post()
                   ),
                ],
                ".section"
