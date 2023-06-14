@@ -1,4 +1,5 @@
 export const base_url = `${location.protocol}//${location.host}/`;
+export const source = `${location.protocol}//${location.host}/aserts/`;
 
 const AddCI = (elem, classId) => {
    if (classId !== undefined && classId !== null && classId !== "") {
