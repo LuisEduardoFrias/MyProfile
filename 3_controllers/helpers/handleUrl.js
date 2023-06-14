@@ -54,8 +54,8 @@ export class handleUrl {
          case "/index.html": {
             MediaQuery(
                "max-width: 900px",
-               cp_home_vertical,
-               cp_home_horizontal
+               home_vertical_page,
+               home_horizontal_page
             );
             break;
          }
