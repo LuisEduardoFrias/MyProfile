@@ -94,7 +94,7 @@ main {
       /*border-right-width: 5px;
     border-right-style: double;
      border-right-color: var(--C);*/
-margin: 3px 3px;
+      margin: 5px 5px;
       box-sizing: border-box;
       box-shadow: 2px 2px 0 2px blue, -2px -2px 0 2px blue,
          inset 0 0 3px 2px rgb(225, 225, 225);
