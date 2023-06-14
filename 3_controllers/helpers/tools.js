@@ -20,9 +20,9 @@ function AddCI(elem, classId) {
               "El strig no corresponde con un atributo de class o Id."
            );
    }
-};
+}
 
-export const RemoveChild = (Node, child) => {
+export function RemoveChild(Node, child) {
    if (IsNode(Node)) {
       if (child !== undefined && child !== "") {
          Node.childNodes.forEach((e) => {
@@ -48,12 +48,13 @@ export const RemoveChild = (Node, child) => {
    } else {
       console.log("La propiedad no es un Nodo, remove child");
    }
-};
+}
 
-export const IsNode = (element) =>
+export function IsNode(element) {
    element instanceof Element || element instanceof HTMLDocument;
+}
 
-export const Select = (ele) => {
+export function Select(ele) {
    const _char = ele.charAt(0);
 
    return _char == "."
@@ -61,9 +62,9 @@ export const Select = (ele) => {
       : _char == "#"
       ? document.querySelector(ele)
       : console.log("El strig no corresponde con un atributo de class o Id.");
-};
+}
 
-const MediaQuery = (query, matches, no_matches) => {
+function MediaQuery(query, home_vertical, home_horizontal) {
    const MediaQuery = window.matchMedia(`(${query})`);
 
    function handleTabletChange(e) {
@@ -77,4 +78,4 @@ const MediaQuery = (query, matches, no_matches) => {
    MediaQuery.addListener(handleTabletChange);
 
    handleTabletChange(MediaQuery);
-};
+}
