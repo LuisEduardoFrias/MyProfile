@@ -4,7 +4,9 @@ import { dataAccess } from "../4_data_access/dataAccess.js";
 import { skill } from "../1_models/models.js";
 
 export class controllerSkill {
-   static add() {}
+   static add() {
+      return add_skill_page;
+   }
    static view() {
       (async () => {
          const data = await dataAccess(skill);
