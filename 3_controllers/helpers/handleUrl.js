@@ -3,22 +3,13 @@ import { ui } from "./ui.js";
 //
 import { component_profile } from "../../2_view/componemts/component_profile.js";
 //
-import { home_horizontal_page } from "../../2_views/pages/home_horizontal_page.js";
-import { home_vertical_page } from "../../2_views/pages/home_vertical_page.js";
-import { error_page } from "../../2_views/pages/error_page.js";
-import { setting_page } from "../../2_views/pages/setting_page.js";
-//
-import { add_skill_page } from "../../2_views/pages/add_pages/add_skill_page.js";
-import { add_experience_page } from "../../2_views/pages/add_pages/add_experience_page.js";
-import { add_proyect_page } from "../../2_views/pages/add_pages/add_proyect_page.js";
-import { add_education_page } from "../../2_views/pages/add_pages/add_education_page.js";
-import { add_reference_page } from "../../2_views/pages/add_pages/add_reference_page.js";
-//
-import { view_skill_page } from "../../2_views/pages/view_page/view_skill_page.js";
-import { view_experience_page } from "../../2_views/pages/view_page/view_experience_page.js";
-import { view_proyect_page } from "../../2_views/pages/view_page/view_proyect_page.js";
-import { view_education_page } from "../../2_views/pages/view_page/view_education_page.js";
-import { view_reference_page } from "../../2_views/pages/view_page/view_reference_page.js";
+import { controller_skill } from "../controller_skill.js";
+import { controller_experience } from "../controller_experience.js";
+import { controller_proyect } from "../controller_proyect.js";
+import { controller_education } from "../controller_education.js";
+import { controller_reference } from "../controller_reference.js";
+import { controller_home } from "../controller_home.js";
+import { controller_setting } from "../controller_setting.js";
 
 export class handleUrl {
    static clearAdd(page) {
@@ -66,58 +57,58 @@ export class handleUrl {
          case "/index.html": {
             MediaQuery(
                "max-width: 900px",
-               home_vertical_page,
-               home_horizontal_page
+               controller_home.vertical(),
+               controller_home.horizontal()
             );
             break;
          }
          case "/settings": {
-            handleUrl.clearAdd(setting_page());
+            handleUrl.clearAdd(controller_setting.setting());
             break;
          }
          case "/view/skills": {
-            handleUrl.clearAdd(view_skill_page());
+            handleUrl.clearAdd(controller_skill.view());
 
             break;
          }
          case "/view/experiences": {
-            handleUrl.clearAdd(view_experience_page());
+            handleUrl.clearAdd(controller_experience.view());
             break;
          }
          case "/view/proyects": {
-            handleUrl.clearAdd(view_proyect_page());
+            handleUrl.clearAdd(controller_proyect.view());
             break;
          }
          case "/view/educations": {
-            handleUrl.clearAdd(view_education_page());
+            handleUrl.clearAdd(controller_education.view());
             break;
          }
          case "/view/references": {
-            handleUrl.clearAdd(view_reference_page());
+            handleUrl.clearAdd(controller_reference.view());
             break;
          }
          case "/add/skill": {
-            handleUrl.clearAdd(add_skill_page());
+            handleUrl.clearAdd(controller_skill.add());
             break;
          }
          case "/add/experience": {
-            handleUrl.clearAdd(add_experience_page());
+            handleUrl.clearAdd(controller_experience.add());
             break;
          }
          case "/add/proyect": {
-            handleUrl.clearAdd(add_proyect_page());
+            handleUrl.clearAdd(controller_proyect.add());
             break;
          }
          case "/add/education": {
-            handleUrl.clearAdd(add_education_page());
+            handleUrl.clearAdd(controller_education.add());
             break;
          }
          case "/add/reference": {
-            handleUrl.clearAdd(add_reference_page());
+            handleUrl.clearAdd(controller_reference.add());
             break;
          }
          default: {
-            handleUrl.clearAdd(error_page());
+            handleUrl.clearAdd(controller_setting.error());
             break;
          }
       }
