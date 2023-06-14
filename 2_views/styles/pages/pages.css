@@ -1,6 +1,10 @@
+..view-container-back-btn {
+   
+}
+
 .back-btn {
-   background-color:black;
-            border-radius:10px 10px;
-            width:100px;
-            height:35px;
+   background-color: black;
+   border-radius: 10px 10px;
+   width: 100px;
+   height: 35px;
 }
