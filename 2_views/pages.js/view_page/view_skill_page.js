@@ -1,4 +1,5 @@
-import { Ui, handleUrl } from "../../../1_controllers/js/tools.js";
+import { ui } from "../../../1_controllers/js/ui.js";
+import { handleUrl } from "../../../1_controllers/js/handleUrl.js";
 
 export default function viewSkill(data) {
    const { Div, ViewData, Label, Button } = Ui;
