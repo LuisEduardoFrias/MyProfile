@@ -8,7 +8,7 @@ export default function viewSkill(data) {
       [
          Div(
             [
-               Label("skill", "skill-page-tittle"),
+               Label("skill", ".tittle-page skill-page-tittle"),
                ViewData(
                   data,
                   () => {
@@ -25,7 +25,7 @@ export default function viewSkill(data) {
             ".view-container-data skill-page-viewskill"
          ),
          Div(
-            [Button("back", "back-button", null, (e) => handleUrl.back())],
+            [Button("back", ".back-button", null, (e) => handleUrl.back())],
             ".view-container-back-btn"
          ),
       ],
