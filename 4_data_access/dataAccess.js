@@ -24,11 +24,3 @@ export async function getdata(t) {
          }
       });
 }
-
-export const segurity = {};
-export const skills = {};
-export const experiences = {};
-export const proyects = {};
-export const educations = {};
-export const references = {};
-export const all = {};
