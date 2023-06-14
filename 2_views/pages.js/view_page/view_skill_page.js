@@ -7,7 +7,7 @@ export default function viewSkill(data) {
       [
          Div(
             [
-               Label("skill"),
+               Label("skill",'skill-page-tittle'),
                ViewData(
                   data,
                   () => {
@@ -21,18 +21,14 @@ export default function viewSkill(data) {
                   }
                ),
             ],
-            ".view-container-data viewskill"
+            ".view-container-data skill-page-viewskill"
          ),
          Div(
             [
                Button(
                   "back",
+                  "back-button",
                   null,
-                  `
-            background-color:black;
-            border-radius:10px 10px;
-            width:100px;
-            height:35px;`,
                   (e) => handleUrl.back()
                ),
             ],
