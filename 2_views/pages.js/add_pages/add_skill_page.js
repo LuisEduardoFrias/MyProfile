@@ -1,4 +1,4 @@
-import { Ui,handleUrl } from "../../../1_controllers/js/tools.js";
+import { Ui, handleUrl } from "../../../1_controllers/js/tools.js";
 
 export default function addSkill() {
    const { Div, Label, Button, Input, Form } = Ui;
@@ -13,7 +13,7 @@ export default function addSkill() {
                   height:35px;`,
          (e) => handleUrl.back()
       ),
-      Form (
+      Form(
          [
             Div(
                [
