@@ -12,7 +12,7 @@ import { controller_home } from "../controller_home.js";
 import { controller_setting } from "../controller_setting.js";
 
 export class handleUrl {
-   static clearAdd(page) {
+   clearAdd(page) {
       const main = Select(".container-main");
       RemoveChild(main);
       main.appendChild(component_profile());
@@ -34,7 +34,7 @@ export class handleUrl {
       });
    }
 
-   async handleLocation() {
+    andleLocation() {
       this.changePageEvenClick({
          target: { href: window.location.pathname },
       });
@@ -44,7 +44,7 @@ export class handleUrl {
       history.back();
    }
 
-   static changePageEvenClick(event) {
+   changePageEvenClick(event) {
       event = event || window.event;
 
       history.pushState(
