@@ -1,43 +1,34 @@
-import { Ui, Select, handleUrl } from "../../../1_controllers/js/tools.js";
-//import { getdata, all } from "../data/data_access.js";
+import { ui } from "../../../1_controllers/js/ui.js";
+import { handleUrl } from "../../../1_controllers/js/handleUrl.js";
 
-export default function viewProyect() {
+export default function viewProyect(data) {
    const { Div, ViewData, Label, Button } = Ui;
-
-   (async () => {
-      const data = {};//await getdata(all);
-      const div = Select(".viewproyect");
-      div.appendChild(ViewData(data.proyects,  
-                  () => {
-               handleUrl.changePageEvenClick({
-                  target: { href: "/add/proyect" },
-               });
-            },
-            (key) => {}));
-   })();
 
    return Div(
       [
          Div(
-            [Label("Proyect")],
-            ".view-container-data viewproyect"
-         ),
-         Div(
             [
-               Button(
-                  "back",
-                  null,
-                  `
-            background-color:black;
-            border-radius:10px 10px;
-            width:100px;
-            height:35px;`,
-                  (e) => handleUrl.back()
+               Label("reference", ".tittle-page proyect-page-tittle"),
+               ViewData(
+                  data,
+                  () => {
+                     handleUrl.changePageEvenClick({
+                        target: { href: "/add/proyect" },
+                     });
+                  },
+                  (key) => {
+                     // skill.key = key;
+                     /*  gate.delete((e) => alert(e), skill);*/
+                  }
                ),
             ],
-            ".view-container-btn"
+            ".view-container-data proyect-container-viewproyect"
+         ),
+         Div(
+            [Button("back", ".back-button", null, (e) => handleUrl.back())],
+            ".view-container-back-btn"
          ),
       ],
-      ".view-container"
+      ".view-container-page proyect-container-page"
    );
 }
