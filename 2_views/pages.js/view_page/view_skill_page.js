@@ -22,13 +22,13 @@ export default function viewSkill(data) {
                   }
                ),
             ],
-            ".view-container-data skill-page-viewskill"
+            ".view-container-data skill-container-viewskill"
          ),
          Div(
             [Button("back", ".back-button", null, (e) => handleUrl.back())],
             ".view-container-back-btn"
          ),
       ],
-      ".view-container-page skill-page"
+      ".view-container-page skill-container-page"
    );
 }
