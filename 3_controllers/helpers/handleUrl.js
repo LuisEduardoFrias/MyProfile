@@ -1,33 +1,30 @@
-const {Select} from './tools.js';
+import { Select } from "./tools.js";
+import { ui } from "./ui.js";
 //
-const {component_profile } from '../../2_view/componemts/component_profile.js'
+import { component_profile } from "../../2_view/componemts/component_profile.js";
 //
-const { home_horizontal_page } from
-'../../2_views/pages/home_horizontal_page.js';
-const { home_vertical_page } from
-'../../2_views/pages/home_vertical_page.js';
-const { error_page} from '../../2_views/pages/error_page.js';
-const { setting_page} from '../../2_views/pages/setting_page.js';
+import { home_horizontal_page } from "../../2_views/pages/home_horizontal_page.js";
+import { home_vertical_page } from "../../2_views/pages/home_vertical_page.js";
+import { error_page } from "../../2_views/pages/error_page.js";
+import { setting_page } from "../../2_views/pages/setting_page.js";
 //
-const { add_skill_page} from '../../2_views/pages/add_pages/add_skill_page.js';
-const {add_experience_page } from '../../2_views/pages/add_pages/add_experience_page.js';
-const {add_proyect_page } from '../../2_views/pages/add_pages/add_proyect_page.js';
-const {add_education_page } from '../../2_views/pages/add_pages/add_education_page.js';
-const { add_reference_page} from '../../2_views/pages/add_pages/add_reference_page.js';
+import { add_skill_page } from "../../2_views/pages/add_pages/add_skill_page.js";
+import { add_experience_page } from "../../2_views/pages/add_pages/add_experience_page.js";
+import { add_proyect_page } from "../../2_views/pages/add_pages/add_proyect_page.js";
+import { add_education_page } from "../../2_views/pages/add_pages/add_education_page.js";
+import { add_reference_page } from "../../2_views/pages/add_pages/add_reference_page.js";
 //
-const {view_skill_page } from '../../2_views/pages/view_page/view_skill_page.js';
-const {view_experience_page } from '../../2_views/pages/view_page/view_experience_page.js';
-const { view_proyect_page} from '../../2_views/pages/view_page/view_proyect_page.js';
-const {view_education_page } from '../../2_views/pages/view_page/view_education_page.js';
-const { view_reference_page} from '../../2_views/pages/view_page/view_reference_page.js';
-
+import { view_skill_page } from "../../2_views/pages/view_page/view_skill_page.js";
+import { view_experience_page } from "../../2_views/pages/view_page/view_experience_page.js";
+import { view_proyect_page } from "../../2_views/pages/view_page/view_proyect_page.js";
+import { view_education_page } from "../../2_views/pages/view_page/view_education_page.js";
+import { view_reference_page } from "../../2_views/pages/view_page/view_reference_page.js";
 
 export class handleUrl {
-   
    static clearAdd(page) {
       const main = Select(".container-main");
       RemoveChild(main);
-      main.appendChild(cp_profile());
+      main.appendChild(component_profile());
       main.appendChild(Ui.Section([page], ".container"));
    }
 
@@ -47,7 +44,6 @@ export class handleUrl {
    }
 
    async handleLocation() {
-      console.log("async method :" + event);
       this.changePageEvenClick({
          target: { href: window.location.pathname },
       });
@@ -66,8 +62,6 @@ export class handleUrl {
          event.target.href
       );
 
-      console.log(event.target.href);
-
       switch (event.target.href) {
          case "/index.html": {
             MediaQuery(
@@ -78,52 +72,52 @@ export class handleUrl {
             break;
          }
          case "/settings": {
-            handleUrl.clearAdd(settingPage());
+            handleUrl.clearAdd(setting_page());
             break;
          }
          case "/view/skills": {
-            handleUrl.clearAdd(viewSkillPage());
+            handleUrl.clearAdd(view_skill_page());
 
             break;
          }
          case "/view/experiences": {
-            handleUrl.clearAdd(viewExperiencePage());
+            handleUrl.clearAdd(view_experience_page());
             break;
          }
          case "/view/proyects": {
-            handleUrl.clearAdd(viewProyectPage());
+            handleUrl.clearAdd(view_proyect_page());
             break;
          }
          case "/view/educations": {
-            handleUrl.clearAdd(viewEducationPage());
+            handleUrl.clearAdd(view_education_page());
             break;
          }
          case "/view/references": {
-            handleUrl.clearAdd(viewReferencePage());
+            handleUrl.clearAdd(view_reference_page());
             break;
          }
          case "/add/skill": {
-            handleUrl.clearAdd(addSkillPage());
+            handleUrl.clearAdd(add_skill_page());
             break;
          }
          case "/add/experience": {
-            handleUrl.clearAdd(addExperiencePage());
+            handleUrl.clearAdd(add_experience_page());
             break;
          }
          case "/add/proyect": {
-            handleUrl.clearAdd(addProyectPage());
+            handleUrl.clearAdd(add_proyect_page());
             break;
          }
          case "/add/education": {
-            handleUrl.clearAdd(addEducationPage());
+            handleUrl.clearAdd(add_education_page());
             break;
          }
          case "/add/reference": {
-            handleUrl.clearAdd(addReferencePage());
+            handleUrl.clearAdd(add_reference_page());
             break;
          }
          default: {
-            handleUrl.clearAdd(errorpage());
+            handleUrl.clearAdd(error_page());
             break;
          }
       }
