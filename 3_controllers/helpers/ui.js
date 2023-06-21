@@ -1,4 +1,6 @@
-export class Ui {
+import { AddCI, IsNode, Error, Warn, aserts } from "./tools.js";
+
+export default class Ui {
    //////
    //////     ICON
    //////
@@ -8,8 +10,7 @@ export class Ui {
       span.innerHTML = name;
 
       if (classid !== undefined) {
-         const classids =
-            ".material-icons " + classid.substring(1, classid.length);
+         const classids = ".material-icons " + classid.replace(".", "");
 
          AddCI(span, classids);
       } else {
@@ -23,12 +24,65 @@ export class Ui {
    //////     SECTION
    //////
 
-   static Section(array, classid, style) {
+   static Select(obj) {
+      const select = document.createElement("select");
+      select.innerHTML = name;
+
+      const appendchild = (value) => {
+         let isnode = true;
+         if (Array.isArray(value)) {
+            value.forEach((e) => {
+               const option = document.createElement("option");
+               const key = Reflect.ownKeys(e)[0];
+               Warn(key);
+               option.setAttribute("value", key);
+               option.innerHTML = Reflect.get(e, key);
+               select.appendChild(option);
+            });
+         } else {
+            const option = document.createElement("option");
+            const key = Reflect.ownKeys(value)[0];
+            option.setAttribute("value", key);
+            option.innerHTML = Reflect.get(e, key);
+            select.appendChild(option);
+         }
+         if (!isnode) Error(`Error: El elemento no es un Nodo. Ui.Select.`);
+      };
+
+      if (obj.toString() === "[object Promise]") {
+         obj[0].then((value) => appendchild(value));
+      } else {
+         appendchild(obj);
+      }
+      return select;
+   }
+
+   //////
+   //////     SECTION
+   //////
+
+   static Section(obj, classid, style) {
       const section = document.createElement("section");
       AddCI(section, classid);
 
-      if (Array.isArray(array)) {
-         array.forEach((e) => section.appendChild(e));
+      const appendchild = (value) => {
+         let isnode = true;
+         if (Array.isArray(value)) {
+            value.forEach((e) => {
+               if (IsNode(e)) section.appendChild(e);
+               else isnode = false;
+            });
+         } else {
+            if (IsNode(value)) section.appendChild(value);
+            else isnode = false;
+         }
+         if (!isnode) Error(`Error: El elemento no es un Nodo. Ui.Section.`);
+      };
+
+      if (obj.toString() === "[object Promise]") {
+         obj[0].then((value) => appendchild(value));
+      } else {
+         appendchild(obj);
       }
 
       if (style !== undefined && style !== null) {
@@ -42,11 +96,14 @@ export class Ui {
    //////     FORM
    //////
 
-   static Form(array, classId, style) {
+   static Form(array, classId) {
       const form = document.createElement("form");
-      form.style.cssText = style;
+      form.setAttribute("onsubmit", "return false");
       form.className = classId;
-      array.forEach((e) => form.appendChild(e));
+
+      array.forEach((e) => {
+         form.appendChild(e);
+      });
 
       return form;
    }
@@ -55,7 +112,7 @@ export class Ui {
    //////     INPUT
    //////
 
-   static Input(tittle, placeholder, type, error, name, identiti) {
+   static Input(tittle, placeholder, required, type, error, name, identiti) {
       identiti = identiti !== undefined ? `-${identiti}` : "";
 
       const labelT =
@@ -66,9 +123,14 @@ export class Ui {
       const input = document.createElement("input");
       input.setAttribute("placeholder", placeholder);
       input.setAttribute("class", `text-box${identiti} text-box-input_`);
-      input.setAttribute("type", "text");
+      input.setAttribute("type", type);
       input.setAttribute("name", name);
       input.setAttribute("id", name);
+
+      if (required) {
+         // . /^\s*$/  \s$
+         // input.setAttribute("pattern", "");
+      }
 
       if (type === "t") {
          input.setAttribute("pattern", "[sa-zA-Z]+");
@@ -87,24 +149,22 @@ export class Ui {
    //////
 
    static ViewData(dataArray, callballadd, callballdelete) {
-      const contenviewdata = Ui.Div(
-         [
-            Ui.Button(
-               "agregar",
-               ".btn-add",
-               `
-               background-color:${Colors.T};
-               border-radius:3px 3px;
-               header:25px;
-               width:70px;
-               tab-size:15px;
-              `,
-               callballadd
-            ),
-         ],
-         ".conten-view-data"
-      );
+      //
+      //boton para agregar nuevos datos.
+      const btnAdd = () => {
+         if (callballadd !== null && callballadd !== undefined) {
+            if (typeof callballadd === "function") {
+               return Ui.Button("agregar", ".add-btn", null, () => {
+                  callballadd();
+               });
+            }
+         }
+      };
 
+      //contenedor de todó el ViewData.
+      const contenviewdata = Ui.Div([btnAdd()], ".conten-view-data");
+
+      //contenedor de viewdata
       const viewdata = Ui.Div([], ".view-data");
 
       //header
@@ -112,130 +172,93 @@ export class Ui {
 
       let count = 1;
       const propertyNames = Reflect.ownKeys(dataArray[0]);
-      const clac = 95 / (propertyNames.length + 1);
+      const clac = 80 / propertyNames.length;
 
-      header.appendChild(
-         Ui.Div(
-            [],
-            `.view-data-column view-data-column-0`,
-            `overflow-x: scroll;
-          white-space:nowrap;
-          height:20px;
-          padding-inline: 2px;
-          width:5%;
-          background-color:${Colors.T};
-          border-radius: 10px 0 0 0;
-          `
-         )
-      );
+      //columna de copiar
+      header.appendChild(Ui.Div([], `.view-data-column view-data-column-0`));
 
+      //agregando columna por cada dato
       propertyNames.forEach((e) => {
          header.appendChild(
             Ui.Div(
                [
                   Ui.Label(
                      e,
-                     `.view-data-column-text
-         view-data-column-text-${count}`
+                     `.view-data-column-text view-data-column-text-${count}`
                   ),
                ],
                `.view-data-column view-data-column-${count}`,
-               `overflow-x: scroll;
-             white-space:nowrap;
-             padding-inline: 2px;
-             width:${clac}%;
-             background-color:${Colors.T};`
+               `width:${clac}%;`
             )
          );
          count++;
       });
 
+      //columna de eliminar
       header.appendChild(
          Ui.Div(
             [
                Ui.Label(
                   "Eliminar",
-                  `.view-data-column-text
-         view-data-column-text-${count}`
+                  `.view-data-column-text view-data-column-text-${count}`
                ),
             ],
-            `.view-data-column view-data-column-${count}`,
-            `overflow-x: scroll;
-             white-space:nowrap;
-             padding-inline: 2px;
-             width:${clac}%;
-             background-color:${Colors.T};`
+            `.view-data-column view-data-column-eliminar`
+            //  `width:${clac}%;`
          )
       );
-
-      header.style.cssText = `
-   display:flex;
-   flex-direction:row;
-   gap:1.5px;
-   width:100%;
-   justify-content:space-evenly;
-   align-content:center;
-   background-color: gray;
-   overflow-x: auto;
-   height:20px;
-   box-sizing: border-box;`;
 
       viewdata.appendChild(header);
 
       //row
       let i = 0;
       dataArray.forEach((obj) => {
+         //contenedor(fila) de celdas
          const row = Ui.Div([], ".view-data-row");
 
+         //evento click para copiar fila
          //TODO event click to button select
-         const evenclick = (e) => {
-            const classs = `.text-cell-${0}`;
+         const evenclick = () => {
+            alert("copiado.");
+            /*    const classs = `.text-cell-${0}`;
             const labelToSelet = Select(classs);
 
-            /* Para obtener el valor */
+            // Para obtener el valor 
             const cod = labelToSelet.textContent;
             alert(cod);
 
-            /* Para obtener el texto */
-            labelToSelet.options[labelToSelet.selectedIndex];
-            alert(selected);
+            // Para obtener el texto 
+          /labelToSelet.options[labelToSelet.selectedIndex];
+            alert(selected);*/
          };
 
+         // boton para copiar
          row.appendChild(
-            Ui.Button(
-               "",
-               ".view-data-cell",
-               `overflow-x: scroll;
-             white-space:nowrap;
-             width:6%;
-             background-color:black;
-             padding-inline: 2px;
-             margin-top:1.5px
-             border-width: 0px;
-             `,
-               evenclick
+            Ui.Div(
+               [Ui.Button("", ".copy-btn", null, (e) => evenclick())],
+               ".view-data-container-copy-btn"
             )
          );
 
+         //celda por cada dato
          propertyNames.forEach((e) => {
             row.appendChild(
                Ui.Div(
                   [
                      Ui.Label(
                         Reflect.get(obj, e),
-                        `.text-cell-${i}`,
-                        `background-color: black;
-                      display:block;`
+                        `.text-cell text-cell-${i} ${e}`
                      ),
                   ],
-                  ".view-data-cell",
-                  `overflow-x: scroll;
-                white-space:nowrap;
-                width:${clac}%;
-                background-color:black;
-                padding-inline: 2px;
-                margin-top:1.5px;
-                `
+
+                  /*la class cell-data  no se puede modificar o elimiar, ya que
+                  es usada el boton eliminar.*/
+                  /*la class asignada mediante la variable 'e' no se puede
+                  remover ni y se debe mantener en la posicion 3 por que usada
+                  en el boton eliminar */
+                  `.view-data-cell cell-data ${e}`,
+                  `width:${clac}%;
+                  `
                )
             );
          });
@@ -244,68 +267,35 @@ export class Ui {
          row.appendChild(
             Ui.Div(
                [
-                  Ui.Button(
-                     "Eliminar",
-                     ".btn-add",
-                     `
-                  background-color: ${Colors.C};
-                  border-width: 0;
-                  border-radius:3px 3px;
-                  width:60px;
-                  tab-size:10px;
-                  `,
-                     () =>
-                        callballdelete("fb96d2da-400e-4de4-bf38-86d9dc0a80b4")
-                  ),
+                  Ui.Button("Eliminar", ".btn-delete", null, (event) => {
+                     const obj = {};
+                     const element = event.target.parentElement;
+
+                     element.parentElement.childNodes.forEach((e) => {
+                        if (e.className.search("cell-data") !== -1) {
+                           Reflect.set(
+                              obj,
+                              e.firstElementChild.classList[2],
+                              e.firstElementChild.innerText
+                           );
+                        }
+                     });
+
+                     callballdelete(obj);
+                  }),
                ],
-               ".view-data-cell",
-               `overflow-x: scroll;
-             white-space:nowrap;
-             width:${clac}%;
-             background-color:black;
-             padding-inline: 2px;
-             margin-top:1.5px;
-                `
+               ".delete-btn"
+               //  `width:${clac}%;`
             )
          );
-
-         row.style.cssText = `
-      display:flex;
-      flex-direction:row;
-      gap:1.5px;
-      justify-content: space-evenly;
-      align-content:center;
-      overflow-x: auto;
-      box-sizing: border-box;
-      border:1px solid black;
-      `;
 
          viewdata.appendChild(row);
 
          i++;
       });
 
-      viewdata.style.cssText = `
-   background-color:gray;
-   width:100%;
-   header:100%;
-   displsy:flex;
-   flex-direction:column;
-   overflow-x: auto;
-   box-sizing: border-box;
-   padding:2px;
-   border-radius:10px 10px`;
-
+      //
       contenviewdata.appendChild(viewdata);
-
-      contenviewdata.style.cssText = `
-      display:flex;
-      flex-direction:column;
-      justify-content: flex-end;
-      gap:10px;
-      width:100%;
-      header:100%;
-      padding: 2px 2px;`;
 
       return contenviewdata;
    }
@@ -379,12 +369,12 @@ export class Ui {
 
    static Img(src, alt, classId, style, event_click) {
       const img = document.createElement("img");
-      img.src = source + src;
+      img.src = aserts + src;
       img.alt = alt;
       AddCI(img, classId);
 
       if (event_click === true) {
-         img.addEventListener("click", (e) => ShowImg(source + src, alt));
+         img.addEventListener("click", (e) => ShowImg(aserts + src, alt));
       }
 
       if (style !== undefined && style !== null) {
@@ -393,55 +383,72 @@ export class Ui {
       return img;
    }
 
+   static ShowImg(src, alt) {
+      const btn = Ui.Button(
+         Ui.Icon("cancel", ".showImg-btn"),
+         ".showImg-btn-close",
+         null,
+         (e) => {
+            document.body.style.overflow = "auto";
+            RemoveChild(main, ".showImg-container");
+         }
+      );
 
-   ShowImg(src, alt){
-   const btn = Ui.Button(
-      Ui.Icon("cancel", ".showImg-btn"),
-      ".showImg-btn-close",
-      null,
-      (e) => {
-         document.body.style.overflow = "auto";
-         RemoveChild(main, ".showImg-container");
-      }
-   );
+      const main = Select(".container-main");
 
-   const main = Select(".container-main");
+      document.body.style.overflow = "hidden";
 
-   document.body.style.overflow = "hidden";
+      main.appendChild(
+         Ui.Div(
+            [
+               btn,
+               Ui.Img(src, alt, ".showImg-img", "--width: 95%; height: 70%;"),
+            ],
+            ".showImg-container",
+            `top: ${-1 * document.body.getBoundingClientRect().y}px;`
+         )
+      );
+   }
 
-   main.appendChild(
-      Ui.Div(
-         [btn, Ui.Img(src, alt, ".showImg-img", "--width: 95%; height: 70%;")],
-         ".showImg-container",
-         `top: ${-1 * document.body.getBoundingClientRect().y}px;`
-      )
-   );
-};
    //////
    //////     DIV
    //////
 
-   static Div(array, classId, style) {
+   static Div(obj, classId, style) {
       const div = document.createElement("div");
 
       AddCI(div, classId);
 
-      if (Array.isArray(array)) {
-         const i = 0;
-
-         array.forEach((element) => {
-            if (element !== null) {
-               if (IsNode(element)) {
-                  div.appendChild(element);
-               } else {
-                  console.log(
-                     `El elemento ${i} del Array no es un elemento html`
-                  );
+      const appendchild = (value) => {
+         let isnode = true;
+         if (Array.isArray(value)) {
+            const i = 0;
+            value.forEach((element) => {
+               if (element !== null && element !== undefined) {
+                  if (IsNode(element)) {
+                     div.appendChild(element);
+                  } else {
+                     Error(
+                        `Error: El elemento ${i} del Array no es un elemento html. Ui.Div`
+                     );
+                  }
                }
-            }
-         });
+            });
+         } else {
+            if (IsNode(value)) div.appendChild(value);
+            else isnode = false;
+         }
+
+         if (!isnode)
+            Error(
+               "Error: El 1er angumento, no es un Array, se requiere un Array[ElementosHTMl].  Ui.Div"
+            );
+      };
+
+      if (obj?.toString() === "[object Promise]") {
+         obj[0].then((value) => appendchild(value));
       } else {
-         console.log("El angumento, no es un Array de elementos html");
+         appendchild(obj);
       }
 
       if (style !== undefined && style !== null) {
@@ -449,6 +456,67 @@ export class Ui {
       }
 
       return div;
+   }
+
+   //////
+   //////     Group
+   //////
+
+   static Group(
+      obj,
+      Name,
+      tittle = "",
+      classId = null,
+      legendPosition = "right" | "left" | "center",
+      style = null
+   ) {
+      const fieldset = document.createElement("fieldset");
+      const legend = document.createElement("legend");
+
+      legend.setAttribute("align", legendPosition);
+      fieldset.setAttribute("Name", Name);
+
+      legend.innerHTML = tittle;
+
+      AddCI(fieldset, classId);
+
+      const appendchild = (value) => {
+         let isnode = true;
+         if (Array.isArray(value)) {
+            const i = 0;
+            value.forEach((element) => {
+               if (element !== null && element !== undefined) {
+                  if (IsNode(element)) {
+                     fieldset.appendChild(element);
+                  } else {
+                     Error(
+                        `Error: El elemento ${i} del Array no es un elemento html. Ui.Group`
+                     );
+                  }
+               }
+            });
+         } else {
+            if (IsNode(value)) fieldset.appendChild(value);
+            else isnode = false;
+         }
+
+         if (!isnode)
+            Error(
+               "Error: El 1er angumento, no es un Array, se requiere un Array[ElementosHTMl].  Ui.Group"
+            );
+      };
+
+      if (obj?.toString() === "[object Promise]") {
+         obj[0].then((value) => appendchild(value));
+      } else {
+         appendchild(obj);
+      }
+
+      if (style !== undefined && style !== null) {
+         fieldset.style.cssText = style;
+      }
+
+      return fieldset;
    }
 
    //////
@@ -516,8 +584,10 @@ export class Ui {
    //////     LINR
    //////
 
-   static Line() {
-      return document.createElement("hr");
+   static Line(className) {
+      const line = document.createElement("hr");
+      line.setAttribute("class", className);
+      return line;
    }
 
    //////
