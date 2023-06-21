@@ -1,6 +1,7 @@
-import { Ui, handleUrl } from "../../1_controllers/js/tools.js";
+import Ui from "../../3_controllers/helpers/ui.js";
+import handleUrl from "../../3_controllers/helpers/handleUrl.js";
 
-export default function error() {
+export default function error_page() {
    const { Div, Label, Line, Button } = Ui;
 
    return Div(
@@ -13,16 +14,7 @@ export default function error() {
 
          Line(""),
 
-         Button(
-            "back",
-            ".error-btn-back",
-            `
-            background-color:gray;
-            border-radius:10px 10px;
-            width:100px;
-            height:35px;`,
-            (e) => handleUrl.back()
-         ),
+         Button("back", ".back-btn", null, (e) =>{ handleUrl.back()}),
       ],
       ".error-container"
    );
