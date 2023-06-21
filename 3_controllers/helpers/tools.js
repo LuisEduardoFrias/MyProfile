@@ -1,14 +1,17 @@
 export const base_url = `${location.protocol}//${location.host}/`;
-export const source = `${location.protocol}//${location.host}/aserts/`;
+export const aserts = `${location.protocol}//${location.host}/aserts/`;
 
-export class Colors {
-   static P = "#1562ff";
-   static S = "#000000";
-   static T = "#0096ff";
-   static C = "#e55f85";
+export function Error(e) {
+   console.error(e);
+}
+export function Warn(e) {
+   console.warn(e);
+}
+export function l(e) {
+   console.log("%c Log:" + e, "background: #222; color: #bada55");
 }
 
-function AddCI(elem, classId) {
+export function AddCI(elem, classId) {
    if (classId !== undefined && classId !== null && classId !== "") {
       const _char = classId.charAt(0);
 
@@ -16,15 +19,39 @@ function AddCI(elem, classId) {
          ? elem.setAttribute("class", classId.substring(1, classId.length))
          : _char == "#"
          ? elem.setAttribute("id", classId.substring(1, classId.length))
-         : console.log(
-              "El strig no corresponde con un atributo de class o Id."
+         : Warn(
+              "warnning: El strig no especifica si es un atributo de class (.) o Id (#). tools.AddCI"
            );
+   }
+}
+
+export function Mapper(form, model) {
+   const keys = Reflect.ownKeys(new model());
+   const value = [];
+
+   keys.forEach((key) => {
+      for (const i in form.elements) {
+         if (form.elements[i].name === key) {
+            value.push(form.elements[i].value);
+            break;
+         }
+      }
+   });
+
+   return Reflect.construct(model, value);
+}
+
+export function clearForm(form) {
+   for (const i in form.elements) {
+      if (`${form.elements[i]}` === "[object HTMLInputElement]") {
+         form.elements[i].value = "";
+      }
    }
 }
 
 export function RemoveChild(Node, child) {
    if (IsNode(Node)) {
-      if (child !== undefined && child !== "") {
+      if (child !== undefined && child !== null) {
          Node.childNodes.forEach((e) => {
             const _char = child.charAt(0);
             let identity;
@@ -32,11 +59,11 @@ export function RemoveChild(Node, child) {
                ? (identity = e.className)
                : _char == "#"
                ? (identity = e.getAttribite("id"))
-               : console.log(
-                    "No se define el tipo de identificadir en el metodo RemoveChild."
+               : Error(
+                    "Error: El strig no especifica si es un atributo de class (.) o Id (#). tools.AddCI"
                  );
 
-            if (e.className === child.substring(1, child.length)) {
+            if (e.className === identity) {
                Node.removeChild(e);
             }
          });
@@ -46,32 +73,32 @@ export function RemoveChild(Node, child) {
          }
       }
    } else {
-      console.log("La propiedad no es un Nodo, remove child");
+      Error("Error: El argumento no es un Nodo, tools.RemoveChild.");
    }
 }
 
 export function IsNode(element) {
-   element instanceof Element || element instanceof HTMLDocument;
+   return element instanceof Element || element instanceof HTMLDocument;
 }
 
 export function Select(ele) {
-   const _char = ele.charAt(0);
-
-   return _char == "."
+   return ele.charAt(0) == "."
       ? document.querySelector(ele)
-      : _char == "#"
+      : ele.charAt(0) == "#"
       ? document.querySelector(ele)
-      : console.log("El strig no corresponde con un atributo de class o Id.");
+      : Error(
+           "Error: El strig no especifica si es un atributo de class (.) o Id (#). tools.AddCI"
+        );
 }
 
-function MediaQuery(query, home_vertical, home_horizontal) {
+export function MediaQuery(query, home_vertical, home_horizontal) {
    const MediaQuery = window.matchMedia(`(${query})`);
 
    function handleTabletChange(e) {
       if (e.matches) {
-         matches();
+         home_vertical();
       } else {
-         no_matches();
+         home_horizontal();
       }
    }
 
