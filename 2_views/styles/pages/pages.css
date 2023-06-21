@@ -1,25 +1,220 @@
+@import "../tools.css";
+/**/
+
+/*/////////////////////////
+/////// view pages //////
+/////////////////////////*/
+
 .view-container-page {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   gap: 20px;
+   padding: 2px 2px;
+   box-sizing: border-box;
+   margin-top: 15px;
 }
 
 .view-container-data {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+   gap: 20px;
+   box-sizing: border-box;
 }
 
-.tittle-page {
+.view-tittle-page {
+   box-sizing: border-box;
+   font-size: 14px;
+   font-weight: bold;
 }
 
 .view-container-back-btn {
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+   width: 100%;
+   box-sizing: border-box;
 }
+
+/*/////////////////
+/////// btn //////
+//////////////////*/
 
 .back-btn {
    background-color: black;
-   border-radius: 10px 10px;
-   width: 100px;
-   height: 35px;
+   box-shadow: inset 0 0 3px 2px var(--Sx);
+   border-radius: 12px 4px;
+   height: 25px;
+   width: 70px;
+   border: 1px solid var(--Q);
 }
 
-.save-button {
-   background-color: rgb(55, 255, 67);
-   border-radius: 10px 10px;
-   width: 100px;
-   height: 35px;
+.save-btn {
+   background-color: var(--St);
+   box-shadow: inset 0 0 4px 3px var(--Oc);
+   border-radius: 12px 4px;
+   height: 25px;
+   width: 70px;
+   border: 1px solid var(--Q);
+   color: gray;
+}
+
+.add-btn {
+   background-color: var(--T);
+   box-shadow: inset 0 0 4px 3px var(--P);
+   border-radius: 12px 4px;
+   height: 25px;
+   width: 70px;
+   border: 1px solid var(--Q);
+}
+
+/*/////////////////////////
+/////// add pages //////
+/////////////////////////*/
+
+.add-page-container-page {
+   background: rgb(229, 95, 133);
+   background: linear-gradient(
+      0deg,
+      rgba(229, 95, 133, 1) 0%,
+      rgba(138, 207, 255, 1) 6%,
+      rgba(0, 150, 255, 1) 45%,
+      rgba(0, 84, 255, 1) 69%,
+      rgba(0, 15, 255, 1) 100%
+   );
+   display: grid;
+   grid-template-columns: 100%;
+   grid-template-rows: 100px 100vh;
+   grid-template-areas:
+      "header-page"
+      "body-page";
+   justify-items: center;
+   align-items: center;
+
+   min-width: 300px;
+   min-height: 200px;
+
+   box-sizing: border-box;
+}
+
+.add-page-form {
+   grid-area: body-page;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-between;
+   padding: 10px 5px;
+   box-sizing: border-box;
+   min-width: 200px;
+   max-width: 300px;
+   backdrop-filter: blur(5px);
+   box-shadow: inset 0 0 4px 3px var(--P), 0 0 3px 1px var(--Q);
+   border-radius: 8px 8px;
+}
+
+.add-page-filds {
+   box-sizing: border-box;
+   width: 100%;
+}
+
+.text-box-fild {
+   width: 95%;
+   border-radius: 5px 5px;
+   border: 1px solid black;
+   height: auto;
+   margin: 0;
+   outline: 0;
+   padding: 2px;
+   box-sizing: border-box;
+   background-color: #ffffffb1;
+   backdrop-filter: blur(5px);
+   color: #64696d;
+   box-shadow: 0 1px 2px 1px var(--T) inset, 0 1px 2px 1px var(--Sx);
+   margin-bottom: 10px;
+}
+
+.text-box-fild:focus {
+   border: 1px solid var(--P);
+}
+
+.add-page-save-btn {
+   margin-top: 10px;
+   background-color: red;
+}
+
+.back-btn {
+   grid-area: backbtn;
+}
+
+.add-page-tittle-page {
+   grid-area: tittle;
+   font-size: 14px;
+   transform: translateX(15%);
+   font-weight: bold;
+}
+
+.add-page-container-back-btn-tittle {
+   display: grid;
+   grid-area: header-page;
+   width: 100%;
+   height: 60px;
+   grid-template-columns: 100px 1fr 100px;
+   grid-template-rows: 100%;
+   grid-template-areas: "backbtn tittle none";
+   justify-content: center;
+   align-items: center;
+   box-sizing: border-box;
+   padding: 3px 3px;
+}
+
+/*/////////////////////////
+/////// btn add fild //////
+/////////////////////////*/
+
+.divide-more-e {
+   width: 80%;
+   box-shadow: 0 0 5px 0 white;
+   border: 2px dashed white;
+   margin-bottom: 3px;
+}
+
+.add-btn-header {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.add-item-group {
+   overflow: auto;
+   overflow-x: hidden;
+   max-height: 100px;
+   box-sizing: border-box;
+}
+
+.btn-add-fild {
+   background-color: transparent;
+   border-radius: 50% 50%;
+   width: 24px;
+   height: 24px;
+   position: relative;
+   margin-bottom: 2px;
+   box-sizing: border-box;
+}
+
+.btn-add-fild:hover {
+   transform: scale(0.8);
+}
+
+.btn-add-fild span {
+   border-radius: 50% 50%;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   box-sizing: border-box;
 }
