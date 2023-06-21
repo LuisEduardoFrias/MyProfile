@@ -17,6 +17,13 @@
    height: 200px;
 }
 
+.setting-btn {
+               
+                  background-color:transparent;
+                  border-radius:50% 50%;
+                  width:35px;
+                  height:35px;}
+                  
 .profile-container-title {
    display: flex;
    flex-direction: column;
