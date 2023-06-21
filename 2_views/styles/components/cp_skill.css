@@ -11,10 +11,6 @@
     box-shadow: inset -3px -3px 3px 0 #304990, -3px -3px 5px 0 #304990, 0 0 1px 1px #5582ff;
     border-width: 2px;
     border-style: double;
- /*   border-bottom-color: var(--P);
-    border-left-color: var(--P);
-    border-top-color: var(--T);
-    border-right-color: var(--T);*/
     background-color: var(--S);
     padding: 2px 2px;
     cursor: pointer;
