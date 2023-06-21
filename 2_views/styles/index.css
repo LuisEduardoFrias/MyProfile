@@ -1,6 +1,6 @@
 @import "tools.css";
 /*pages*/
-@import "./pages/settings_page.css";
+@import "./pages/setting_page.css";
 @import "./pages/home_page.css";
 @import "./pages/error_page.css";
 @import "./pages/pages.css";
@@ -13,10 +13,10 @@
 @import "./components/cp_profile.css";
 @import "./components/cp_skill.css";
 @import "./components/cp_menu.css";
-/*helper*/
-@import "./helper/cp_viewdata.css";
+/*helpers*/
+@import "./helpers/view_data.css";
 
-*{
+* {
    margin: 0;
    padding: 0;
    color: #ffffff;
@@ -24,6 +24,8 @@
 
 body {
    background-color: #100f0f;
+   width: 100vw;
+   box-sizing: border-box;
 }
 
 a {
@@ -39,7 +41,7 @@ a {
    grid-area: menus;
 }
 
-.container {
+.container-home {
    grid-area: mains;
 }
 
@@ -54,7 +56,10 @@ main {
    grid-template-areas: "profiles" "mains";
    grid-row-gap: 15px;
    padding: 5px 5px;
+   min-width: 300px;
+   width: 100vw;
    border: 5px double var(--C);
+   box-sizing: border-box;
 }
 
 /*  */
@@ -67,6 +72,10 @@ main {
       align-items: center;
       justify-content: space-evenly;
       gap: 15px;
+   }
+
+   .setting-btn {
+      transform: translate(50%, 45%);
    }
 }
 
@@ -87,6 +96,11 @@ main {
       padding: 0 0;
    }
 
+   .setting-btn {
+      margin-top: 15px;
+      margin-right: 45%;
+   }
+
    .profile-container {
       display: flex;
       flex-direction: column;
@@ -103,7 +117,7 @@ main {
          inset 0 0 3px 2px rgb(225, 225, 225);
    }
 
-   .container {
+   .container-home {
       overflow: auto;
       padding-block: 10px;
    }
