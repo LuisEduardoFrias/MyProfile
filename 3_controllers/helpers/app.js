@@ -1,3 +1,3 @@
-import { handleUrl } from "./handleUrl.js";
+import handleUrl from "./handleUrl.js";
 
 handleUrl.listenerUrl();
