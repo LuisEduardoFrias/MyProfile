@@ -1,32 +1,52 @@
 import {
-   getdata,
    skills,
    experiences,
    proyects,
    educations,
    references,
-} from "../data/data_access.js";
+} from "../../1_models/models.js";
 
-import { Select, RemoveChild, Ui } from "../../1_controllers/js/tools.js";
+import Ui from "../../3_controllers/helpers/ui.js";
+
+import {
+   Select,
+   RemoveChild,
+   IsNode,
+} from "../../3_controllers/helpers/tools.js";
 
 import cp_skill from "../components/component_skill.js";
 import cp_experience from "../components/component_experience.js";
 import cp_proyect from "../components/component_proyect.js";
 import cp_education from "../components/component_education.js";
 import cp_reference from "../components/component_reference.js";
-import cp_profile from "../components/component_profile.js";
-import cp_menu from "../components/component_menu.js";
 
-export default function homeHorizontal() {
+export default function home_horizontal_page(gate) {
    const { Div, Section } = Ui;
 
-   const main = Select(".container-main");
-   const section = Div([], ".container");
+   function clearAdd(page) {
+      const section = Select(".container-horizontal");
+      RemoveChild(section);
 
-   RemoveChild(main);
-   main.appendChild(cp_profile());
-   main.appendChild(cp_menu());
-   main.appendChild(section);
+      const appendchild = (value) => {
+         let isnode = true;
+         if (Array.isArray(value)) {
+            value.forEach((e) => {
+               if (IsNode(e)) section.appendChild(e);
+               else isnode = false;
+            });
+         } else {
+            if (IsNode(value)) section.appendChild(value);
+            else isnode = false;
+         }
+         if (!isnode) Error(`Error: El elemento no es un Nodo. Ui.Section.`);
+      };
+
+      if (page.toString() === "[object Promise]") {
+         page.then((value) => appendchild(value));
+      } else {
+         appendchild(page);
+      }
+   }
 
    const btnS = Select(".memu-btn-skill");
    const btnE = Select(".menu-btn-experience");
@@ -35,14 +55,16 @@ export default function homeHorizontal() {
    const btnR = Select(".menu-btn-reference");
 
    function skill() {
-      RemoveChild(section);
+      clearAdd(
+         (async () => {
+            const data = await gate.get(skills);
 
-      (async () => {
-         section.appendChild(Div([], ".skills matches-div"));
-
-         const data = await getdata(skills);
-         data?.forEach((i) => cp_skill(Select(".skills"), i));
-      })();
+            return Div(
+               data?.map((i) => cp_skill(i)),
+               ".skills matches-div"
+            );
+         })()
+      );
    }
 
    skill();
@@ -54,52 +76,60 @@ export default function homeHorizontal() {
    /* ********************************** */
 
    btnE.addEventListener("click", (event) => {
-      RemoveChild(section);
+      clearAdd(
+         (async () => {
+            const data = await gate.get(experiences);
 
-      (async () => {
-         section.appendChild(Div([], ".experiences matches-div"));
-
-         const data = await getdata(experiences);
-         data?.forEach((i) => cp_experience(Select(".experiences"), i));
-      })();
+            return Div(
+               data?.map((i) => cp_experience(i)),
+               ".experiences matches-div"
+            );
+         })()
+      );
    });
 
    /* ********************************** */
 
    btnP.addEventListener("click", (event) => {
-      RemoveChild(section);
+      clearAdd(
+         (async () => {
+            const data = await gate.get(proyects);
 
-      (async () => {
-         section.appendChild(Div([], ".proyects matches-div"));
-
-         const data = await getdata(proyects);
-         data?.forEach((i) => cp_proyect(Select(".proyects"), i));
-      })();
+            return Div(
+               data?.map((i) => cp_proyect(i)),
+               ".proyects matches-div"
+            );
+         })()
+      );
    });
 
    /* ********************************** */
 
    btnD.addEventListener("click", (event) => {
-      RemoveChild(section);
+      clearAdd(
+         (async () => {
+            const data = await gate.get(educations);
 
-      (async () => {
-         section.appendChild(Div([], ".educations matches-div"));
-
-         const data = await getdata(educations);
-         data?.forEach((i) => cp_education(Select(".educations"), i));
-      })();
+            return Div(
+               data?.map((i) => cp_education(i)),
+               ".educations matches-div"
+            );
+         })()
+      );
    });
 
    /* ********************************** */
 
    btnR.addEventListener("click", (event) => {
-      RemoveChild(section);
+      clearAdd(
+         (async () => {
+            const data = await gate.get(references);
 
-      (async () => {
-         section.appendChild(Div([], ".references matches-div"));
-
-         const data = await getdata(references);
-         data?.forEach((i) => cp_reference(Select(".references"), i));
-      })();
+            return Div(
+               data?.map((i) => cp_reference(i)),
+               ".references matches-div"
+            );
+         })()
+      );
    });
 }
