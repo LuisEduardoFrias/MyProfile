@@ -1,8 +1,9 @@
-import { Ui, handleUrl } from "../../1_controllers/js/tools.js";
+import Ui from "../../3_controllers/helpers/ui.js";
+import handleUrl from "../../3_controllers/helpers/handleUrl.js";
 
-export default function setting() {
+export default function setting_page() {
    const { Label, Button, Line, Div } = Ui;
-   const { changePageEvenClick } = handleUrl;
+   const { changePage, back } = handleUrl;
 
    return Div(
       [
@@ -10,7 +11,9 @@ export default function setting() {
             [
                Label("Skills", ".tittle-option"),
                Button("Go to skills", ".btn-option", null, (e) =>
-                  changePageEvenClick({ target: { href: "/view/skills" } })
+                  changePage({
+                     target: { href: "/view/skills" },
+                  })
                ),
             ],
             ".option"
@@ -19,7 +22,7 @@ export default function setting() {
             [
                Label("Experiences", ".tittle-option"),
                Button("Go to experiences", ".btn-option", null, (e) =>
-                  changePageEvenClick({
+                  changePage({
                      target: { href: "/view/experiences" },
                   })
                ),
@@ -30,7 +33,9 @@ export default function setting() {
             [
                Label("Proyects", ".tittle-option"),
                Button("Go to proyects", ".btn-option", null, (e) =>
-                  changePageEvenClick({ target: { href: "/view/proyects" } })
+                  changePage({
+                     target: { href: "/view/proyects" },
+                  })
                ),
             ],
             ".option"
@@ -39,7 +44,7 @@ export default function setting() {
             [
                Label("Educations", ".tittle-option"),
                Button("Go to educations", ".btn-option", null, (e) =>
-                  changePageEvenClick({
+                  changePage({
                      target: { href: "/view/educations" },
                   })
                ),
@@ -50,13 +55,14 @@ export default function setting() {
             [
                Label("References", ".tittle-option"),
                Button("Go to references", ".btn-option", null, (e) =>
-                  changePageEvenClick({
+                  changePage({
                      target: { href: "/view/references" },
                   })
                ),
             ],
             ".option"
          ),
+         
       ],
       ".setting-container"
    );
