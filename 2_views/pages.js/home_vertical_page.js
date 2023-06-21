@@ -1,111 +1,101 @@
-import { getdata, all } from "../data/data_access.js";
-
-import { Select, Ui, RemoveChild } from "../../1_controllers/js/tools.js";
+import Ui from "../../3_controllers/helpers/ui.js";
 
 import cp_skill from "../components/component_skill.js";
 import cp_experience from "../components/component_experience.js";
 import cp_proyect from "../components/component_proyect.js";
 import cp_education from "../components/component_education.js";
 import cp_reference from "../components/component_reference.js";
-import cp_profile from "../components/component_profile.js";
-import cp_menu from "../components/component_menu.js";
 
-export default function homeVertcal() {
+export default function home_vertical_page(data) {
+   const { Section, Div, Label, Line, Icon } = Ui;
 
-   const main = Select(".container-main");
-   RemoveChild(main);
-   main.appendChild(cp_profile());
-
-   (async () => {
-      main.appendChild(
-         Ui.Section(
+   return Section(
+      [
+         Div(
             [
-               Ui.Div(
-                  [
-                     Ui.Label("Habilidades", ".main-tittle"),
-                     Ui.Div([], ".skills matches_container_into"),
-                  ],
-                  ".matches-div matches_container_section"
-               ),
-
-               Ui.Div(
-                  [
-                     Ui.Line(),
-                     Ui.Label("Experiencia laboral", ".main-tittle"),
-                     Ui.Div(
-                        [
-                           Ui.Icon(
-                              "arrow_back_ios",
-                              ".experiences-arrow-button arrow-button"
-                           ),
-                           Ui.Div([], ".experiences matches_container_into"),
-                           Ui.Icon(
-                              "arrow_forward_ios",
-                              ".experiences-arrow-button arrow-button"
-                           ),
-                        ],
-                        ".matches_container_into slider_arrow"
-                     ),
-                  ],
-                  ".matches-div matches_container_section"
-               ),
-
-               Ui.Div(
-                  [
-                     Ui.Line(),
-                     Ui.Label("Proyectos personales", ".main-tittle"),
-                     Ui.Div(
-                        [
-                           Ui.Icon(
-                              "arrow_back_ios",
-                              ".proyect-arrow-button arrow-button"
-                           ),
-                           Ui.Div([], ".proyects matches_container_into"),
-                           Ui.Icon(
-                              "arrow_forward_ios",
-                              ".proyect-arrow-button arrow-button"
-                           ),
-                        ],
-                        ".matches_container_into slider_arrow"
-                     ),
-                  ],
-                  ".matches-div matches_container_section"
-               ),
-
-               Ui.Div(
-                  [
-                     Ui.Line(),
-                     Ui.Label("Educacion", ".main-tittle"),
-                     Ui.Div([], ".educations matches_container_into"),
-                  ],
-                  ".matches-div matches_container_section"
-               ),
-
-               Ui.Div(
-                  [
-                     Ui.Line(),
-                     Ui.Label("Referencia", ".main-tittle"),
-                     Ui.Div([], ".references matches_container_into"),
-                  ],
-                  ".matches-div matches_container_section"
+               Label("Habilidades", ".main-tittle"),
+               Div(
+                  data.skills?.map((i) => cp_skill(i)),
+                  ".skills matches_container_into"
                ),
             ],
-            ".container"
-         )
-      );
+            ".matches-div matches_container_section"
+         ),
 
-      const data = await getdata(all);
+         Div(
+            [
+               Line(),
+               Label("Experiencia laboral", ".main-tittle"),
+               Div(
+                  [
+                     Icon(
+                        "arrow_back_ios",
+                        ".experiences-arrow-button arrow-button"
+                     ),
+                     Div(
+                        data.experiences?.map((i) => cp_experience(i)),
+                        ".experiences matches_container_into"
+                     ),
+                     Icon(
+                        "arrow_forward_ios",
+                        ".experiences-arrow-button arrow-button"
+                     ),
+                  ],
+                  ".matches_container_into slider_arrow"
+               ),
+            ],
+            ".matches-div matches_container_section"
+         ),
 
-      data.skills?.forEach((i) => cp_skill(Select(".skills"), i));
+         Div(
+            [
+               Line(),
+               Label("Proyectos personales", ".main-tittle"),
+               Div(
+                  [
+                     Icon(
+                        "arrow_back_ios",
+                        ".proyect-arrow-button arrow-button"
+                     ),
+                     Div(
+                        data.proyects?.map((i) => cp_proyect(i)),
+                        ".proyects matches_container_into"
+                     ),
+                     Icon(
+                        "arrow_forward_ios",
+                        ".proyect-arrow-button arrow-button"
+                     ),
+                  ],
+                  ".matches_container_into slider_arrow"
+               ),
+            ],
+            ".matches-div matches_container_section"
+         ),
 
-      data.experiences?.forEach((i) =>
-         cp_experience(Select(".experiences"), i)
-      );
+         Div(
+            [
+               Line(),
+               Label("Educacion", ".main-tittle"),
+               Div(
+                  data.educations?.map((i) => cp_education(i)) ,
+                  ".educations matches_container_into"
+               ),
+            ],
+            ".matches-div matches_container_section"
+         ),
 
-      data.proyects?.forEach((i) => cp_proyect(Select(".proyects"), i));
-
-      data.educations?.forEach((i) => cp_education(Select(".educations"), i));
-
-      data.references?.forEach((i) => cp_reference(Select(".references"), i));
-   })();
+         Div(
+            [
+               Line(),
+               Label("Referencia", ".main-tittle"),
+               Div(
+                  data.references?.map((i) => cp_reference(i)),
+                  ".references matches_container_into"
+               ),
+            ],
+            ".matches-div matches_container_section"
+         ),
+      ],
+      ".container"
+   );
 }
