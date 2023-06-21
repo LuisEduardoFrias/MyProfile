@@ -1,31 +1,33 @@
-import { ui } from "../../../1_controllers/js/ui.js";
-import { handleUrl } from "../../../1_controllers/js/handleUrl.js";
+import Ui from "../../../3_controllers/helpers/ui.js";
+import handleUrl from "../../../3_controllers/helpers/handleUrl.js";
+import controller_skill from "../../../3_controllers/controller_skill.js";
 
-export default function viewSkill(data) {
+export default function view_skill_page(data, gate) {
    const { Div, ViewData, Label, Button } = Ui;
 
    return Div(
       [
          Div(
             [
-               Label("skill", ".tittle-page skill-page-tittle"),
+               Label("Skills", ".view-tittle-page skill-page-tittle"),
                ViewData(
                   data,
                   () => {
-                     handleUrl.changePageEvenClick({
+                     handleUrl.changePage({
                         target: { href: "/add/skill" },
                      });
                   },
-                  (key) => {
-                     // skill.key = key;
-                     /*  gate.delete((e) => alert(e), skill);*/
-                  }
+                  (value) => controller_skill.delete(gate, value.key)
                ),
             ],
             ".view-container-data skill-container-viewskill"
          ),
          Div(
-            [Button("back", ".back-button", null, (e) => handleUrl.back())],
+            [
+               Button("back", ".back-btn", null, (e) => {
+                  handleUrl.back();
+               }),
+            ],
             ".view-container-back-btn"
          ),
       ],
