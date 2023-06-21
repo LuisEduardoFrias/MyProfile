@@ -5,6 +5,8 @@
    --C: #e55f85;
    --Q: silver;
    --Sx: gray;
+   --St: #37ff43;
+   --Oc: #006706;
 }
 
 /*/////
@@ -17,6 +19,10 @@
    color: #a10303;
 }
 
+.text-box-input_ {
+   width: 100%;
+}
+
 .text-box-input_:invalid + .error-input_ {
    position: static;
    opacity: 1;
@@ -24,12 +30,16 @@
 
 .text-box-input_:invalid {
    border-color: #a10303;
-   background: transparent;
+   background: #a10303;
 }
 
 .container-input_ {
    display: flex;
    flex-direction: column;
+}
+
+.error-input_ {
+   margin: 0;
 }
 
 /*/////
