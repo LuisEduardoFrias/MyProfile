@@ -1,31 +1,33 @@
-import { ui } from "../../../1_controllers/js/ui.js";
-import { handleUrl } from "../../../1_controllers/js/handleUrl.js";
+import Ui from "../../../3_controllers/helpers/ui.js";
+import handleUrl from "../../../3_controllers/helpers/handleUrl.js";
+import controller_reference from "../../../3_controllers/controller_reference.js";
 
-export default function viewReference(data) {
+export default function view_reference_page(data, da) {
    const { Div, ViewData, Label, Button } = Ui;
 
    return Div(
       [
          Div(
             [
-               Label("reference", ".tittle-page reference-page-tittle"),
+               Label("References", ".view-tittle-page reference-page-tittle"),
                ViewData(
                   data,
                   () => {
-                     handleUrl.changePageEvenClick({
+                     handleUrl.changePage({
                         target: { href: "/add/reference" },
                      });
                   },
-                  (key) => {
-                     // skill.key = key;
-                     /*  gate.delete((e) => alert(e), skill);*/
-                  }
+                  (value, e) => controller_reference.delete(da, value)
                ),
             ],
             ".view-container-data reference-container-viewreference"
          ),
          Div(
-            [Button("back", ".back-button", null, (e) => handleUrl.back())],
+            [
+               Button("back", ".back-btn", null, (e) => {
+                  handleUrl.back();
+               }),
+            ],
             ".view-container-back-btn"
          ),
       ],
