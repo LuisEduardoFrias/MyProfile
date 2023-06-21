@@ -18,9 +18,14 @@
    flex-direction: column;
    gap: 8px;
    padding: 15px 15px;
-   border: 1px double var(--C);
    border-radius: 15px 15px;
-   box-shadow: 0 0 5px 2px var(--C);
+   /*border: 1px double var(--C);
+   box-shadow: 0 0 5px 2px var(--C);*/
+   box-shadow: inset -3px -3px 3px 0 #304990, -3px -3px 5px 0 #304990,
+      0 0 1px 1px #5582ff;
+   border-width: 2px;
+   border-style: double;
+
    box-sizing: border-box;
    justify-content: center;
    align-items: center;
@@ -33,7 +38,10 @@
    height: 25px;
    background-color: var(--T);
    border: 1px solid var(--Sx);
-   border-radius: 5px 5px;
+   border-radius: 15px 5px;
    padding: 0 5px 0 5px;
-   box-shadow: 0px 0px 1px 2px var(--Q);
+   box-shadow: inset -3px -3px 3px 0 #304990, -3px -3px 5px 0 #304990,
+      0 0 1px 1px #5582ff;
+   border-width: 2px;
+   border-style: double;
 }
