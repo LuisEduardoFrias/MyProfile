@@ -6,6 +6,7 @@ import { Mapper, clearForm } from "./helpers/tools.js";
 import { skills } from "../1_models/models.js";
 
 export default class controller_skill {
+   //comentario de pruebas.
    static add(gate) {
       return add_skill_page(gate);
    }
