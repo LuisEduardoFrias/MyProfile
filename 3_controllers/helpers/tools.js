@@ -32,7 +32,7 @@ export function Mapper(form, model) {
    keys.forEach((key) => {
       for (const i in form.elements) {
          if (form.elements[i].name === key) {
-            value.push(form.elements[i].value);
+            value.push(form.elements[i].value.replace("C:\\fakepath\\", ""));
             break;
          }
       }

@@ -22,11 +22,14 @@ export default class controller_education {
          alert("data save");
       })();
    }
-   static delete(gate, value) {
+   static delete(gate, key) {
       (async () => {
-         const res = await gate.delete(value);
-         alert("data delete");
-         this.view(gate);
+         if (await gate.delete(new educations(), key)) {
+            alert("data delete");
+            handleUrl.changePage({
+               target: { href: "/view/educations" },
+            });
+         } else alert("error");
       })();
    }
 }

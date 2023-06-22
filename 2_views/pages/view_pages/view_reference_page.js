@@ -1,26 +1,26 @@
 import Ui from "../../../3_controllers/helpers/ui.js";
 import handleUrl from "../../../3_controllers/helpers/handleUrl.js";
-import controller_proyect from "../../../3_controllers/controller_proyect.js";
+import controller_reference from "../../../3_controllers/controller_reference.js";
 
-export default function view_proyect_page(data,da) {
+export default function view_reference_page(data, da) {
    const { Div, ViewData, Label, Button } = Ui;
 
    return Div(
       [
          Div(
             [
-               Label("Proyects", ".view-tittle-page proyect-page-tittle"),
+               Label("References", ".view-tittle-page reference-page-tittle"),
                ViewData(
                   data,
                   () => {
                      handleUrl.changePage({
-                        target: { href: "/add/proyect" },
+                        target: { href: "/add/reference" },
                      });
                   },
-                  (value, e) => controller_proyect.delete(da,value)
+                                   (obj) => controller_skill.delete(gate, obj.Key)
                ),
             ],
-            ".view-container-data proyect-container-viewproyect"
+            ".view-container-data reference-container-viewreference"
          ),
          Div(
             [
@@ -31,6 +31,6 @@ export default function view_proyect_page(data,da) {
             ".view-container-back-btn"
          ),
       ],
-      ".view-container-page proyect-container-page"
+      ".view-container-page reference-container-page"
    );
 }

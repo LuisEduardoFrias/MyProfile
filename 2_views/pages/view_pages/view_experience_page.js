@@ -17,7 +17,7 @@ export default function view_experience_page(data, da) {
                         target: { href: "/add/experience" },
                      });
                   },
-                  (value, e) => controller_experience.delete(da, value)
+                                (obj) => controller_skill.delete(gate, obj.Key)
                ),
             ],
             ".view-container-data experience-container-viewexperience"

@@ -50,20 +50,21 @@
    height: 300px;
    border-radius: 10px 10px;
    padding-block: 10px;
-   background: rgb(0, 18, 255);
-   background: linear-gradient(
+   /* background: rgb(0, 18, 255);
+     background: linear-gradient(
       180deg,
       gray 0%,
       rgba(0, 0, 0, 0) 5%,
       rgba(0, 0, 0, 0) 95%,
       gray 100%
-   );
+   );*/
 }
 
 .education-container-sub-education {
    display: flex;
    flex-direction: column;
    border-radius: 10px 10px;
+   width:90%;
    gap: 2px;
    padding: 10px 10px;
    box-shadow: inset 0px 0px 5px 1px gray;
@@ -84,7 +85,7 @@
 .education-sub-institution-link {
    font-size: 10px;
    text-decoration-line: underline;
-   text-decoration-color: var(--C);
+   text-decoration-color: var(--Sx);
    cursor: pointer;
 }
 

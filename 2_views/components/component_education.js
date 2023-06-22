@@ -1,32 +1,36 @@
 import Ui from "../../3_controllers/helpers/ui.js";
 
-export default function cp_education({tittle,institution,tittle_img,more_education}) {
+export default function cp_education({
+   Tittle,
+   Institution,
+   TittleImg,
+   MoreEducation,
+}) {
    const { Div, Label, Img, Link } = Ui;
-
 
    const contaS = Div([], ".education-container-sub-tittle");
 
-   more_education?.forEach((e) => {
+   MoreEducation?.forEach((e) => {
       contaS.appendChild(
          Div(
             [
-               Label(e.tittle, ".education-sub-tittle"),
+               Label(e.Tittle, ".education-sub-tittle"),
                Div(
                   [
                      Label("Institucion : ", ".educstion-label-institution"),
                      e.url !== ""
                         ? Link(
                              e.url,
-                             e.institution,
+                             e.Institution,
                              ".education-sub-institution-link"
                           )
-                        : Label(e.institution, ".education-sub-institution"),
+                        : Label(e.Institution, ".education-sub-institution"),
                   ],
                   ".education-contaiber-institution"
                ),
-               e.tittle_img !== ""
+               e.TittleImg !== ""
                   ? Img(
-                       e.tittle_img,
+                       e.TittleImg,
                        "Imagen del titutlo",
                        ".education-img-sub-tittle",
                        "",
@@ -40,20 +44,23 @@ export default function cp_education({tittle,institution,tittle_img,more_educati
    });
 
    return Div(
-      [Div(
       [
-         Label(tittle, ".education-tittle"),
-         Label(institution, ".education-institution"),
-         Img(
-            tittle_img,
-            "Imagen de titulo.",
-            ".education-img-tittle",
-            "",
-            true
+         Div(
+            [
+               Label(Tittle, ".education-tittle"),
+               Label(Institution, ".education-institution"),
+               Img(
+                  TittleImg,
+                  "Imagen de titulo.",
+                  ".education-img-tittle",
+                  "",
+                  true
+               ),
+            ],
+            ".education-container-last-tittle"
          ),
+         contaS,
       ],
-      ".education-container-last-tittle"
-   ), contaS],
       ".education-container_education"
    );
 }

@@ -5,7 +5,7 @@ import { base_url } from "../3_controllers/helpers/tools.js";
 export class gateway {
    static async get(t) {
       return await fetch(base_url + "data/data.json")
-         .then((response) => data /*response.json()*/)
+         .then((response) => dataArray /*response.json()*/)
          .then((json) => {
             switch (t) {
                case models.skills:
@@ -29,7 +29,7 @@ export class gateway {
    }
 
    static async post(obj) {
-      const pro = Reflect.get(dataArray, obj.constructor.Name);
+      const pro = Reflect.get(dataArray, obj.constructor.name);
 
       if (pro === undefined) {
          if (!Reflect.set(obj, "Key", 1)) return false;
@@ -47,7 +47,7 @@ export class gateway {
    }
 
    static async put(obj) {
-      let newPro = [...Reflect.get(dataArray, obj.constructor.Name)];
+      let newPro = [...Reflect.get(dataArray, obj.constructor.name)];
 
       const index = newPro.findIndex((e) => e.Key === obj.Key);
 
@@ -60,13 +60,17 @@ export class gateway {
    }
 
    static async delete(obj, Key) {
-      const pro = Reflect.get(dataArray, obj.constructor.Name);
+      const pro = Reflect.get(dataArray, obj.constructor.name);
 
-      const index = pro.findIndex((e) => e.Key === Key);
+      if (pro === undefined) return false;
+
+      const index = pro.findIndex((e) => e.Key == Key);
+
       if (index > -1) {
          pro.splice(index, 1);
+      } else {
+         return false;
       }
-
       return Reflect.set(dataArray, obj.constructor.Name, pro);
    }
 }
@@ -76,17 +80,17 @@ const dataArray = {
       password: "Robert190114",
    },
    skills: [
-      { Key: "1", Name: "C#", Img: "cShart.png" },
-      { Key: "2", Name: "React", Img: "react.png" },
-      { Key: "3", Name: "Html 5", Img: "html5.png" },
-      { Key: "4", Name: "Css 3", Img: "css3.png" },
-      { Key: "5", Name: "Java Script", Img: "javaScript.png" },
-      { Key: "6", Name: "Sql Server", Img: "sqlServer.png" },
-      { Key: "7", Name: "Oracle", Img: "oracle.png" },
-      { Key: "8", Name: "Type Script", Img: "typeScript.png" },
-      { Key: "9", Name: "GitHub", Img: "github.svg" },
-      { Key: "10", Name: "Node", Img: "node.png" },
-      { Key: "11", Name: "BootStrap", Img: "bootStrap.png" },
+      { Key: "1", Name: "C#", ImageName: "cShart.png" },
+      { Key: "2", Name: "React", ImageName: "react.png" },
+      { Key: "3", Name: "Html 5", ImageName: "html5.png" },
+      { Key: "4", Name: "Css 3", ImageName: "css3.png" },
+      { Key: "5", Name: "Java Script", ImageName: "javaScript.png" },
+      { Key: "6", Name: "Sql Server", ImageName: "sqlServer.png" },
+      { Key: "7", Name: "Oracle", ImageName: "oracle.png" },
+      { Key: "8", Name: "Type Script", ImageName: "typeScript.png" },
+      { Key: "9", Name: "GitHub", ImageName: "github.svg" },
+      { Key: "10", Name: "Node", ImageName: "node.png" },
+      { Key: "11", Name: "BootStrap", ImageName: "bootStrap.png" },
    ],
    experiences: [
       {
@@ -142,7 +146,6 @@ const dataArray = {
          ],
       },
    ],
-
    proyects: [
       {
          Key: "1",

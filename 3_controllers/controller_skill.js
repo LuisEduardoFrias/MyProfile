@@ -6,7 +6,6 @@ import { Mapper, clearForm } from "./helpers/tools.js";
 import { skills } from "../1_models/models.js";
 
 export default class controller_skill {
-   //comentario de pruebas.
    static add(gate) {
       return add_skill_page(gate);
    }
@@ -24,13 +23,15 @@ export default class controller_skill {
          alert("data save");
       })();
    }
-   static delete(gate, value) {
+
+   static delete(gate, key) {
       (async () => {
-         const res = await gate.delete(new skills(), value);
-         alert("data delete");
-         handleUrl.changePage({
-            target: { href: "/view/skills" },
-         });
+         if (await gate.delete(new skills(), key)) {
+            alert("data delete");
+            handleUrl.changePage({
+               target: { href: "/view/skills" },
+            });
+         } else alert("error");
       })();
    }
 }

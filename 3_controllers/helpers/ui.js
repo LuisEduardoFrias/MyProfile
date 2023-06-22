@@ -178,7 +178,7 @@ export default class Ui {
       header.appendChild(Ui.Div([], `.view-data-column view-data-column-0`));
 
       //agregando columna por cada dato
-      propertyNames.forEach((e) => {
+      propertyNames?.forEach((e) => {
          header.appendChild(
             Ui.Div(
                [
@@ -212,7 +212,7 @@ export default class Ui {
 
       //row
       let i = 0;
-      dataArray.forEach((obj) => {
+      dataArray?.forEach((obj) => {
          //contenedor(fila) de celdas
          const row = Ui.Div([], ".view-data-row");
 
@@ -462,23 +462,68 @@ export default class Ui {
    //////     Group
    //////
 
+   static Chart(
+      labels = ["a", "b", "c", "d"],
+      series = [4, 2, 1, 3],
+      backgroundColor = ["red", "blue", "green", "orange"]
+   ) {
+      const canvas = document.createElement("canvas");
+      canvas.setAttribute("id", "chart");
+      myChart = new Chart(canvas, {
+         type: "doughnut",
+         data: {
+            labels: labels,
+            datasets: [
+               {
+                  data: series,
+                  backgroundColor: backgroundColor,
+               },
+            ],
+         },
+         options: {
+            maintainAspectRatio: false,
+         },
+         plugins: [
+            {
+               afterLayout: function (chart) {
+                  let total = chart.data.datasets[0].data.reduce((a, b) => {
+                     return a + b;
+                  });
+                  chart.legend.legendItems.forEach((label) => {
+                     let value = chart.data.datasets[0].data[label.index];
+
+                     label.text +=
+                        " - " + ((value / total) * 100).toFixed(0) + "%";
+                     return label;
+                  });
+               },
+            },
+         ],
+      });
+   }
+
+   //////
+   //////     Group
+   //////
+
    static Group(
       obj,
       Name,
       tittle = "",
       classId = null,
-      legendPosition = "right" | "left" | "center",
+      classId2 = null,
       style = null
    ) {
       const fieldset = document.createElement("fieldset");
       const legend = document.createElement("legend");
-
-      legend.setAttribute("align", legendPosition);
+      
       fieldset.setAttribute("Name", Name);
-
-      legend.innerHTML = tittle;
-
       AddCI(fieldset, classId);
+
+      legend.innerText = tittle;
+      AddCI(legend, classId2);
+
+      fieldset.appendChild(legend);
 
       const appendchild = (value) => {
          let isnode = true;
