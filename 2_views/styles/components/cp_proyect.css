@@ -1,0 +1,111 @@
+@import "tools.css";
+
+.proyects {
+   width: 100%;
+   height: 250px;
+   scroll-snap-type: x mandatory;
+   -webkit-overflow-scrolling: touch;
+   overflow-x: scroll;
+   display: flex;
+   box-sizing: border-box;
+   gap: 3px;
+}
+
+.proyect-constainer-experience {
+   border-radius: 10px 10px;
+   display: flex;
+   flex-direction: column;
+   box-shadow: inset -3px -3px 3px 0px #304990;
+   min-width: 100%;
+   height: 100%;
+   scroll-snap-align: start;
+   position: relative;
+   box-sizing: border-box;
+   padding: 15px 10px 10px 10px;
+   gap: 5px;
+   background-color: var(--S);
+}
+
+.proyect-tittle {
+   font-size: 18px;
+   font-weight: bold;
+}
+
+.proyect-description {
+   font-size: 9px;
+}
+
+.proyect-titleTegnology {
+   font-size: 12px;
+   font-weight: 700;
+   position: absolute;
+   left: 50%;
+   transform: translateX(-50%);
+   top: 0;
+}
+
+.proyect-container-tegnology-base {
+   position: relative;
+   padding-top: 15px;
+   width: 100%;
+   box-sizing: border-box;
+}
+
+.proyect-container-tegnology {
+   display: flex;
+   flex-direction: column;
+   border-radius: 10px 10px;
+   border: 1px solid var(--Sx);
+   box-sizing: border-box;
+   width: 100%;
+   height: 110px;
+   gap: 2px;
+   padding: 10px 10px;
+   box-shadow: inset 0 0 5px 1px gray;
+   overflow: auto;
+   background: rgb(0, 18, 255);
+   background: linear-gradient(
+      180deg,
+      gray 0%,
+      rgba(0, 0, 0, 0) 15%,
+      rgba(0, 0, 0, 0) 85%,
+      gray 100%
+   );
+}
+
+.proyect-tittle-group-tacks {
+   text-align: center;
+}
+
+.proyect-tenology {
+   font-size: 10px;
+   font-weight: 700;
+}
+
+.proyect-tenology:before {
+   content: "-";
+   margin-left: 2px;
+}
+
+.proyect-container-repository {
+   display: flex;
+   flex-direction: column;
+   border-radius: 10px 10px;
+   width: 100%;
+   box-sizing: border-box;
+   height: 60px;
+   gap: 2px;
+   padding: 10px 10px;
+   box-shadow: inset 0px 0px 5px 1px gray;
+   overflow: auto;
+}
+
+.proyect-repository {
+   font-size: 10px;
+   font-weight: 700;
+}
+
+.proyect-repository:before {
+   content: "-";
+   margin-left: 2px;
+}

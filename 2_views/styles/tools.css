@@ -1,0 +1,206 @@
+:root {
+   --P: #1562ff;
+   --S: #000000;
+   --T: #0096ff;
+   --C: #e55f85;
+   --Q: silver;
+   --Sx: gray;
+   --St: #37ff43;
+   --Oc: #006706;
+}
+
+/*/////
+/////  INPUT
+/////*/
+
+.error-input_ {
+   position: absolute;
+   opacity: 0;
+   color: #a10303;
+}
+
+.text-box-input_ {
+   width: 100%;
+}
+
+.text-box-input_:invalid + .error-input_ {
+   position: static;
+   opacity: 1;
+}
+
+.text-box-input_:invalid {
+   border-color: #a10303;
+   background: #a10303;
+}
+
+.container-input_ {
+   display: flex;
+   flex-direction: column;
+}
+
+.error-input_ {
+   margin: 0;
+}
+
+/*/////
+///// SHOW IMG
+/////*/
+
+.showImg-container {
+   width: 100%;
+   height: 100%;
+   background-color: #000000c2;
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   gap: 10px;
+   position: absolute;
+   left: 0;
+   padding: 10px 10px;
+   box-sizing: border-box;
+}
+
+.showImg-btn-close {
+   border: 0 solid transparent;
+   background-color: transparent;
+}
+
+.showImg-btn-close:hover {
+   transform: scale(0.8);
+}
+
+.showImg-btn {
+}
+
+.showImg-img {
+   box-sizing: border-box;
+}
+
+/*/////
+/////  FLOAT BUTTON
+/////*/
+
+/*
+.btn_float{}
+    background: transparent;
+    background: linear-gradient(180deg, 
+        #737373 0%, 
+        transparent 20%,
+        transparent 80%, 
+        #737373 100%);
+    border-radius: 50%;
+    border-width: 0;
+    box-sizing: border-box;
+    height: 45px;
+    position: absolute;
+    top: 80%;
+    right: 27.5px;
+    width: 45px;
+    z-index: 1;
+}
+*/ /*
+.center_float_btn : active{
+    transform: scale(0.9) translate(-18px,-18px);
+}
+*/ /*
+.aro_float_btn{
+    background-color: var(--P);
+    border-radius: 50%;
+    border-width: 0;
+    box-sizing: border-box;
+    height: 43px;
+    left: 50%;
+    padding: 5px 5px;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 43px;
+    z-index: 2;
+}
+*/ /*
+.border_center_float_btn{
+    background: transparent;
+    background: linear-gradient(135deg, 
+        white 30%, 
+        #e3e3e3 50%,
+        #e3e3e3 65%,
+        #737373 98%);
+    border-radius: 50%;
+    box-shadow: 1px 1px 2px 0px #1a1a1a;
+    height: 35px;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 35px;
+    z-index: 3;
+
+}
+*/ /*
+.center_float_btn{  
+    background-color: var(--P);
+    background: linear-gradient(135deg, 
+        #e3e3e3 45%, 
+        white 65%,
+        white 100%);
+    border-radius: 50%;
+    height: 33px;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 33px;
+    z-index: 4;
+}
+*/ /*
+.center{
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+*/
+
+.push_btn {
+   height: 35px;
+   width: 35px;
+}
+
+.border_push_btn {
+   height: 35px;
+   width: 35px;
+   background: linear-gradient(
+      135deg,
+      white 30%,
+      #e3e3e3 50%,
+      #e3e3e3 65%,
+      #737373 98%
+   );
+   border-radius: 50%;
+   box-shadow: 1px 1px 2px 0 #1a1a1a;
+   padding: 4px 4px;
+   box-sizing: border-box;
+}
+
+.center_push_btn {
+   height: 35px;
+   width: 35px;
+   background: linear-gradient(
+      135deg,
+      #0096ff 45%,
+      #1562ff 65%,
+      #ff47a2d6 100%
+   );
+   border-radius: 50%;
+   box-sizing: border-box;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.center_push_btn span {
+   user-select: none;
+}
+
+.center_push_btn:active {
+   transform: scale(0.9);
+}
