@@ -1,11 +1,11 @@
 import Ui from "../../../3_controllers/helpers/ui.js";
 import handleUrl from "../../../3_controllers/helpers/handleUrl.js";
-import { Select } from "../../../3_controllers/helpers/tools.js";
+import { Select, RemoveChild } from "../../../3_controllers/helpers/tools.js";
 import controller_education from "../../../3_controllers/controller_education.js";
 
-export default function add_education_page() {
+export default function add_education_page(gate) {
    //
-   const { Div, Label, Button, Input, Form, Line } = Ui;
+   const { Div, Label, Button, Input, Form, Group } = Ui;
    let countMoreE = 1;
    //
    return Form([
@@ -25,11 +25,11 @@ export default function add_education_page() {
                [
                   Div(
                      [
-                        Input(
+                        /*  Input(
                            null,
                            "Tittle",
                            false,
-                           "text",
+                           null,
                            null,
                            "Tittle",
                            "fild"
@@ -38,8 +38,7 @@ export default function add_education_page() {
                            null,
                            "Institution",
                            false,
-
-                           "text",
+                           null,
                            null,
                            "Institution",
                            "fild"
@@ -48,11 +47,11 @@ export default function add_education_page() {
                            null,
                            "Image Name",
                            false,
-                           "text",
+                           null,
                            null,
                            "TittleImg",
                            "fild"
-                        ),
+                        ),*/
 
                         Div(
                            [
@@ -73,48 +72,52 @@ export default function add_education_page() {
                                           divfather.appendChild(
                                              Group(
                                                 [
-                                                   Line("divide-more-e"),
                                                    Input(
                                                       null,
                                                       "Tittle",
                                                       false,
-                                                      "text",
+                                                      null,
                                                       null,
                                                       `Tittle-${countMoreE}`,
-                                                      "fild"
+                                                      `fild focus-${countMoreE}`
                                                    ),
                                                    Input(
                                                       null,
-                                                      "Url",
+                                                      "Institution",
                                                       false,
-                                                      "text",
+                                                      null,
                                                       null,
                                                       `Institution-${countMoreE}`,
                                                       "fild"
                                                    ),
                                                    Input(
                                                       null,
-                                                      "Img Name",
+                                                      "Url istitution",
                                                       false,
-                                                      "text",
+                                                      null,
                                                       null,
                                                       `UrlIstitution-${countMoreE}`,
                                                       "fild"
                                                    ),
                                                    Input(
                                                       null,
-                                                      "Img Name",
+                                                      "Img",
                                                       false,
-                                                      "text",
                                                       null,
                                                       null,
                                                       `TittleImg-${countMoreE}`,
                                                       "fild"
                                                    ),
                                                 ],
-                                                                                      "MoreEducation", ".add-page-more-education"
+                                                "MoreEducation",
+                                                null,
+                                                ".add-page-more-education"
                                              )
                                           );
+
+                                          Select(
+                                             `.focus-${countMoreE}`
+                                          ).focus();
                                           countMoreE++;
                                        }
                                     ),
@@ -129,45 +132,45 @@ export default function add_education_page() {
                                              null,
                                              "Tittle",
                                              false,
-                                             "text",
                                              null,
-                                             `Tittle-${countMoreE}`,
+                                             null,
+                                             `Tittle-0`,
                                              "fild"
                                           ),
                                           Input(
                                              null,
-                                             "Url",
+                                             "Institution",
                                              false,
-                                             "text",
                                              null,
-                                             `Institution-${countMoreE}`,
+                                             null,
+                                             `Institution-0`,
+                                             "fild"
+                                          ),
+                                          Input(
+                                             null,
+                                             "Url istitution",
+                                             false,
+                                             null,
+                                             null,
+                                             `UrlIstitution-0`,
                                              "fild"
                                           ),
                                           Input(
                                              null,
                                              "Img Name",
                                              false,
-                                             "text",
-                                             null,
-                                             `UrlIstitution-${countMoreE}`,
-                                             "fild"
-                                          ),
-                                          Input(
-                                             null,
-                                             "Img Name",
-                                             false,
-                                             "text",
                                              null,
                                              null,
-                                             `TittleImg-${countMoreE}`,
+                                             `TittleImg-0`,
                                              "fild"
                                           ),
                                        ],
                                        "MoreEducation",
+                                       null,
                                        ".add-page-more-education"
                                     ),
                                  ],
-                                 ".more-education add-item-group"
+                                 ".more-education"
                               ),
                            ],
                            ".more-education-group"
@@ -176,9 +179,58 @@ export default function add_education_page() {
                      ".add-page-filds"
                   ),
 
-                  Button("Save", ".save-btn", null, (e) =>
-                     controller_education.post(da, document.forms[0])
-                  ),
+                  Button("Save", ".save-btn", null, (e) => {
+                     controller_education.post(gate, document.forms[0]);
+
+                     const divfather = Select(".more-education");
+                     RemoveChild(divfather);
+
+                     divfather.appendChild(
+                        Group(
+                           [
+                              Input(
+                                 null,
+                                 "Tittle",
+                                 false,
+                                 null,
+                                 null,
+                                 `Tittle-0`,
+                                 "fild"
+                              ),
+                              Input(
+                                 null,
+                                 "Institution",
+                                 false,
+                                 null,
+                                 null,
+                                 `Institution-0`,
+                                 "fild"
+                              ),
+                              Input(
+                                 null,
+                                 "Url istitution",
+                                 false,
+                                 null,
+                                 null,
+                                 `UrlIstitution-0`,
+                                 "fild"
+                              ),
+                              Input(
+                                 null,
+                                 "Img",
+                                 false,
+                                 null,
+                                 null,
+                                 `TittleImg-0`,
+                                 "fild"
+                              ),
+                           ],
+                           "MoreEducation",
+                           null,
+                           ".add-page-more-education"
+                        )
+                     );
+                  }),
                ],
                ".add-page-form form-education"
             ),

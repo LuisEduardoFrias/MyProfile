@@ -2,7 +2,7 @@ import Ui from "../../../3_controllers/helpers/ui.js";
 import handleUrl from "../../../3_controllers/helpers/handleUrl.js";
 import controller_skill from "../../../3_controllers/controller_skill.js";
 
-export default function add_skill_page(da) {
+export default function add_skill_page(gate) {
    //
    const { Div, Label, Button, Input, Form, Select } = Ui;
    //
@@ -23,31 +23,22 @@ export default function add_skill_page(da) {
                [
                   Div(
                      [
+                        Input(null, "Name", true, null, null, "Name", "fild"),
                         Input(
                            null,
-                           "Name",
+                           "Image url",
                            true,
                            null,
-                           "error",
-                           "Name",
-                           "fild"
-                        ),
-                        Input(
                            null,
-                           "Image name",
-                           true,
-                           "file",
-                           "error",
                            "ImageName",
                            "fild"
                         ),
-                        
                      ],
                      ".add-page-filds"
                   ),
 
                   Button("Save", ".save-btn hadd-page-save-btn", null, (e) => {
-                     controller_skill.post(da, document.forms[0]);
+                     controller_skill.post(gate, document.forms[0]);
                   }),
                ],
                ".add-page-form form-skill"

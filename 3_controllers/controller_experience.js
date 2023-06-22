@@ -1,7 +1,8 @@
 import add_experience_page from "../../2_views/pages/add_pages/add_experience_page.js";
 import view_experience_page from "../../2_views/pages/view_pages/view_experience_page.js";
 //
-import { Mapper } from "./helpers/tools.js";
+import handleUrl from "./helpers/handleUrl.js";
+import { Mapper, clearForm } from "./helpers/tools.js";
 import { experiences } from "../1_models/models.js";
 
 export default class controller_experience {
@@ -10,7 +11,7 @@ export default class controller_experience {
    }
    static view(gate) {
       return (async () => {
-         return view_experiemce_page(await gate.get(experiences), gate);
+         return view_experience_page(await gate.get(experiences), gate);
       })();
    }
    static post(gate, form) {

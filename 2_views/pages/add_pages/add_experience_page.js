@@ -1,9 +1,9 @@
 import Ui from "../../../3_controllers/helpers/ui.js";
 import handleUrl from "../../../3_controllers/helpers/handleUrl.js";
 import controller_experience from "../../../3_controllers/controller_experience.js";
-import { Select } from "../../../3_controllers/helpers/tools.js";
+import { Select, RemoveChild } from "../../../3_controllers/helpers/tools.js";
 
-export default function add_experience_page() {
+export default function add_experience_page(gate) {
    //
    const { Div, Label, Button, Input, Form } = Ui;
    let countTask = 1;
@@ -25,16 +25,33 @@ export default function add_experience_page() {
                [
                   Div(
                      [
-                        Input("", "Company", "text", "error", "Company", "fild"),
                         Input(
-                           "",
+                           null,
+                           "Company",
+                           true,
+                           null,
+                           null,
+                           "Company",
+                           "fild"
+                        ),
+                        Input(
+                           null,
                            "Description",
-                           "text",
-                           "error",
+                           true,
+                           null,
+                           null,
                            "Description",
                            "fild"
                         ),
-                        Input("", "Position", "text", "error", "Position", "fild"),
+                        Input(
+                           null,
+                           "Position",
+                           true,
+                           null,
+                           null,
+                           "Position",
+                           "fild"
+                        ),
 
                         Div(
                            [
@@ -48,16 +65,27 @@ export default function add_experience_page() {
                                        (e) => {
                                           const divfather = Select(".task");
 
-                                          divfather.appendChild(
-                                             Input(
-                                                null,
-                                                "New task",
-                                                "text",
-                                                "error",
-                                                `Task-Name-${countTask}`,
-                                                "fild"
-                                             )
+                                          const inp = Input(
+                                             null,
+                                             "Other Task",
+                                             true,
+                                             null,
+                                             null,
+                                             `Tern-Name-${countTask}`,
+                                             "fild"
                                           );
+
+                                          inp.addEventListener(
+                                             "DOMNodeInserted",
+                                             (e) => {
+                                                e.focus();
+                                                alert("was insert");
+                                             },
+                                             false
+                                          );
+
+                                          divfather.appendChild(inp);
+
                                           countTask++;
                                        }
                                     ),
@@ -68,9 +96,10 @@ export default function add_experience_page() {
                                  [
                                     Input(
                                        null,
-                                       "New task",
-                                       "t",
-                                       "error",
+                                       "Task",
+                                       true,
+                                       null,
+                                       null,
                                        "Tern-Name-0",
                                        "fild"
                                     ),
@@ -84,9 +113,23 @@ export default function add_experience_page() {
                      ".add-page-filds"
                   ),
 
-                  Button("Save", ".save-btn", null, (e) =>
-                     controller_experience.post(da, document.forms[0])
-                  ),
+                  Button("Save", ".save-btn", null, (e) => {
+                     controller_experience.post(gate, document.forms[0]);
+
+                     const divtack = Select(".task");
+
+                     RemoveChild(divtack);
+                     
+                     divtack.appendChild(Input(
+                                       null,
+                                       "Task",
+                                       true,
+                                       null,
+                                       null,
+                                       "Tern-Name-0",
+                                       "fild"
+                                    ),)
+                  }),
                ],
                ".add-page-form form-experience"
             ),

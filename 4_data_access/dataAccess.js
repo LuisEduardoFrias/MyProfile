@@ -270,17 +270,17 @@ const dataArray = {
    references: [
       {
          Key: "1",
-         Name: "Ing. José Manuel Tejeda Contacto",
+         Name: "Ing. José Manuel Tejeda",
          PhoneNumber: "809-436-7126",
       },
       {
          Key: "2",
-         Name: "Lic. Jairo Esteban Lora Mejía Contacto",
+         Name: "Lic. Jairo Esteban Lora Mejía",
          PhoneNumber: "829-983-1386",
       },
       {
          Key: "3",
-         Name: "Ing. Julio Angel Florentino Contacto",
+         Name: "Ing. Julio Angel Florentino",
          PhoneNumber: "829-854-7130",
       },
    ],

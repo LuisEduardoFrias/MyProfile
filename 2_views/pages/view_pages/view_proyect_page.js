@@ -2,7 +2,7 @@ import Ui from "../../../3_controllers/helpers/ui.js";
 import handleUrl from "../../../3_controllers/helpers/handleUrl.js";
 import controller_proyect from "../../../3_controllers/controller_proyect.js";
 
-export default function view_proyect_page(data,da) {
+export default function view_proyect_page(data,gate) {
    const { Div, ViewData, Label, Button } = Ui;
 
    return Div(
@@ -17,7 +17,7 @@ export default function view_proyect_page(data,da) {
                         target: { href: "/add/proyect" },
                      });
                   },
-                  (obj) => controller_skill.delete(gate, obj.Key)
+                  (obj) => controller_proyect.delete(gate, obj.Key)
                ),
             ],
             ".view-container-data proyect-container-viewproyect"

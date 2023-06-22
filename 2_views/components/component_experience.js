@@ -2,14 +2,14 @@ import Ui from "../../3_controllers/helpers/ui.js";
 
 export default function cp_experience({
    Company,
-   Descripcion,
+   Description,
    Position,
    Tacks,
 }) {
    const { Label, Div, Group } = Ui;
 
    const labelC = Label(Company, ".experience_company");
-   const labelD = Label(Descripcion, ".experience_description");
+   const labelD = Label(Description, ".experience_description");
    const labelP = Label(Position, ".experience_position");
 
    const GroupCT = Group(

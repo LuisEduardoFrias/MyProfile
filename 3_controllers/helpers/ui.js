@@ -138,8 +138,13 @@ export default class Ui {
          input.setAttribute("pattern", "[s0-9]+");
       }
 
+      const errorlabel =
+         error !== null && error !== "" && error !== undefined
+            ? Ui.Label(error, `.error${identiti} error-input_`)
+            : null;
+            
       return Ui.Div(
-         [labelT, input, Ui.Label(error, `.error${identiti} error-input_`)],
+         [labelT, input, errorlabel],
          `.container-input${identiti} container-input_`
       );
    }
@@ -369,7 +374,13 @@ export default class Ui {
 
    static Img(src, alt, classId, style, event_click) {
       const img = document.createElement("img");
-      img.src = aserts + src;
+
+      if (!src.search("http")) {
+         img.src = src;
+      } else {
+         img.src = aserts + src;
+      }
+
       img.alt = alt;
       AddCI(img, classId);
 
@@ -459,7 +470,7 @@ export default class Ui {
    }
 
    //////
-   //////     Group
+   //////     Chart
    //////
 
    static Chart(
@@ -516,7 +527,7 @@ export default class Ui {
    ) {
       const fieldset = document.createElement("fieldset");
       const legend = document.createElement("legend");
-      
+
       fieldset.setAttribute("Name", Name);
       AddCI(fieldset, classId);
 

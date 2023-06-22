@@ -23,7 +23,6 @@ export default class controller_skill {
          alert("data save");
       })();
    }
-
    static delete(gate, key) {
       (async () => {
          if (await gate.delete(new skills(), key)) {

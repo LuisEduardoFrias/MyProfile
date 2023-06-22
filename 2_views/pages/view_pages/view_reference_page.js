@@ -2,7 +2,7 @@ import Ui from "../../../3_controllers/helpers/ui.js";
 import handleUrl from "../../../3_controllers/helpers/handleUrl.js";
 import controller_reference from "../../../3_controllers/controller_reference.js";
 
-export default function view_reference_page(data, da) {
+export default function view_reference_page(data, gate) {
    const { Div, ViewData, Label, Button } = Ui;
 
    return Div(
@@ -17,7 +17,7 @@ export default function view_reference_page(data, da) {
                         target: { href: "/add/reference" },
                      });
                   },
-                                   (obj) => controller_skill.delete(gate, obj.Key)
+                                   (obj) => controller_reference.delete(gate, obj.Key)
                ),
             ],
             ".view-container-data reference-container-viewreference"
