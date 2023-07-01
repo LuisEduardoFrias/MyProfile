@@ -60,7 +60,7 @@ export default function home_horizontal_page(gate) {
             const data = await gate.get(skills);
 
             return Div(
-               data?.map((i) => cp_skill(i)),
+               data.map((i) => cp_skill(i)),
                ".skills matches-div"
             );
          })()
@@ -81,7 +81,7 @@ export default function home_horizontal_page(gate) {
             const data = await gate.get(experiences);
 
             return Div(
-               data?.map((i) => cp_experience(i)),
+               data.map((i) => cp_experience(i)),
                ".experiences matches-div"
             );
          })()
@@ -96,7 +96,7 @@ export default function home_horizontal_page(gate) {
             const data = await gate.get(proyects);
 
             return Div(
-               data?.map((i) => cp_proyect(i)),
+               data.map((i) => cp_proyect(i)),
                ".proyects matches-div"
             );
          })()
@@ -111,7 +111,7 @@ export default function home_horizontal_page(gate) {
             const data = await gate.get(educations);
 
             return Div(
-               data?.map((i) => cp_education(i)),
+               data.map((i) => cp_education(i)),
                ".educations matches-div"
             );
          })()
@@ -126,7 +126,7 @@ export default function home_horizontal_page(gate) {
             const data = await gate.get(references);
 
             return Div(
-               data?.map((i) => cp_reference(i)),
+               data.map((i) => cp_reference(i)),
                ".references matches-div"
             );
          })()

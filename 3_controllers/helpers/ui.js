@@ -183,7 +183,7 @@ export default class Ui {
       header.appendChild(Ui.Div([], `.view-data-column view-data-column-0`));
 
       //agregando columna por cada dato
-      propertyNames?.forEach((e) => {
+      propertyNames.forEach((e) => {
          header.appendChild(
             Ui.Div(
                [
@@ -217,33 +217,39 @@ export default class Ui {
 
       //row
       let i = 0;
-      dataArray?.forEach((obj) => {
+      dataArray.forEach((obj) => {
          //contenedor(fila) de celdas
          const row = Ui.Div([], ".view-data-row");
 
-         //evento click para copiar fila
-         //TODO event click to button select
-         const evenclick = () => {
-            alert("copiado.");
-            /*    const classs = `.text-cell-${0}`;
-            const labelToSelet = Select(classs);
-
-            // Para obtener el valor 
-            const cod = labelToSelet.textContent;
-            alert(cod);
-
-            // Para obtener el texto 
-          /labelToSelet.options[labelToSelet.selectedIndex];
-            alert(selected);*/
-         };
-
          // boton para copiar
          row.appendChild(
-            Ui.Div(
-               [Ui.Button("", ".copy-btn", null, (e) => evenclick())],
-               ".view-data-container-copy-btn"
-            )
-         );
+        Ui.Div(
+          [
+            Ui.Button("", ".copy-btn", null, (event) => {
+              let selected = "";
+              const element = event.target.parentElement;
+
+              element.parentElement.childNodes.forEach((e) => {
+                if (e.className.search("cell-data") !== -1) {
+                  selected += `${e.firstElementChild.innerText} `;
+                }
+              });
+
+              var aux = document.createElement("input");
+              aux.setAttribute("value", selected);
+              document.body.appendChild(aux);
+              aux.select();
+
+              document.execCommand("copy");
+
+              document.body.removeChild(aux);
+
+              alert("copiado.", "My Profile");
+            }),
+          ],
+          ".view-data-container-copy-btn"
+        )
+      );
 
          //celda por cada dato
          propertyNames.forEach((e) => {
@@ -456,7 +462,7 @@ export default class Ui {
             );
       };
 
-      if (obj?.toString() === "[object Promise]") {
+      if (obj.toString() === "[object Promise]") {
          obj[0].then((value) => appendchild(value));
       } else {
          appendchild(obj);
@@ -562,7 +568,7 @@ export default class Ui {
             );
       };
 
-      if (obj?.toString() === "[object Promise]") {
+      if (obj.toString() === "[object Promise]") {
          obj[0].then((value) => appendchild(value));
       } else {
          appendchild(obj);

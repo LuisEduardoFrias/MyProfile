@@ -40,7 +40,7 @@ export default class handleUrl {
          if (!isnode) Error(`Error: El elemento no es un Nodo. Ui.Section.`);
       };
 
-      if (page?.toString() === "[object Promise]") {
+      if (page.toString() === "[object Promise]") {
          page.then((value) => appendchild(value));
       } else {
          appendchild(page);

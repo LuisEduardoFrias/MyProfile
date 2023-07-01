@@ -21,7 +21,7 @@ export default function cp_experience({
       null
    );
 
-   Tacks?.forEach((element) =>
+   Tacks.forEach((element) =>
       GroupCT.appendChild(Label(element, ".experience_tack"))
    );
 
