@@ -10,7 +10,7 @@ export default function cp_education({
 
    const contaS = Div([], ".education-container-sub-tittle");
 
-   MoreEducation?.forEach((e) => {
+   MoreEducation.forEach((e) => {
       contaS.appendChild(
          Div(
             [

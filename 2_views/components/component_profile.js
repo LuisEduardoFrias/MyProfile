@@ -2,7 +2,7 @@ import handleUrl from "../../3_controllers/helpers/handleUrl.js";
 import Ui from "../../3_controllers/helpers/ui.js";
 import { Select } from "../../3_controllers/helpers/tools.js";
 
-export default function component_profile() {
+export default function cp_profile() {
    return Ui.Div(
       [
          Ui.Div(

@@ -10,7 +10,7 @@ export default class controller_experience {
    }
    static view(gate) {
       return (async () => {
-         return view_experiemce_page(await gate.get(experiences), gate);
+         return view_experience_page(await gate.get(experiences), gate);
       })();
    }
    static post(gate, form) {

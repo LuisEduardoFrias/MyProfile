@@ -1,37 +1,32 @@
-export class segurity {
-   constructor() {}
-}
-
 export class skills {
-   constructor(Name,ImageName) {
-      this.Name = Name;
-      this.ImageName = ImageName;
-   }
+  constructor(Name, ImageName) {
+    this.Name = Name;
+    this.ImageName = ImageName;
+  }
 }
 
 export class experiences {
-   constructor() {}
+  constructor() {}
 }
 
 export class proyects {
-   constructor() {}
+  constructor() {}
 }
 
 export class educations {
-   constructor() {}
+  constructor() {}
 }
 
 export class references {
-   constructor() {}
+  constructor() {}
 }
 
 export class all {
-   constructor() {}
+  constructor() {}
 }
 
 class models {}
 
-models.segurity = segurity;
 models.skills = skills;
 models.experiences = experiences;
 models.proyects = proyects;

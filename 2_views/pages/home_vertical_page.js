@@ -15,7 +15,7 @@ export default function home_vertical_page(data) {
             [
                Label("Habilidades", ".main-tittle"),
                Div(
-                  data.skills?.map((i) => cp_skill(i)),
+                  data.skills.map((i) => cp_skill(i)),
                   ".skills matches_container_into"
                ),
             ],
@@ -33,7 +33,7 @@ export default function home_vertical_page(data) {
                         ".experiences-arrow-button arrow-button"
                      ),
                      Div(
-                        data.experiences?.map((i) => cp_experience(i)),
+                        data.experiences.map((i) => cp_experience(i)),
                         ".experiences matches_container_into"
                      ),
                      Icon(
@@ -58,7 +58,7 @@ export default function home_vertical_page(data) {
                         ".proyect-arrow-button arrow-button"
                      ),
                      Div(
-                        data.proyects?.map((i) => cp_proyect(i)),
+                        data.proyects.map((i) => cp_proyect(i)),
                         ".proyects matches_container_into"
                      ),
                      Icon(
@@ -77,7 +77,7 @@ export default function home_vertical_page(data) {
                Line(),
                Label("Educacion", ".main-tittle"),
                Div(
-                  data.educations?.map((i) => cp_education(i)) ,
+                  data.educations.map((i) => cp_education(i)) ,
                   ".educations matches_container_into"
                ),
             ],
@@ -89,7 +89,7 @@ export default function home_vertical_page(data) {
                Line(),
                Label("Referencia", ".main-tittle"),
                Div(
-                  data.references?.map((i) => cp_reference(i)),
+                  data.references.map((i) => cp_reference(i)),
                   ".references matches_container_into"
                ),
             ],

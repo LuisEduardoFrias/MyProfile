@@ -26,11 +26,11 @@ export default function cp_proyect({
       ".proyect-container-repository"
    );
 
-   Tegnologys?.forEach((element) => {
+   Tegnologys.forEach((element) => {
       groupT.appendChild(Label(element, ".proyect-tenology"));
    });
 
-   Repositorys?.forEach((element) => {
+   Repositorys.forEach((element) => {
       groupR.appendChild(Link(element, element, ".proyect-repository"));
    });
 
