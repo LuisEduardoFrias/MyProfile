@@ -20,7 +20,7 @@
    border-radius: 10px 10px;
    display: flex;
    flex-direction: column;
-   box-shadow: inset -3px -3px 3px 0px #304990;
+   box-shadow: inset -3px -3px 3px 0px #304990, inset 0 0 2px 1px #304990;
    min-width: 100%;
    height: 100%;
    scroll-snap-align: start;

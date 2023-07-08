@@ -391,7 +391,11 @@ export default class Ui {
       AddCI(img, classId);
 
       if (event_click === true) {
-         img.addEventListener("click", (e) => ShowImg(aserts + src, alt));
+        img.addEventListener("click", (e) => 
+        {
+          window.location.replace(aserts + src);
+        //  ShowImg(aserts + src, alt);
+        })
       }
 
       if (style !== undefined && style !== null) {
